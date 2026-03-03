@@ -1,32 +1,36 @@
 # Notify Module Roadmap
 
-"Informare con precisione: il battito cardiaco dell'applicazione."
+## Visione
 
-## 🎯 Visione
-Diventare un Communication Hub universale che orchestra in modo intelligente le notifiche tra canali diversi, ottimizzando i costi (es. SMS vs WhatsApp) e il coinvolgimento dell'utente finale.
+Modulo per il sistema di notifiche: email, in-app, SMS, push, template, scheduling e integrazione con servizi esterni (SendAppointmentNotificationAction, MailTemplateVersion).
 
-## 🏗️ Fasi di Sviluppo
+## Fasi di Sviluppo
 
-### Fase 1: Stability & Standard (In Progress)
-- [x] PHPStan Level 10.
-- [ ] Rimozione definitiva dei 500+ file obsoleti.
-- [ ] Implementazione del **Notify Cluster** in Filament v5.
-- [ ] Supporto per **Laravel 12 concurrent queuing** per le notifiche bulk.
+### Fase 1: Stabilizzazione (In Progress)
+- [x] PHPStan Level 9+ Compliance
+- [ ] Upgrade PHPStan Level 10
+- [ ] Allineamento Filament v5
+- [ ] Test Coverage improvement
 
-### Fase 2: Provider Intelligence (Planned)
-- [ ] Sistema di "Channel Fallback": se l'invio fallisce su WhatsApp, riprova via SMS.
-- [ ] Dashboard analitica avanzata dei tassi di apertura direttamente in Filament.
-- [ ] Webhook Receiver unificato per conferme di lettura cross-provider.
+### Fase 2: Canali Notifica (Planned)
+- [ ] Email notifications
+- [ ] In-app notifications
+- [ ] Template e MailLayout
+- [ ] Integrazione Pdnd/Servizi esterni
 
-### Fase 3: AI & Optimization (Future)
-- [ ] **AI Subject Generator**: Suggerimento dell'oggetto email in base al contenuto per aumentare l'Open Rate.
-- [ ] **Priority Orchestrator**: L'AI decide il canale migliore in base alle abitudini dell'utente.
-- [ ] **Seasonal Auto-Theming**: Generazione AI di grafiche per i template festivi (Natale, ecc.).
+### Fase 3: Integrazione (Future)
+- [ ] SMS/Push (se richiesto)
+- [ ] Analytics delivery
+- [ ] Traduzioni it/en complete
+- [ ] Documentazione completa
 
-## ✅ Checklist Qualità
-- [x] PHPStan Level 10.
-- [ ] 0 hardcoded strings nei template (usa il modulo Lang).
-- [ ] Smoke tests per ogni provider configurato.
+## Checklist Qualità
+
+- [x] PHPStan Level 9
+- [ ] PHPStan Level 10
+- [ ] Test coverage
+- [ ] Documentazione in docs/
 
 ---
-**Ultimo aggiornamento**: 31 Gennaio 2026
+
+**Ultimo aggiornamento**: Febbraio 2026
