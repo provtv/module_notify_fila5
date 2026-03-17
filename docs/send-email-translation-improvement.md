@@ -279,8 +279,8 @@ php -l Modules/Notify/lang/it/send_email.php
 
 ### Documentazione Correlata
 - [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
-- [Best Practice Filament](../../../project_docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
+- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
 - [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
 - [Struttura Modulo Notify](./README.md)
 
@@ -307,7 +307,7 @@ php -l Modules/Notify/lang/it/send_email.php
 
 ---
 
-**
+**Ultimo aggiornamento**: Gennaio 2025
 **Autore**: Sistema di miglioramento automatico
 # Miglioramento File Traduzione send_email.php
 
@@ -564,9 +564,9 @@ php -l Modules/Notify/lang/it/send_email.php
 ### Documentazione Correlata
 - [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
 - [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
-- [Best Practice Filament](../../../project_docs/FILAMENT-BEST-PRACTICES.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
+- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
+- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
+- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
 - [Struttura Modulo Notify](./README.md)
 
 ### File Modificati
@@ -593,5 +593,5 @@ php -l Modules/Notify/lang/it/send_email.php
 
 ---
 
-**
+**Ultimo aggiornamento**: Gennaio 2025
 **Autore**: Sistema di miglioramento automatico

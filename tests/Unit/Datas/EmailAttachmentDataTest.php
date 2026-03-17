@@ -2,11 +2,13 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Datas;
+
 use Modules\Notify\Datas\EmailAttachmentData;
 
 describe('EmailAttachmentData', function () {
     it('can be referenced via reflection without instantiation', function () {
-        $reflection = new ReflectionClass(EmailAttachmentData::class);
+        $reflection = new \ReflectionClass(EmailAttachmentData::class);
 
         expect($reflection->isInstantiable())->toBeTrue();
     });
@@ -16,13 +18,13 @@ describe('EmailAttachmentData', function () {
     });
 
     it('extends Spatie Data', function () {
-        $reflection = new ReflectionClass(EmailAttachmentData::class);
+        $reflection = new \ReflectionClass(EmailAttachmentData::class);
 
         expect($reflection->isSubclassOf(\Spatie\LaravelData\Data::class))->toBeTrue();
     });
 
     it('has required properties', function () {
-        $reflection = new ReflectionClass(EmailAttachmentData::class);
+        $reflection = new \ReflectionClass(EmailAttachmentData::class);
         $properties = $reflection->getProperties();
 
         $propertyNames = array_map(fn ($p) => $p->getName(), $properties);
@@ -36,7 +38,7 @@ describe('EmailAttachmentData', function () {
     });
 
     it('has constructor with required parameters', function () {
-        $reflection = new ReflectionClass(EmailAttachmentData::class);
+        $reflection = new \ReflectionClass(EmailAttachmentData::class);
         $constructor = $reflection->getConstructor();
 
         expect($constructor)->not->toBeNull();

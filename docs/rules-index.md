@@ -27,12 +27,15 @@ This file documents the rules and standards specific to the Notify module.
 - Test each notification channel separately
 - Mock external services in unit tests
 
+## Architectural Violations — Do Not Repeat
+
+### No HTTP controllers
+Controllers are forbidden in all modules. Architecture = Folio + Volt + Filament only.
+A `NotificationTrackingController` was found and removed. Email tracking must be implemented
+as a Folio page + Action, not a controller.
+See: [no-http-controllers.md](./no-http-controllers.md)
+
 ## Related Documentation
 - [README](./readme.md)
 - [phpstan](./phpstan.md)
-
-## Pre-Edit Rule Link
-
-- [Pre-Edit Docs-First Rule](../../../../docs/rules/pre-edit-docs-first-rule.md)
-- [Pre-Edit Docs-First Memory](../../../../docs/memory/pre-edit-docs-first-memory.md)
-- [Pre-Edit Docs-First Skill](../../../../docs/skills/pre-edit-docs-first-skill.md)
+- [No HTTP controllers](./no-http-controllers.md)

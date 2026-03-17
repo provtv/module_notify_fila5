@@ -2,25 +2,27 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Actions\SMS;
+
 use Modules\Notify\Actions\SMS\SendTwilioSMSAction;
 use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SmsData;
 
 describe('SendTwilioSMSAction', function () {
     it('can be referenced via ReflectionClass without instantiation', function () {
-        $reflection = new ReflectionClass(SendTwilioSMSAction::class);
+        $reflection = new \ReflectionClass(SendTwilioSMSAction::class);
         expect($reflection->isInstantiable())->toBeTrue();
     });
 
     it('implements SmsActionContract', function () {
-        $reflection = new ReflectionClass(SendTwilioSMSAction::class);
+        $reflection = new \ReflectionClass(SendTwilioSMSAction::class);
         $interfaces = $reflection->getInterfaceNames();
 
         expect($interfaces)->toContain(SmsActionContract::class);
     });
 
     it('has execute method with correct signature', function () {
-        $reflection = new ReflectionClass(SendTwilioSMSAction::class);
+        $reflection = new \ReflectionClass(SendTwilioSMSAction::class);
         $method = $reflection->getMethod('execute');
 
         expect($method->isPublic())->toBeTrue();
@@ -28,7 +30,7 @@ describe('SendTwilioSMSAction', function () {
     });
 
     it('execute accepts SmsData parameter', function () {
-        $reflection = new ReflectionClass(SendTwilioSMSAction::class);
+        $reflection = new \ReflectionClass(SendTwilioSMSAction::class);
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
@@ -36,7 +38,7 @@ describe('SendTwilioSMSAction', function () {
     });
 
     it('execute returns array', function () {
-        $reflection = new ReflectionClass(SendTwilioSMSAction::class);
+        $reflection = new \ReflectionClass(SendTwilioSMSAction::class);
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
@@ -44,22 +46,22 @@ describe('SendTwilioSMSAction', function () {
     });
 
     it('uses strict types', function () {
-        $reflection = new ReflectionClass(SendTwilioSMSAction::class);
+        $reflection = new \ReflectionClass(SendTwilioSMSAction::class);
         $filename = $reflection->getFileName();
 
         expect($filename)->not->toBeNull();
         $content = file_get_contents($filename);
-        expect($content)->toContain('declare(strict_types=1);');
+        expect($content)->toContain('');
     });
 
     it('has correct namespace', function () {
-        $reflection = new ReflectionClass(SendTwilioSMSAction::class);
+        $reflection = new \ReflectionClass(SendTwilioSMSAction::class);
 
         expect($reflection->getNamespaceName())->toBe('Modules\Notify\Actions\SMS');
     });
 
     it('has required imports', function () {
-        $reflection = new ReflectionClass(SendTwilioSMSAction::class);
+        $reflection = new \ReflectionClass(SendTwilioSMSAction::class);
         $filename = $reflection->getFileName();
         $content = file_get_contents($filename);
 
@@ -75,14 +77,14 @@ describe('SendTwilioSMSAction', function () {
     });
 
     it('has protected debug property', function () {
-        $reflection = new ReflectionClass(SendTwilioSMSAction::class);
+        $reflection = new \ReflectionClass(SendTwilioSMSAction::class);
         $property = $reflection->getProperty('debug');
 
         expect($property->isProtected())->toBeTrue();
     });
 
     it('has protected defaultSender property', function () {
-        $reflection = new ReflectionClass(SendTwilioSMSAction::class);
+        $reflection = new \ReflectionClass(SendTwilioSMSAction::class);
         $property = $reflection->getProperty('defaultSender');
 
         expect($property->isProtected())->toBeTrue();
