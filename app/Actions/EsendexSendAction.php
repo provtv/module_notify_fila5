@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions;
 
-use function Safe\curl_close;
 use function Safe\curl_exec;
 use function Safe\curl_getinfo;
 use function Safe\curl_init;
