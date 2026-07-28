@@ -204,3 +204,4 @@ workbench/
 _docs
 workbench
 phpstan*
+docs/**/*-[0-9].md
