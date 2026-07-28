@@ -34,23 +34,12 @@ class BuildMailMessageAction
         $theme = app(Get::class)->execute($name, $type, $view_params);
         $view_html = 'notify::email';
         // dddx([$theme, $view_params]);
+        /** @var string $fromAddress */
         $fromAddress = $theme->view_params['from_email'] ?? $theme->from_email;
+        /** @var string|null $fromName */
         $fromName = $theme->view_params['from'] ?? $theme->from;
+        /** @var string $subject */
         $subject = $view_params['subject'] ?? $theme->subject;
-
-        // Utilizziamo asserzioni per verificare che i valori siano stringhe
-        if (! is_string($fromAddress)) {
-            $fromAddress = '';
-        }
-
-        // Il nome del mittente può essere null
-        if ($fromName !== null && ! is_string($fromName)) {
-            $fromName = '';
-        }
-
-        if (! is_string($subject)) {
-            $subject = 'Notifica';
-        }
 
         $bodyHtml = $this->decodeRichText($theme->body_html);
         $subject = $this->decodeRichText($subject);
