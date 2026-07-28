@@ -9,8 +9,6 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Modules\Notify\Actions\NotifyTheme\Get;
 use Modules\Notify\Datas\AttachmentData;
 use Modules\Notify\Datas\NotifyThemeData;
-use function Safe\mb_convert_encoding;
-use Spatie\LaravelData\DataCollection;
 use Spatie\QueueableAction\QueueableAction;
 
 class BuildMailMessageAction
@@ -19,13 +17,13 @@ class BuildMailMessageAction
 
     /**
      * @param  array<string, mixed>  $view_params
-     * @param  DataCollection<int, AttachmentData>|null  $dataCollection
+     * @param  array<int, AttachmentData>|null  $attachments
      */
     public function execute(
         string $name,
         Model $model,
         array $view_params = [],
-        ?DataCollection $dataCollection = null,
+        ?array $attachments = null,
     ): MailMessage {
         /** @var array<string, mixed> $view_params */
         $view_params = array_merge($model->toArray(), $view_params);
@@ -65,8 +63,8 @@ class BuildMailMessageAction
             ->subject($subject)
             ->view($view_html, $viewParams);
 
-        if ($dataCollection instanceof DataCollection) {
-            foreach ($dataCollection as $attachment) {
+        if (is_array($attachments)) {
+            foreach ($attachments as $attachment) {
                 $email = $email->attach($attachment->path, ['as' => $attachment->as, 'mime' => $attachment->mime]);
             }
         }
