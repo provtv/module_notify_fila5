@@ -6,7 +6,6 @@ namespace Modules\Notify\Actions\SMS;
 
 use Spatie\QueueableAction\QueueableAction;
 
-use function Safe\preg_split;
 
 /**
  * Azione per l'invio di SMS tramite Agile Telecom.

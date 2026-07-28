@@ -166,7 +166,8 @@ _docs/
 _docs/
 
 # Second brain: no-docs-archive (wiki) — non tracciare albero legacy docs/archive/
-docs/archive/.devcontainer/
+docs/archive/
+docs/archive/**
 .planning/
 .ralph
 _bmad-output/

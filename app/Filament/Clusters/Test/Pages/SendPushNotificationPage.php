@@ -25,7 +25,6 @@ use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Override;
 use Webmozart\Assert\Assert;
 
-use function Safe\json_encode;
 
 /**
  * @property Schema $notificationForm

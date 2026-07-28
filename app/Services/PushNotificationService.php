@@ -16,7 +16,6 @@ use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
-use function Safe\json_encode;
 
 /**
  * Servizio per notifiche push avanzate.

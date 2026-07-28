@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Log;
 use Modules\Notify\Contracts\WhatsAppProviderActionInterface;
 use Modules\Notify\Datas\WhatsAppData;
 use Modules\Xot\Actions\Cast\SafeIntCastAction;
-use function Safe\json_decode;
 use Spatie\QueueableAction\QueueableAction;
 
 final class Send360dialogWhatsAppAction implements WhatsAppProviderActionInterface

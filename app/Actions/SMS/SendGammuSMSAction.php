@@ -13,9 +13,6 @@ use Override;
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\Process\Process;
 
-use function Safe\file_put_contents;
-use function Safe\tempnam;
-use function Safe\unlink;
 
 final class SendGammuSMSAction implements SmsActionContract
 {

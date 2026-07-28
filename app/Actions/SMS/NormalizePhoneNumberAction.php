@@ -7,8 +7,6 @@ namespace Modules\Notify\Actions\SMS;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
-use function Safe\preg_match;
-use function Safe\preg_replace;
 
 /**
  * Azione per l'invio di SMS tramite Agile Telecom.

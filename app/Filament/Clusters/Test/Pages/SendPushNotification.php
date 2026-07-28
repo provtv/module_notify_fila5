@@ -24,7 +24,6 @@ use Modules\Xot\Filament\Pages\XotBasePage;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Webmozart\Assert\Assert;
 
-use function Safe\json_encode;
 
 /**
  * @property Schema $notificationForm

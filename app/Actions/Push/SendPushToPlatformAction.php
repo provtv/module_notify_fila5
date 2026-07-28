@@ -12,7 +12,6 @@ use Modules\Notify\Datas\PushNotificationData;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
 
-use function Safe\json_encode;
 
 /**
  * Invia una notifica push a un singolo token su una specifica piattaforma
