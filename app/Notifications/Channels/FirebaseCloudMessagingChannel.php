@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Notifications\Channels;
 
+use function Safe\json_encode;
 use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions;
 
+use function Safe\mb_convert_encoding;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Messages\MailMessage;
 use Modules\Notify\Actions\NotifyTheme\Get;

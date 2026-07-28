@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions\Push;
 
+use function Safe\json_encode;
 use Exception;
 use GuzzleHttp\Promise\PromiseInterface;
 use Illuminate\Http\Client\Response;

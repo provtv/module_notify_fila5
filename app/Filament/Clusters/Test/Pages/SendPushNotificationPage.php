@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Clusters\Test\Pages;
 
+use function Safe\json_encode;
 use Exception;
 use Filament\Actions\Action;
 use Filament\Facades\Filament;

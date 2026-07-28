@@ -4,7 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions;
 
+use function Safe\curl_close;
+use function Safe\curl_exec;
+use function Safe\curl_getinfo;
+use function Safe\curl_init;
+use function Safe\curl_setopt;
+use function Safe\json_decode;
+use function Safe\json_encode;
 use Exception;
+
 use Modules\Notify\Datas\SmsData;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
@@ -38,7 +46,7 @@ class EsendexSendAction
         ];
 
         $curlHandle = curl_init();
-        curl_setopt($curlHandle, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($curlHandle, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curlHandle, CURLOPT_URL, $this->base_endpoint.'sms');
 
 
@@ -49,7 +57,7 @@ class EsendexSendAction
         ]);
 
         curl_setopt($curlHandle, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curlHandle, CURLOPT_POST, 1);
+        curl_setopt($curlHandle, CURLOPT_POST, true);
         curl_setopt($curlHandle, CURLOPT_POSTFIELDS, json_encode($data, JSON_THROW_ON_ERROR));
         $response = curl_exec($curlHandle);
         $info = curl_getinfo($curlHandle);
@@ -76,7 +84,7 @@ class EsendexSendAction
     public function login(): ?array
     {
         $curlHandle = curl_init();
-        curl_setopt($curlHandle, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($curlHandle, CURLOPT_SSL_VERIFYPEER, false);
 
         Assert::string($username = config('esendex.username'));
         Assert::string($password = config('esendex.password'));

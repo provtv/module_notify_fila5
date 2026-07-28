@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions\SMS;
 
+use function Safe\mb_convert_encoding;
 use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;

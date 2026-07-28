@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions;
 
+use function Safe\preg_replace;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
 

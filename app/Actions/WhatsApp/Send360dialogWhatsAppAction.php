@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions\WhatsApp;
 
+use function Safe\json_decode;
 use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;

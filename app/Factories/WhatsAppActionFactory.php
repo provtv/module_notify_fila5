@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Factories;
 
+use function Safe\preg_replace;
 use Exception;
 use Illuminate\Support\Facades\Config;
 use Modules\Notify\Contracts\WhatsAppProviderActionInterface;

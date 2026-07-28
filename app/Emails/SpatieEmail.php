@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Emails;
 
+use function Safe\file_get_contents;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Envelope;

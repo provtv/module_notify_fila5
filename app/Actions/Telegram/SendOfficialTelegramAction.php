@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions\Telegram;
 
+use function Safe\json_decode;
+use function Safe\json_encode;
 use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
