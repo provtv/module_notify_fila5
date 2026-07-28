@@ -186,6 +186,7 @@ laravel/
 config/Config
 config/config
 
+# -----------------------------------------------------------------------------
 # Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
 *~HEAD
 *~BASE
@@ -195,11 +196,11 @@ config/config
 *.rej
 *~head
 
-ruvector.db
-.ai*
-_bmad
-agentdb.rvf
-public_html/
-docs/archived/
-*.db
+# MODULE ROOT FORBIDDEN DIRS
+_docs/
+workbench/
+
+# MODULE ROOT FORBIDDEN DIRS
+_docs
+workbench
 phpstan*
