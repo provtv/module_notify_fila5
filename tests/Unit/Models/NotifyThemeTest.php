@@ -4,23 +4,22 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Models;
 
-use function Safe\json_encode;
-use PHPUnit\Framework\Assert;
 use Modules\Notify\Models\NotifyTheme;
 use Modules\Notify\Tests\TestCase;
-use function Pest\Laravel\get;
+use PHPUnit\Framework\Assert;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+use function Safe\json_encode;
+
+uses(TestCase::class);
 
 beforeEach(function (): void {
-    /** @var \Modules\Notify\Tests\TestCase $this */
-$this->disableExceptionHandling();
+    /** @var TestCase $this */
+    $this->disableExceptionHandling();
 });
 
 describe('Notify Theme', function (): void {
     test('_can_create_notify_theme', function (): void {
-        /** @var \Modules\Notify\Tests\TestCase $this */
-$theme = NotifyTheme::create([
+        $theme = NotifyTheme::create([
             'lang' => 'it',
             'type' => 'email',
             'subject' => 'Benvenuto nella nostra piattaforma',
@@ -66,7 +65,7 @@ $theme = NotifyTheme::create([
     });
 
     test('_has_correct_fillable_fields', function (): void {
-$theme = new NotifyTheme;
+        $theme = new NotifyTheme;
 
         $expectedFillable = [
             'id',
@@ -90,7 +89,7 @@ $theme = new NotifyTheme;
     });
 
     test('_has_correct_casts', function (): void {
-$theme = new NotifyTheme;
+        $theme = new NotifyTheme;
 
         $expectedCasts = [
             'id' => 'string',
@@ -108,7 +107,7 @@ $theme = new NotifyTheme;
     });
 
     test('_has_logo_appended_attribute', function (): void {
-$theme = new NotifyTheme;
+        $theme = new NotifyTheme;
 
         $expectedAppends = ['logo'];
 
@@ -116,7 +115,7 @@ $theme = new NotifyTheme;
     });
 
     test('_can_store_json_view_params', function (): void {
-$viewParams = [
+        $viewParams = [
             'company_name' => 'Test Company',
             'primary_color' => '#ef4444',
             'secondary_color' => '#f59e0b',
@@ -148,7 +147,7 @@ $viewParams = [
     });
 
     test('_can_generate_logo_attribute', function (): void {
-$theme = NotifyTheme::create([
+        $theme = NotifyTheme::create([
             'type' => 'email',
             'subject' => 'Logo Test Theme',
             'logo_src' => '/images/custom-logo.png',
@@ -165,7 +164,7 @@ $theme = NotifyTheme::create([
     });
 
     test('_uses_default_logo_dimensions_when_not_specified', function (): void {
-$theme = NotifyTheme::create([
+        $theme = NotifyTheme::create([
             'type' => 'email',
             'subject' => 'Default Logo Theme',
             'logo_src' => '/images/default-logo.png',
@@ -178,7 +177,7 @@ $theme = NotifyTheme::create([
     });
 
     test('_can_update_theme', function (): void {
-$theme = NotifyTheme::create([
+        $theme = NotifyTheme::create([
             'type' => 'email',
             'subject' => 'Original Subject',
             'body' => 'Original body text',
@@ -200,14 +199,14 @@ $theme = NotifyTheme::create([
             'view_params' => json_encode(['updated' => true, 'version' => '2.0']),
         ]);
 
-        Assert::assertEquals('Updated Subject', \assertFreshModel($theme, \Modules\Notify\Models\NotifyTheme::class)->subject);
-        Assert::assertEquals('Updated body text', \assertFreshModel($theme, \Modules\Notify\Models\NotifyTheme::class)->body);
-        Assert::assertEquals('updated', \assertFreshModel($theme, \Modules\Notify\Models\NotifyTheme::class)->theme);
-        Assert::assertEquals(['updated' => true, 'version' => '2.0'], \assertFreshModel($theme, \Modules\Notify\Models\NotifyTheme::class)->view_params);
+        Assert::assertEquals('Updated Subject', \assertFreshModel($theme, NotifyTheme::class)->subject);
+        Assert::assertEquals('Updated body text', \assertFreshModel($theme, NotifyTheme::class)->body);
+        Assert::assertEquals('updated', \assertFreshModel($theme, NotifyTheme::class)->theme);
+        Assert::assertEquals(['updated' => true, 'version' => '2.0'], \assertFreshModel($theme, NotifyTheme::class)->view_params);
     });
 
     test('_can_find_by_language', function (): void {
-NotifyTheme::create([
+        NotifyTheme::create([
             'type' => 'email',
             'subject' => 'Italian Welcome',
             'lang' => 'it',
@@ -232,13 +231,13 @@ NotifyTheme::create([
         Assert::assertCount(1, $italianThemes);
         Assert::assertCount(1, $englishThemes);
         Assert::assertCount(1, $germanThemes);
-        Assert::assertEquals('it', \assertFirstModel($italianThemes, \Modules\Notify\Models\NotifyTheme::class)->lang);
-        Assert::assertEquals('en', \assertFirstModel($englishThemes, \Modules\Notify\Models\NotifyTheme::class)->lang);
-        Assert::assertEquals('de', \assertFirstModel($germanThemes, \Modules\Notify\Models\NotifyTheme::class)->lang);
+        Assert::assertEquals('it', \assertFirstModel($italianThemes, NotifyTheme::class)->lang);
+        Assert::assertEquals('en', \assertFirstModel($englishThemes, NotifyTheme::class)->lang);
+        Assert::assertEquals('de', \assertFirstModel($germanThemes, NotifyTheme::class)->lang);
     });
 
     test('_can_find_by_type', function (): void {
-NotifyTheme::create([
+        NotifyTheme::create([
             'type' => 'email',
             'subject' => 'Email Theme',
             'lang' => 'it',
@@ -263,13 +262,13 @@ NotifyTheme::create([
         Assert::assertCount(1, $emailThemes);
         Assert::assertCount(1, $smsThemes);
         Assert::assertCount(1, $pushThemes);
-        Assert::assertEquals('email', \assertFirstModel($emailThemes, \Modules\Notify\Models\NotifyTheme::class)->type);
-        Assert::assertEquals('sms', \assertFirstModel($smsThemes, \Modules\Notify\Models\NotifyTheme::class)->type);
-        Assert::assertEquals('push', \assertFirstModel($pushThemes, \Modules\Notify\Models\NotifyTheme::class)->type);
+        Assert::assertEquals('email', \assertFirstModel($emailThemes, NotifyTheme::class)->type);
+        Assert::assertEquals('sms', \assertFirstModel($smsThemes, NotifyTheme::class)->type);
+        Assert::assertEquals('push', \assertFirstModel($pushThemes, NotifyTheme::class)->type);
     });
 
     test('_can_find_by_theme_name', function (): void {
-NotifyTheme::create([
+        NotifyTheme::create([
             'type' => 'email',
             'subject' => 'Default Theme',
             'theme' => 'default',
@@ -294,13 +293,13 @@ NotifyTheme::create([
         Assert::assertCount(1, $defaultThemes);
         Assert::assertCount(1, $darkThemes);
         Assert::assertCount(1, $customThemes);
-        Assert::assertEquals('default', \assertFirstModel($defaultThemes, \Modules\Notify\Models\NotifyTheme::class)->theme);
-        Assert::assertEquals('dark', \assertFirstModel($darkThemes, \Modules\Notify\Models\NotifyTheme::class)->theme);
-        Assert::assertEquals('custom', \assertFirstModel($customThemes, \Modules\Notify\Models\NotifyTheme::class)->theme);
+        Assert::assertEquals('default', \assertFirstModel($defaultThemes, NotifyTheme::class)->theme);
+        Assert::assertEquals('dark', \assertFirstModel($darkThemes, NotifyTheme::class)->theme);
+        Assert::assertEquals('custom', \assertFirstModel($customThemes, NotifyTheme::class)->theme);
     });
 
     test('_can_find_by_post_type', function (): void {
-NotifyTheme::create([
+        NotifyTheme::create([
             'type' => 'email',
             'subject' => 'User Welcome',
             'post_type' => 'App\Models\User',
@@ -328,13 +327,13 @@ NotifyTheme::create([
         Assert::assertCount(1, $userThemes);
         Assert::assertCount(1, $companyThemes);
         Assert::assertCount(1, $orderThemes);
-        Assert::assertEquals('App\Models\User', \assertFirstModel($userThemes, \Modules\Notify\Models\NotifyTheme::class)->post_type);
-        Assert::assertEquals('App\Models\Company', \assertFirstModel($companyThemes, \Modules\Notify\Models\NotifyTheme::class)->post_type);
-        Assert::assertEquals('App\Models\Order', \assertFirstModel($orderThemes, \Modules\Notify\Models\NotifyTheme::class)->post_type);
+        Assert::assertEquals('App\Models\User', \assertFirstModel($userThemes, NotifyTheme::class)->post_type);
+        Assert::assertEquals('App\Models\Company', \assertFirstModel($companyThemes, NotifyTheme::class)->post_type);
+        Assert::assertEquals('App\Models\Order', \assertFirstModel($orderThemes, NotifyTheme::class)->post_type);
     });
 
     test('_can_find_by_subject_pattern', function (): void {
-NotifyTheme::create([
+        NotifyTheme::create([
             'type' => 'email',
             'subject' => 'Welcome to our platform',
             'lang' => 'it',
@@ -357,8 +356,8 @@ NotifyTheme::create([
 
         Assert::assertCount(2, $welcomeThemes);
         Assert::assertCount(1, $orderThemes);
-        $welcomeSubject = \assertFirstModel($welcomeThemes, \Modules\Notify\Models\NotifyTheme::class)->subject;
-        $orderSubject = \assertFirstModel($orderThemes, \Modules\Notify\Models\NotifyTheme::class)->subject;
+        $welcomeSubject = \assertFirstModel($welcomeThemes, NotifyTheme::class)->subject;
+        $orderSubject = \assertFirstModel($orderThemes, NotifyTheme::class)->subject;
         Assert::assertNotNull($welcomeSubject);
         Assert::assertNotNull($orderSubject);
         Assert::assertStringContainsString('Welcome', $welcomeSubject);
@@ -366,7 +365,7 @@ NotifyTheme::create([
     });
 
     test('_can_find_by_from_email', function (): void {
-NotifyTheme::create([
+        NotifyTheme::create([
             'type' => 'email',
             'subject' => 'System Notification',
             'from' => 'System',
@@ -394,13 +393,13 @@ NotifyTheme::create([
         Assert::assertCount(1, $systemThemes);
         Assert::assertCount(1, $marketingThemes);
         Assert::assertCount(1, $supportThemes);
-        Assert::assertEquals('system@example.com', \assertFirstModel($systemThemes, \Modules\Notify\Models\NotifyTheme::class)->from_email);
-        Assert::assertEquals('marketing@example.com', \assertFirstModel($marketingThemes, \Modules\Notify\Models\NotifyTheme::class)->from_email);
-        Assert::assertEquals('support@example.com', \assertFirstModel($supportThemes, \Modules\Notify\Models\NotifyTheme::class)->from_email);
+        Assert::assertEquals('system@example.com', \assertFirstModel($systemThemes, NotifyTheme::class)->from_email);
+        Assert::assertEquals('marketing@example.com', \assertFirstModel($marketingThemes, NotifyTheme::class)->from_email);
+        Assert::assertEquals('support@example.com', \assertFirstModel($supportThemes, NotifyTheme::class)->from_email);
     });
 
     test('_can_find_by_view_params_value', function (): void {
-NotifyTheme::create([
+        NotifyTheme::create([
             'type' => 'email',
             'subject' => 'High Priority Theme',
             'view_params' => [
@@ -432,12 +431,12 @@ NotifyTheme::create([
 
         Assert::assertCount(1, $highPriorityThemes);
         Assert::assertCount(1, $securityThemes);
-        Assert::assertEquals('high', \assertFirstModel($highPriorityThemes, \Modules\Notify\Models\NotifyTheme::class)->view_params['priority']);
-        Assert::assertEquals('security', \assertFirstModel($securityThemes, \Modules\Notify\Models\NotifyTheme::class)->view_params['category']);
+        Assert::assertEquals('high', \assertFirstModel($highPriorityThemes, NotifyTheme::class)->view_params['priority']);
+        Assert::assertEquals('security', \assertFirstModel($securityThemes, NotifyTheme::class)->view_params['category']);
     });
 
     test('_can_find_by_multiple_criteria', function (): void {
-NotifyTheme::create([
+        NotifyTheme::create([
             'type' => 'email',
             'subject' => 'Italian High Priority Security',
             'lang' => 'it',
@@ -476,14 +475,14 @@ NotifyTheme::create([
             ->get();
 
         Assert::assertCount(1, $italianEmailHighPriority);
-        Assert::assertEquals('it', \assertFirstModel($italianEmailHighPriority, \Modules\Notify\Models\NotifyTheme::class)->lang);
-        Assert::assertEquals('email', \assertFirstModel($italianEmailHighPriority, \Modules\Notify\Models\NotifyTheme::class)->type);
-        Assert::assertEquals('high', \notifyArrayGet(\assertFirstModel($italianEmailHighPriority, \Modules\Notify\Models\NotifyTheme::class)->view_params, 'priority'));
-        Assert::assertEquals('Italian High Priority Security', \assertFirstModel($italianEmailHighPriority, \Modules\Notify\Models\NotifyTheme::class)->subject);
+        Assert::assertEquals('it', \assertFirstModel($italianEmailHighPriority, NotifyTheme::class)->lang);
+        Assert::assertEquals('email', \assertFirstModel($italianEmailHighPriority, NotifyTheme::class)->type);
+        Assert::assertEquals('high', \notifyArrayGet(\assertFirstModel($italianEmailHighPriority, NotifyTheme::class)->view_params, 'priority'));
+        Assert::assertEquals('Italian High Priority Security', \assertFirstModel($italianEmailHighPriority, NotifyTheme::class)->subject);
     });
 
     test('_can_handle_null_values', function (): void {
-$theme = NotifyTheme::create([
+        $theme = NotifyTheme::create([
             'type' => 'email',
             'subject' => 'Null Values Theme',
             'lang' => null,
@@ -515,7 +514,7 @@ $theme = NotifyTheme::create([
     });
 
     test('_can_handle_empty_view_params', function (): void {
-$theme = NotifyTheme::create([
+        $theme = NotifyTheme::create([
             'type' => 'email',
             'subject' => 'Empty Params Theme',
             'view_params' => [],
@@ -528,7 +527,7 @@ $theme = NotifyTheme::create([
     });
 
     test('_can_handle_complex_view_params', function (): void {
-$complexParams = [
+        $complexParams = [
             'branding' => [
                 'logo' => [
                     'url' => '/images/logo.png',

@@ -4,24 +4,23 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Models;
 
-use function Safe\json_encode;
-use PHPUnit\Framework\Assert;
+use Modules\Notify\Database\Factories\MailTemplateFactory;
 use Modules\Notify\Models\MailTemplate;
 use Modules\Notify\Tests\TestCase;
-use Modules\Notify\Database\Factories\MailTemplateFactory;
-use function Pest\Laravel\get;
+use PHPUnit\Framework\Assert;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+use function Safe\json_encode;
+
+uses(TestCase::class);
 
 beforeEach(function (): void {
-    /** @var \Modules\Notify\Tests\TestCase $this */
-$this->disableExceptionHandling();
+    /** @var TestCase $this */
+    $this->disableExceptionHandling();
 });
 
 describe('Mail Template', function (): void {
     test('_can_create_mail_template', function (): void {
-        /** @var \Modules\Notify\Tests\TestCase $this */
-$template = MailTemplateFactory::new()->createOne([
+        $template = MailTemplateFactory::new()->createOne([
             'mailable' => 'App\Mail\WelcomeMail',
             'name' => 'Welcome Email Template',
             'subject' => 'Benvenuto {{name}}!',
@@ -49,7 +48,7 @@ $template = MailTemplateFactory::new()->createOne([
     });
 
     test('_has_correct_fillable_fields', function (): void {
-$template = new MailTemplate;
+        $template = new MailTemplate;
 
         $expectedFillable = [
             'mailable',
@@ -67,7 +66,7 @@ $template = new MailTemplate;
     });
 
     test('_has_correct_casts', function (): void {
-$template = new MailTemplate;
+        $template = new MailTemplate;
 
         $expectedCasts = [
             'created_at' => 'datetime',
@@ -79,7 +78,7 @@ $template = new MailTemplate;
     });
 
     test('_has_translatable_fields', function (): void {
-$template = new MailTemplate;
+        $template = new MailTemplate;
 
         $expectedTranslatable = [
             'subject',
@@ -92,13 +91,13 @@ $template = new MailTemplate;
     });
 
     test('_uses_notify_connection', function (): void {
-$template = new MailTemplate;
+        $template = new MailTemplate;
 
         Assert::assertEquals('notify', $template->getConnectionName());
     });
 
     test('_generates_slug_from_name', function (): void {
-$template = MailTemplateFactory::new()->createOne([
+        $template = MailTemplateFactory::new()->createOne([
             'mailable' => 'App\Mail\TestMail',
             'name' => 'Test Email Template',
             'subject' => 'Test Subject',
@@ -115,7 +114,7 @@ $template = MailTemplateFactory::new()->createOne([
     });
 
     test('_can_store_json_params', function (): void {
-$params = ['name', 'email', 'company', 'role'];
+        $params = ['name', 'email', 'company', 'role'];
 
         $template = MailTemplateFactory::new()->createOne([
             'mailable' => 'App\Mail\ComplexMail',
@@ -138,7 +137,7 @@ $params = ['name', 'email', 'company', 'role'];
     });
 
     test('_can_store_json_sms_template', function (): void {
-$smsTemplate = [
+        $smsTemplate = [
             'message' => 'Benvenuto {{name}}! La tua email è {{email}}',
             'variables' => ['name', 'email'],
             'max_length' => 160,
@@ -166,7 +165,7 @@ $smsTemplate = [
     });
 
     test('_can_increment_counter', function (): void {
-$template = MailTemplateFactory::new()->createOne([
+        $template = MailTemplateFactory::new()->createOne([
             'mailable' => 'App\Mail\CounterMail',
             'name' => 'Counter Email Template',
             'subject' => 'Test Subject',
@@ -178,14 +177,14 @@ $template = MailTemplateFactory::new()->createOne([
         Assert::assertEquals(0, $template->counter);
 
         $template->increment('counter');
-        Assert::assertEquals(1, \assertFreshModel($template, \Modules\Notify\Models\MailTemplate::class)->counter);
+        Assert::assertEquals(1, \assertFreshModel($template, MailTemplate::class)->counter);
 
         $template->increment('counter', 5);
-        Assert::assertEquals(6, \assertFreshModel($template, \Modules\Notify\Models\MailTemplate::class)->counter);
+        Assert::assertEquals(6, \assertFreshModel($template, MailTemplate::class)->counter);
     });
 
     test('_can_update_template', function (): void {
-$template = MailTemplateFactory::new()->createOne([
+        $template = MailTemplateFactory::new()->createOne([
             'mailable' => 'App\Mail\UpdateMail',
             'name' => 'Original Name',
             'subject' => 'Original Subject',
@@ -208,11 +207,11 @@ $template = MailTemplateFactory::new()->createOne([
             'params' => json_encode(['updated']),
         ]);
 
-        Assert::assertEquals('updated-name', \assertFreshModel($template, \Modules\Notify\Models\MailTemplate::class)->slug);
+        Assert::assertEquals('updated-name', \assertFreshModel($template, MailTemplate::class)->slug);
     });
 
     test('_can_find_by_mailable_and_slug', function (): void {
-$template = MailTemplateFactory::new()->createOne([
+        $template = MailTemplateFactory::new()->createOne([
             'mailable' => 'App\Mail\FindMail',
             'name' => 'Find Test Template',
             'subject' => 'Test Subject',
@@ -232,7 +231,7 @@ $template = MailTemplateFactory::new()->createOne([
     });
 
     test('_can_find_by_name', function (): void {
-$template = MailTemplateFactory::new()->createOne([
+        $template = MailTemplateFactory::new()->createOne([
             'mailable' => 'App\Mail\NameMail',
             'name' => 'Name Search Template',
             'subject' => 'Test Subject',
@@ -249,7 +248,7 @@ $template = MailTemplateFactory::new()->createOne([
     });
 
     test('_can_find_by_subject_pattern', function (): void {
-$template = MailTemplateFactory::new()->createOne([
+        $template = MailTemplateFactory::new()->createOne([
             'mailable' => 'App\Mail\PatternMail',
             'name' => 'Pattern Template',
             'subject' => 'Welcome to our platform',
@@ -261,11 +260,11 @@ $template = MailTemplateFactory::new()->createOne([
         $foundTemplates = MailTemplate::where('subject', 'like', '%Welcome%')->get();
 
         Assert::assertCount(1, $foundTemplates);
-        Assert::assertEquals('Welcome to our platform', \assertFirstModel($foundTemplates, \Modules\Notify\Models\MailTemplate::class)->subject);
+        Assert::assertEquals('Welcome to our platform', \assertFirstModel($foundTemplates, MailTemplate::class)->subject);
     });
 
     test('_can_find_by_params', function (): void {
-$template = MailTemplateFactory::new()->createOne([
+        $template = MailTemplateFactory::new()->createOne([
             'mailable' => 'App\Mail\ParamsMail',
             'name' => 'Params Template',
             'subject' => 'Test Subject',
@@ -277,12 +276,12 @@ $template = MailTemplateFactory::new()->createOne([
         $foundTemplates = MailTemplate::whereJsonContains('params', 'name')->get();
 
         Assert::assertCount(1, $foundTemplates);
-        Assert::assertEquals($template->id, \assertFirstModel($foundTemplates, \Modules\Notify\Models\MailTemplate::class)->id);
-        Assert::assertContains('name', \assertNotifyArray(\assertFirstModel($foundTemplates, \Modules\Notify\Models\MailTemplate::class)->params));
+        Assert::assertEquals($template->id, \assertFirstModel($foundTemplates, MailTemplate::class)->id);
+        Assert::assertContains('name', \assertNotifyArray(\assertFirstModel($foundTemplates, MailTemplate::class)->params));
     });
 
     test('_can_find_by_counter_range', function (): void {
-MailTemplateFactory::new()->createOne([
+        MailTemplateFactory::new()->createOne([
             'mailable' => 'App\Mail\LowCounterMail',
             'name' => 'Low Counter Template',
             'subject' => 'Test Subject',
@@ -305,12 +304,12 @@ MailTemplateFactory::new()->createOne([
 
         Assert::assertCount(1, $lowCounterTemplates);
         Assert::assertCount(1, $highCounterTemplates);
-        Assert::assertEquals(5, \assertFirstModel($lowCounterTemplates, \Modules\Notify\Models\MailTemplate::class)->counter);
-        Assert::assertEquals(50, \assertFirstModel($highCounterTemplates, \Modules\Notify\Models\MailTemplate::class)->counter);
+        Assert::assertEquals(5, \assertFirstModel($lowCounterTemplates, MailTemplate::class)->counter);
+        Assert::assertEquals(50, \assertFirstModel($highCounterTemplates, MailTemplate::class)->counter);
     });
 
     test('_can_handle_empty_params', function (): void {
-$template = MailTemplateFactory::new()->createOne([
+        $template = MailTemplateFactory::new()->createOne([
             'mailable' => 'App\Mail\EmptyParamsMail',
             'name' => 'Empty Params Template',
             'subject' => 'Test Subject',
@@ -322,7 +321,7 @@ $template = MailTemplateFactory::new()->createOne([
     });
 
     test('_can_handle_empty_sms_template', function (): void {
-$template = MailTemplateFactory::new()->createOne([
+        $template = MailTemplateFactory::new()->createOne([
             'mailable' => 'App\Mail\EmptySmsMail',
             'name' => 'Empty SMS Template',
             'subject' => 'Test Subject',
@@ -335,7 +334,7 @@ $template = MailTemplateFactory::new()->createOne([
     });
 
     test('_can_store_complex_sms_template', function (): void {
-$complexSmsTemplate = [
+        $complexSmsTemplate = [
             'message' => 'Benvenuto {{name}}!',
             'variables' => ['name', 'email'],
             'max_length' => 160,
@@ -375,7 +374,7 @@ $complexSmsTemplate = [
     });
 
     test('_can_find_templates_by_multiple_criteria', function (): void {
-MailTemplateFactory::new()->createOne([
+        MailTemplateFactory::new()->createOne([
             'mailable' => 'App\Mail\MultiCriteriaMail',
             'name' => 'Multi Criteria Template',
             'subject' => 'Welcome to our platform',
@@ -399,12 +398,12 @@ MailTemplateFactory::new()->createOne([
             ->get();
 
         Assert::assertCount(1, $foundTemplates);
-        Assert::assertEquals('Another Multi Criteria Template', \assertFirstModel($foundTemplates, \Modules\Notify\Models\MailTemplate::class)->name);
-        Assert::assertEquals(20, \assertFirstModel($foundTemplates, \Modules\Notify\Models\MailTemplate::class)->counter);
+        Assert::assertEquals('Another Multi Criteria Template', \assertFirstModel($foundTemplates, MailTemplate::class)->name);
+        Assert::assertEquals(20, \assertFirstModel($foundTemplates, MailTemplate::class)->counter);
     });
 
     test('_can_handle_null_values', function (): void {
-$template = MailTemplateFactory::new()->createOne([
+        $template = MailTemplateFactory::new()->createOne([
             'mailable' => 'App\Mail\NullValuesMail',
             'name' => 'Null Values Template',
             'subject' => null,
@@ -422,7 +421,7 @@ $template = MailTemplateFactory::new()->createOne([
     });
 
     test('_can_generate_unique_slugs', function (): void {
-MailTemplateFactory::new()->createOne([
+        MailTemplateFactory::new()->createOne([
             'mailable' => 'App\Mail\UniqueSlugMail1',
             'name' => 'Test Template',
             'subject' => 'Test Subject',
@@ -443,7 +442,7 @@ MailTemplateFactory::new()->createOne([
         $templates = MailTemplate::where('name', 'Test Template')->get();
 
         Assert::assertCount(2, $templates);
-        Assert::assertEquals('test-template', \assertFirstModel($templates, \Modules\Notify\Models\MailTemplate::class)->slug);
-        Assert::assertEquals('test-template-1', \assertFirstModel($templates->slice(1), \Modules\Notify\Models\MailTemplate::class)->slug);
+        Assert::assertEquals('test-template', \assertFirstModel($templates, MailTemplate::class)->slug);
+        Assert::assertEquals('test-template-1', \assertFirstModel($templates->slice(1), MailTemplate::class)->slug);
     });
 });

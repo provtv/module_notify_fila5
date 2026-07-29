@@ -32,7 +32,6 @@ beforeEach(function (): void {
 
 describe('Notify Theme PartOne', function (): void {
     test('_can_create_notify_theme', function (): void {
-        /** @var TestCase $this */
         $theme = NotifyTheme::create([
             'lang' => 'it',
             'type' => 'email',
@@ -79,7 +78,7 @@ describe('Notify Theme PartOne', function (): void {
     });
 
     test('_has_correct_fillable_fields', function (): void {
-        $theme = new NotifyTheme();
+        $theme = new NotifyTheme;
 
         $expectedFillable = [
             'id',
@@ -103,7 +102,7 @@ describe('Notify Theme PartOne', function (): void {
     });
 
     test('_has_correct_casts', function (): void {
-        $theme = new NotifyTheme();
+        $theme = new NotifyTheme;
 
         $expectedCasts = [
             'id' => 'string',
@@ -121,7 +120,7 @@ describe('Notify Theme PartOne', function (): void {
     });
 
     test('_has_logo_appended_attribute', function (): void {
-        $theme = new NotifyTheme();
+        $theme = new NotifyTheme;
 
         $expectedAppends = ['logo'];
 
@@ -249,5 +248,4 @@ describe('Notify Theme PartOne', function (): void {
         Assert::assertEquals('en', \assertFirstModel($englishThemes, NotifyTheme::class)->lang);
         Assert::assertEquals('de', \assertFirstModel($germanThemes, NotifyTheme::class)->lang);
     });
-
 });
