@@ -72,7 +72,8 @@ class SendPushNotification extends XotBasePage
             if (! is_object($profile)) {
                 return [];
             }
-            $fullName = (string) (data_get($profile, 'full_name') ?? 'Utente');
+            $fullNameRaw = data_get($profile, 'full_name');
+            $fullName = is_scalar($fullNameRaw) ? (string) $fullNameRaw : 'Utente';
 
             $tokenAttr = method_exists($item, 'getAttribute') ? $item->getAttribute('push_notifications_token') : null;
             $token = is_string($tokenAttr) ? $tokenAttr : '';

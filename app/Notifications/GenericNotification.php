@@ -79,7 +79,12 @@ class GenericNotification extends Notification implements ShouldQueue
 
         // Aggiungi eventuali azioni se specificate nei dati
         if (isset($this->data['action_text'], $this->data['action_url'])) {
-            $mail->action((string) $this->data['action_text'], (string) $this->data['action_url']);
+            $actionText = $this->data['action_text'];
+            $actionUrl = $this->data['action_url'];
+            $mail->action(
+                is_scalar($actionText) ? (string) $actionText : '',
+                is_scalar($actionUrl) ? (string) $actionUrl : ''
+            );
         }
 
         // Aggiungi eventuali linee aggiuntive
@@ -110,7 +115,7 @@ class GenericNotification extends Notification implements ShouldQueue
         $to = '';
         if (is_object($notifiable) && method_exists($notifiable, 'routeNotificationForTwilio')) {
             $routeResult = $notifiable->routeNotificationForTwilio($this);
-            $to = (string) ($routeResult ?? '');
+            $to = is_scalar($routeResult) ? (string) $routeResult : '';
         }
 
         return [
