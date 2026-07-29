@@ -33,7 +33,7 @@ class ChristmasGreetingMailable extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address(strval(config('mail.from.address', 'hello@example.com')), $this->senderName),
+            from: new Address(is_scalar(config('mail.from.address', 'hello@example.com')) ? (string) config('mail.from.address', 'hello@example.com') : 'hello@example.com', $this->senderName),
             subject: 'Auguri di Buone Feste e Informazioni Importanti!',
         );
     }

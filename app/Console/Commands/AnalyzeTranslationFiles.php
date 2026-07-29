@@ -36,7 +36,7 @@ class AnalyzeTranslationFiles extends Command
 
         // Collect all files and their keys
         foreach ($languages as $langDir) {
-            $langDirPath = strval($langDir);
+            $langDirPath = is_scalar($langDir) ? (string) $langDir : '';
             $lang = basename($langDirPath);
             $files = File::files($langDirPath);
 

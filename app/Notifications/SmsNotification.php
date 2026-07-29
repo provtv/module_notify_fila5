@@ -46,8 +46,8 @@ class SmsNotification extends Notification implements ShouldQueue
 
             $this->smsData = SmsData::from([
                 'body' => $content,
-                'recipient' => strval($recipient),
-                'from' => strval($from),
+                'recipient' => is_scalar($recipient) ? (string) $recipient : '',
+                'from' => is_scalar($from) ? (string) $from : '',
             ]);
         }
 
@@ -79,7 +79,7 @@ class SmsNotification extends Notification implements ShouldQueue
         // we'll use that to get the destination phone number
         if (is_object($notifiable) && method_exists($notifiable, 'routeNotificationForSms')) {
             $routeResult = $notifiable->routeNotificationForSms($this);
-            $this->smsData->recipient = strval($routeResult ?? '');
+            $this->smsData->recipient = is_scalar($routeResult ?? null) ? (string) ($routeResult ?? '') : '';
         }
 
         return $this->smsData;

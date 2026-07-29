@@ -29,7 +29,7 @@ class SendRecordsNotificationBulkAction extends XotBaseBulkAction
             ->action(function (Collection $records, array $data): void {
                 /** @var Collection<int, Model> $records */
                 /** @var array<string, mixed> $data */
-                $mailTemplateSlug = strval($data['mail_template_slug'] ?? '');
+                $mailTemplateSlug = is_scalar($data['mail_template_slug'] ?? null) ? (string) $data['mail_template_slug'] : '';
                 /** @var array<int, string> $channels */
                 $channels = (array) $data['channels'];
                 app(SendRecordsNotificationAction::class)->execute($records, $mailTemplateSlug, $channels);
