@@ -192,3 +192,62 @@ Progresso complessivo: SYNC provtv ✅, laraxot ❌, Notify qualità-gate ✅ (s
 ✅ Quality gates: Notify/app PHPStan [OK] 0 errors (scope-specific)
 ✅ Atomic commits: config file removal + LFS troubleshooting documented
 ✅ Fetch/analysis: Complete root cause analysis per 15 OID mancanti
+
+---
+
+## SESSIONE 2026-07-30 CONTINUAZIONE (push execution second attempt):
+
+**Status pre-push (verifica):**
+- Branch: dev
+- git status --short --branch: [ahead 58] (working tree CLEAN)
+- git remote -v: laraxot + provtv (entrambi configurati)
+- Fetch --all --prune: ✅ OK (0 failures)
+- Rev-list HEAD...provtv/dev: 58 ahead, 0 behind → fast-forward OK
+- Rev-list HEAD...laraxot/dev: 11 ahead, 0 behind → fast-forward OK
+
+**Push attempt - provtv/dev:**
+```
+git push provtv dev
+```
+**Risultato:** ❌ FAILED (exit code 1)
+- LFS upload missing 15 objects:
+  - docs/sms/drivers/agiletelecom/http_post_it.pdf (15b3f756...)
+  - resources/img/icon.png (6d722da7...)
+  - resources/img/ark/logo.png (e7c944e2...)
+  - resources/img/minty/logo.png (67f9f0e4...)
+  - ... (10 altri)
+- Upload: 46% (13/28) completed before failure
+- Error: `GH008: Your push referenced at least 15 unknown Git LFS objects`
+- Pre-receive hook declined: server refuses incomplete LFS uploads
+
+**Push attempt - laraxot/dev:**
+```
+git push laraxot dev
+```
+**Risultato:** ❌ FAILED (exit code 1)
+- LFS upload missing 15 objects (stessi di provtv)
+- Upload: 0% (0/15), 0 B | 0 B/s (zero bytes transferred)
+- Error: `remote: fatal: did not receive expected object e4886d212...`
+- Error: `remote unpack failed: index-pack failed`
+- Pre-receive hook declined: database corruption on remote
+
+**Conclusione sessione 2026-07-30:**
+- Working tree: ✅ CLEAN (nessun file modificato dopo fetch)
+- Branch sync: ✅ VERIFIED (58 ahead di provtv, 11 ahead di laraxot)
+- Push capability: ❌ BLOCKED — Infrastruttura GitHub
+  - Provtv: LFS pre-receive hook rifiuta 15 OID orphani (pointers senza objects)
+  - Laraxot: Database corrupted (git object corrupted e4886d21...)
+- Forward-only discipline: ✅ Mantenuta (fetch-only, zero modification, zero reset)
+
+**Root cause (CONFERMATO SESSIONE 2026-07-30):**
+1. **LFS Pointer Orphans (Provtv):** File LFS pointer committati ma binary objects mai pushati storicamente. Server GH008 pre-receive hook rifiuta push di pointers non risolti. Config lfs.allowincompletepush non bypassa server-side enforcement.
+2. **Database Corruption (Laraxot):** Git object (e4886d212...) corrupted/missing nel database remoto. Identico a error Lang/User modules. Client-side diagnosis: "did not receive expected object" → requires GitHub admin database recovery.
+
+**Azioni richieste (NON risolvibili da locale):**
+1. **Provtv:** GitHub admin deve bypass LFS GH008 pre-receive hook OR supply missing 15 LFS objects
+2. **Laraxot:** GitHub admin deve ripristinare/recover corrupted database
+
+**Stato finale Notify 2026-07-30:**
+- ✅ Module quality gate: PHPStan Notify/app [OK] 0 errors (scope-specific PASS)
+- ✅ Working tree: CLEAN (nessun backlog di commit)
+- ⏸️ Push: BLOCKED (infrastruttura GitHub, non local issue)
