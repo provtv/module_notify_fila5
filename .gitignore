@@ -205,3 +205,5 @@ _docs
 workbench
 phpstan*
 docs/**/*-[0-9].md
+archive/
+legacy/
