@@ -30,11 +30,14 @@ class GetMailLayoutAction
      */
     public function execute(string $baseName = 'base'): string
     {
-        $xot = XotData::make();
-        $pub_theme = $xot->pub_theme;
+        $xotResult = XotData::make();
+        $pubThemeValue = $xotResult->pub_theme ?? null;
+        $pub_theme = is_string($pubThemeValue) ? $pubThemeValue : 'theme';
         $themePath = base_path('Themes/'.$pub_theme.'/resources/mail-layouts');
 
-        $context = app(GetThemeContextAction::class)->execute();
+        /** @var mixed $contextResult */
+        $contextResult = app(GetThemeContextAction::class)->execute();
+        $context = is_string($contextResult) ? $contextResult : 'default';
 
         // Potential filenames to check in priority order
         // 1. Specific base layout for the context (e.g. base_christmas.html) - Allows overriding base layout per season
@@ -77,6 +80,8 @@ class GetMailLayoutAction
 
         $content = file_get_contents($layoutPath);
 
-        return app(SafeStringCastAction::class)->execute($content);
+        /** @var mixed $castResult */
+        $castResult = app(SafeStringCastAction::class)->execute($content);
+        return is_string($castResult) ? $castResult : $content;
     }
 }

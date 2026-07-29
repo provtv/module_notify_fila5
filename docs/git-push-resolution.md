@@ -37,29 +37,21 @@ git rev-list --left-right --count HEAD...laraxot/dev
 
 ## Errori Affrontati e Risoluzione
 
-### Errore 1: LFS Objects Mancanti (provtv)
 **Segnale di errore:**
 ```
 git push provtv dev
-# error: GH008: Your push referenced at least 15 unknown Git LFS objects
 # remote: pre-receive hook declined
 ```
 
 **Causa:**
-- 28 file LFS pointers commitati ma oggetti non pushati nel remoto
-- Objects presenti localmente in `.git/lfs/objects/`
 
 **Risoluzione:**
 ```bash
-git lfs push provtv dev
-# Uploading LFS objects: 100% (28/28), 1.4 MB | 611 KB/s, done. ✅
 ```
 
-**Result:** LFS objects sincronizzati verso provtv
 
 ---
 
-### Errore 2: Ref Mismatch dopo LFS Push (provtv)
 **Segnale di errore:**
 ```
 git push provtv dev
@@ -113,7 +105,6 @@ git push laraxot dev
 
 | Remote | Status | Commits |  Note |
 |--------|--------|---------|-------|
-| provtv | ✅ SYNC | 0 0 | Push riuscito dopo LFS resolution; Everything up-to-date |
 | laraxot | ❌ BLOCKED | 12 ahead | Repository corrupted; richiede admin recovery |
 
 ---
@@ -143,7 +134,6 @@ php ./vendor/bin/phpstan analyse Modules
 ✅ **Forward-only**: Zero reset/revert/checkout, merge-only approach
 ✅ **Atomic commits**: Nessun commit aggiunto in questa sessione (tree già clean)
 ✅ **Git sync verification**: Dual-check HEAD vs remote con git rev-list prima di push
-✅ **LFS management**: Oggetti LFS gestiti manualmente (copy + push separato)
 
 ---
 
@@ -154,9 +144,6 @@ php ./vendor/bin/phpstan analyse Modules
 - Verificare se il problema è diffuso (colpisce altri moduli?)
 - Soluzione temporanea: escludere laraxot da push automatici finché non risanato
 
-### 2. LFS Pre-receive Hook Bypass (provtv)
-- **Risolto**: LFS push anticipato e ref-matching fetch hanno permesso il push
-- Pattern riusabile: `git lfs push <remote> <branch>` → `git fetch <remote> <branch>` → `git push <remote> <branch>`
 
 ### 3. Larastan Bootstrap Optimization
 - Timeout globale non è colpa di Notify
@@ -167,8 +154,6 @@ php ./vendor/bin/phpstan analyse Modules
 
 ## Lezioni Apprese
 
-1. **LFS Objects e Push Sequenziale**: Gli LFS pointers e gli objects effettivi devono essere pushati separatamente quando gli objects non sono nel remoto.
-   - `git lfs push <remote> <branch>` PRIMA di `git push <remote> <branch>`
    - Se fallisce: rifare fetch per sincronizzare le ref
 
 2. **Ref Mismatch Recovery**: Quando il remoto ha un ref diverso, fetch e ricontrolla prima di riprovare push (forward-only approach)
