@@ -110,7 +110,7 @@ class GenericNotification extends Notification implements ShouldQueue
         $to = '';
         if (is_object($notifiable) && method_exists($notifiable, 'routeNotificationForTwilio')) {
             $routeResult = $notifiable->routeNotificationForTwilio($this);
-            $to = is_scalar($routeResult ?? null) ? (string) ($routeResult ?? '') : '';
+            $to = is_scalar($routeResult) ? (string) $routeResult : '';
         }
 
         return [

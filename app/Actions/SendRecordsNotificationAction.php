@@ -109,6 +109,6 @@ class SendRecordsNotificationAction
 
         $key = $record->getKey();
 
-        return null !== $key ? (string) $key : '';
+        return is_scalar($key) ? (string) $key : '';
     }
 }

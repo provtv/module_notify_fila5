@@ -79,7 +79,7 @@ class SmsNotification extends Notification implements ShouldQueue
         // we'll use that to get the destination phone number
         if (is_object($notifiable) && method_exists($notifiable, 'routeNotificationForSms')) {
             $routeResult = $notifiable->routeNotificationForSms($this);
-            $this->smsData->recipient = is_scalar($routeResult ?? null) ? (string) ($routeResult ?? '') : '';
+            $this->smsData->recipient = is_scalar($routeResult) ? (string) $routeResult : '';
         }
 
         return $this->smsData;
