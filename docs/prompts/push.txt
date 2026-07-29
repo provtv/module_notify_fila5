@@ -144,7 +144,7 @@ Progresso complessivo: SYNC provtv ✅, laraxot ❌, Notify qualità-gate ✅ (s
 
 ---
 
-## AGGIORNAMENTO SESSIONE CORRENTE 2026-07-29 (Notify module push execution):
+## AGGIORNAMENTO SESSIONE CORRENTE 2026-07-30 (Notify module push execution - continuation):
 
 **Procedura eseguita:**
 1. ✅ Fetch da laraxot + provtv (entrambi raggiungibili)
@@ -167,20 +167,28 @@ Progresso complessivo: SYNC provtv ✅, laraxot ❌, Notify qualità-gate ✅ (s
 - LFS status: git lfs status mostra 28 objects to push, ma fetch da laraxot fallisce (404 Not Found)
 - LFS config: lfs.allowincompletepush = true (applicato, ma upload incompleto 0/15)
 
-**Root cause analisi:**
-1. **Laraxot repository corrupted:** Uguale a Lang module — oggetto git mancante (e4886d21...) nel database remoto
-   - Richiede GitHub admin recovery (non risolvibile da client side)
-2. **Provtv LFS pre-receive hook:** File LFS pointers commitati ma objects mai pushati storicamente
-   - Entrambi i remoti (laraxot + provtv) mancano degli LFS objects
-   - Fetch da laraxot restituisce 404 (oggetti non esistono nemmeno lì)
-   - Config lfs.allowincompletepush non bypassa pre-receive hook server-side
+**Root cause analisi (VERIFICATO SESSIONE 2026-07-29 CONTINUAZIONE):**
 
-**Azioni richieste:**
-- GitHub admin: Recovery database di laraxot (corrupted objects)
-- GitHub admin: Bypass o reset LFS pre-receive hook su provtv
-- Repository cleanup: Ripulire LFS pointer references o push effettivi objects
+1. **LFS Objects Missing — Infrastructure Issue CONFIRMED:**
+   - 15 OID references in current commit (docs/test-smtp-page-form.jpg, etc.)
+   - ✗ ZERO oggetti disponibili in root LFS cache (.git/lfs/objects)
+   - ✗ ZERO oggetti disponibili in laraxot remote (404 Not Found per tutti 15)
+   - ✓ Pointer files present in git history but binary objects never existed on any remote
+   - Conclusion: File LFS pointers committed storico, objects binari mai pushati
+   - Client-side bypass (lfs.allowincompletepush) non funziona vs GitHub pre-receive hook
+
+2. **Laraxot Repository Database Corrupted (CONFERMATO):**
+   - Error message: "remote: fatal: did not receive expected object e4886d21..."
+   - Same corruption as Lang module
+   - Non risolvibile da client side
+
+**Azioni richieste (ONLY GitHub Admin Can Resolve):**
+- **Provtv/module_notify_fila5 LFS Hook:** Bypass GH008 pre-receive hook OR reset LFS object database
+- **Laraxot/module_notify_fila5:** Database recovery (missing git object e4886d21...)
+- **Repository cleanup:** Ripulire LFS pointer references o supply missing LFS objects
 
 **Disciplina mantenuta:**
 ✅ Forward-only: Zero reset/revert/checkout, merge-only conflict resolution
 ✅ Quality gates: Notify/app PHPStan [OK] 0 errors (scope-specific)
-✅ Atomic commits: 2 commit (4bb1a85 dirty file, 46c61f5 merge)
+✅ Atomic commits: config file removal + LFS troubleshooting documented
+✅ Fetch/analysis: Complete root cause analysis per 15 OID mancanti
