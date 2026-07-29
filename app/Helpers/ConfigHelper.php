@@ -163,7 +163,8 @@ class ConfigHelper
     {
         foreach ($variables as $variable => $value) {
             $placeholder = '{{'.$variable.'}}';
-            $string = str_replace($placeholder, strval($value), $string);
+            $replacement = is_scalar($value) ? (string) $value : '';
+            $string = str_replace($placeholder, $replacement, $string);
         }
 
         return $string;
