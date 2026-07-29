@@ -163,7 +163,7 @@ class ConfigHelper
     {
         foreach ($variables as $variable => $value) {
             $placeholder = '{{'.$variable.'}}';
-            $string = str_replace($placeholder, (string) $value, $string);
+            $string = str_replace($placeholder, strval($value), $string);
         }
 
         return $string;

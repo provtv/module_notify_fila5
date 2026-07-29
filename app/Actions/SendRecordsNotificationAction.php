@@ -107,6 +107,8 @@ class SendRecordsNotificationAction
             }
         }
 
-        return (string) $record->getKey();
+        $key = $record->getKey();
+
+        return null !== $key ? (string) $key : '';
     }
 }
