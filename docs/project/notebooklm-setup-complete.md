@@ -1,0 +1,592 @@
+---
+title: "NotebookLM Skill - Configuration & Usage Guide"
+type: concept
+tags: [notebooklm, setup, complete]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "notebooklm-setup-complete notebooklm skill - configuration & usage guide"
+issues: ["https://github.com/provtv/<nome repository>/issues/124"]
+discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
+related:
+  - "./2-1-1-plan.md"
+  - "./2-1-context.md"
+  - "./agents.md"
+  - "./ai-agent-lessons-learned.md"
+  - "./ai-skills-and-plugins-complete.md"
+  - "./commit-message.md"
+  - "./configuration.md"
+  - "./design-comuni-bmad-master-plan.md"
+---
+
+# NotebookLM Skill - Configuration & Usage Guide
+
+<<<<<<< HEAD
+**Project**: Notify  
+=======
+**Project**: <nome progetto>  
+>>>>>>> b05b65f05 (Refactor NotifyThemeableBusinessLogicTest to simplify factory usage and improve readability)
+**Skill Location**: `~/.claude/skills/notebooklm/`  
+**Status**: ✅ **INSTALLED & READY**  
+**Last Updated**: 2026-03-30
+
+---
+
+## Cos'è NotebookLM
+
+**Google NotebookLM** è un AI research assistant che:
+
+- ✅ Fornisce risposte **source-grounded** (solo dai tuoi documenti)
+- ✅ Riduce drasticamente le allucinazioni
+- ✅ Supporta 50+ fonti per notebook (PDF, docs, website, GitHub, YouTube)
+- ✅ Genera risposte con citazioni
+- ✅ È gratuito (Google account richiesto)
+- ✅ Usa Gemini 2.5 come motore AI
+
+**Importante**: NotebookLM **NON ha API pubbliche** - questo skill usa browser automation.
+
+---
+
+## Architettura
+
+```
+~/.claude/skills/notebooklm/
+├── SKILL.md                 # Claude instructions
+├── scripts/
+│   ├── ask_question.py      # Query NotebookLM
+│   ├── notebook_manager.py  # Library management
+│   └── auth_manager.py      # Authentication
+├── .venv/                   # Python environment (auto-created)
+└── data/                    # Local data (gitignored)
+    ├── library.json         # Notebook library
+    ├── auth_info.json       # Auth status
+    └── browser_state/       # Browser cookies
+```
+
+### Come Funziona
+
+```
+User Query → Claude Code → NotebookLM Skill → Browser Automation
+    ↓
+NotebookLM (Gemini) → Source-grounded answer → Claude → Code
+```
+
+**Vantaggio**: Claude non legge file per file (costoso in token), ma chiede a NotebookLM che ha già indicizzato tutto.
+
+---
+
+## ✅ Installazione (GIÀ FATTA)
+
+### Verifica
+
+```bash
+ls -la ~/.claude/skills/notebooklm/
+# Deve mostrare: SKILL.md, scripts/, .venv/, data/
+```
+
+### Struttura Attuale
+
+```
+notebooklm/
+├── .git/                    # Git repository
+├── .venv/                   # Python 3.8+ environment ✅
+├── data/                    # Notebook library ✅
+├── scripts/                 # Automation scripts ✅
+├── SKILL.md                 # Instructions ✅
+├── README.md                # Documentation ✅
+└── requirements.txt         # Dependencies ✅
+```
+
+**Status**: ✅ **Tutto installato e pronto**
+
+---
+
+## 🔐 Setup Iniziale
+
+### Step 1: Autenticazione (One-Time)
+
+**Comando in Claude Code**:
+```
+"Set up NotebookLM authentication"
+```
+
+**Cosa succede**:
+1. ✅ Chrome si apre automaticamente
+2. ✅ Login con Google account
+3. ✅ Auth persiste tra le sessioni
+4. ✅ Dati salvati in `data/auth_info.json`
+
+**Security Best Practices**:
+- ✅ Usa un Google account dedicato
+- ✅ Le credenziali restano sul tuo PC
+- ✅ Browser gira in locale
+- ⚠️ Google potrebbe rilevare automazione (lo skill ha humanization)
+
+### Step 2: Creare Notebook
+
+1. Vai su **notebooklm.google.com**
+2. Click **Create notebook**
+3. Upload documenti:
+   - 📄 PDF, Markdown, Text files
+   - 🔗 Websites
+   - 📚 GitHub repositories
+   - 🎥 YouTube transcripts
+
+<<<<<<< HEAD
+**Per Notify**:
+```
+Notebook Name: "Notify Documentation"
+=======
+**Per <nome progetto>**:
+```
+Notebook Name: "<nome progetto> Documentation"
+>>>>>>> b05b65f05 (Refactor NotifyThemeableBusinessLogicTest to simplify factory usage and improve readability)
+Sources:
+  - agents.md
+  - laravel/agents.md
+  - docs/**/*.md
+  - .planning/**/*.md
+  - laravel/Modules/docs/README.md
+```
+
+### Step 3: Condividere Notebook
+
+1. Click **⚙️ Share**
+2. Seleziona **Anyone with link**
+3. **Copia il link**
+
+### Step 4: Aggiungere alla Library
+
+**Comando in Claude Code**:
+```
+"Add this NotebookLM to my library: [LINK]"
+```
+
+Oppure (smart):
+```
+<<<<<<< HEAD
+"Query this notebook about Notify and add it to my library: [LINK]"
+=======
+"Query this notebook about <nome progetto> and add it to my library: [LINK]"
+>>>>>>> b05b65f05 (Refactor NotifyThemeableBusinessLogicTest to simplify factory usage and improve readability)
+```
+
+---
+
+## 📚 Utilizzo
+
+### Comandi Base
+
+| Comando | Azione |
+|---------|--------|
+| `"What skills do I have?"` | Lista skills |
+| `"Set up NotebookLM authentication"` | Login Google |
+| `"Add [LINK] to my NotebookLM library"` | Aggiungi notebook |
+| `"Show my NotebookLM notebooks"` | Lista notebook |
+<<<<<<< HEAD
+| `"Ask my Notify docs about [topic]"` | Query notebook |
+| `"Use the Notify notebook"` | Set active |
+=======
+| `"Ask my <nome progetto> docs about [topic]"` | Query notebook |
+| `"Use the <nome progetto> notebook"` | Set active |
+>>>>>>> b05b65f05 (Refactor NotifyThemeableBusinessLogicTest to simplify factory usage and improve readability)
+| `"Clear NotebookLM data"` | Reset (keep library) |
+| `"Reset NotebookLM authentication"` | Re-auth |
+
+### Esempi Pratici
+
+#### 1. Query su Documentazione
+
+```
+<<<<<<< HEAD
+User: "What does the Notify documentation say about theme configuration?"
+=======
+User: "What does the <nome progetto> documentation say about theme configuration?"
+>>>>>>> b05b65f05 (Refactor NotifyThemeableBusinessLogicTest to simplify factory usage and improve readability)
+
+Claude → NotebookLM → Gemini synthesizes answer from docs → Claude responds
+```
+
+#### 2. Ricerca Specifica
+
+```
+User: "Check the Laraxot documentation for XotBaseModel patterns"
+
+Result: Source-grounded answer with citations
+```
+
+#### 3. Multi-Source Correlation
+
+```
+<<<<<<< HEAD
+User: "How do Notify tickets integrate with the Geo module for location tracking?"
+=======
+User: "How do <nome progetto> tickets integrate with the Geo module for location tracking?"
+>>>>>>> b05b65f05 (Refactor NotifyThemeableBusinessLogicTest to simplify factory usage and improve readability)
+
+Result: Gemini connects info from multiple docs
+```
+
+---
+
+<<<<<<< HEAD
+## 🔧 Configurazione Notify
+
+### Notebook Structure Consigliata
+
+**Notebook 1: Notify Core**
+=======
+## 🔧 Configurazione <nome progetto>
+
+### Notebook Structure Consigliata
+
+**Notebook 1: <nome progetto> Core**
+>>>>>>> b05b65f05 (Refactor NotifyThemeableBusinessLogicTest to simplify factory usage and improve readability)
+```
+Sources:
+  - agents.md
+  - laravel/agents.md
+  - .planning/project.md
+  - .planning/config.json
+<<<<<<< HEAD
+  - laraxot-improvement-plan.md
+=======
+  - <nome progetto>-improvement-plan.md
+>>>>>>> b05b65f05 (Refactor NotifyThemeableBusinessLogicTest to simplify factory usage and improve readability)
+```
+
+**Notebook 2: Module Documentation**
+```
+Sources:
+  - laravel/Modules/docs/README.md
+<<<<<<< HEAD
+  - laravel/Modules/App/docs/
+=======
+  - laravel/Modules/<nome progetto>/docs/
+>>>>>>> b05b65f05 (Refactor NotifyThemeableBusinessLogicTest to simplify factory usage and improve readability)
+  - laravel/Modules/User/docs/
+  - laravel/Modules/Cms/docs/
+  - ... (altri moduli)
+```
+
+**Notebook 3: Theme Documentation**
+```
+Sources:
+  - laravel/Themes/docs/README.md
+  - laravel/Themes/Sixteen/docs/
+  - .planning/THEME_CONTEXT.md
+```
+
+**Notebook 4: Technical Guides**
+```
+Sources:
+  - docs/**/*.md (technical docs)
+  - bashscripts/docs/**/*.md
+  - .kilo/README.md
+```
+
+### Library Management
+
+I notebook vengono salvati in:
+```
+~/.claude/skills/notebooklm/data/library.json
+```
+
+**Struttura**:
+```json
+{
+  "notebooks": [
+    {
+<<<<<<< HEAD
+      "name": "Notify Core",
+=======
+      "name": "<nome progetto> Core",
+>>>>>>> b05b65f05 (Refactor NotifyThemeableBusinessLogicTest to simplify factory usage and improve readability)
+      "url": "https://notebooklm.google.com/notebook/...",
+      "topics": ["architecture", "configuration", "setup"],
+      "added_date": "2026-03-30"
+    }
+  ]
+}
+```
+
+---
+
+## 🎯 Best Practices
+
+### DRY (Don't Repeat Yourself)
+
+✅ **CORRETTO**:
+```
+Claude chiede a NotebookLM → NotebookLM ha già indicizzato → Risposta source-grounded
+```
+
+❌ **SBAGLIATO**:
+```
+Claude legge file per file → Consuma token → Possibili allucinazioni
+```
+
+### KISS (Keep It Simple, Stupid)
+
+✅ **SEMPLICE**:
+- 1 notebook per area tematica
+- Nomi chiari e descrittivi
+- Query dirette e specifiche
+
+❌ **COMPLESSO**:
+- Troppi notebook sovrapposti
+- Nomi generici
+- Query vaghe
+
+### Security
+
+- ✅ Usa account Google dedicato
+- ✅ Non commitare `data/` directory
+- ✅ Review before commit
+- ✅ Test in safe environments
+
+### Workflow
+
+```
+SENZA NotebookLM:
+1. Claude legge file → 2. Trova info → 3. Scrive codice
+   (lento, costoso, possibile hallucination)
+
+CON NotebookLM:
+1. Claude chiede a NotebookLM → 2. Gemini sintetizza → 3. Claude scrive codice
+   (veloce, economico, source-grounded)
+```
+
+---
+
+## ⚠️ Limitazioni
+
+| Limitazione | Dettaglio |
+|-------------|-----------|
+| **Local Only** | NON funziona su Claude web UI (sandbox) |
+| **No Session** | Ogni query è indipendente |
+| **No Context** | Non può riferirsi a "risposta precedente" |
+| **Rate Limits** | Free tier ha limiti giornalieri |
+| **Manual Upload** | Devi uploadare docs su NotebookLM prima |
+| **Share Required** | Notebook deve essere shared pubblicamente |
+
+---
+
+## 🔍 Troubleshooting
+
+### Skill Not Found
+
+```bash
+# Verifica installazione
+ls -la ~/.claude/skills/notebooklm/
+
+# Se manca, reinstalla
+cd ~/.claude/skills
+git clone https://github.com/PleasePrompto/notebooklm-skill notebooklm
+```
+
+### Authentication Issues
+
+**In Claude Code**:
+```
+"Reset NotebookLM authentication"
+```
+
+### Browser Crashes
+
+**In Claude Code**:
+```
+"Clear NotebookLM browser data"
+```
+
+### Dependencies Issues
+
+```bash
+cd ~/.claude/skills/notebooklm
+rm -rf .venv
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+### Notebook Not Found
+
+**Verifica**:
+1. Notebook è condiviso pubblicamente?
+2. Link è corretto?
+3. Hai fatto l'upload dei documenti?
+
+---
+
+## 📊 Integration with AI Tools
+
+### OpenViking
+
+```bash
+# OpenViking per context management
+<<<<<<< HEAD
+openviking add-memory "NotebookLM: Notify docs indexed"
+=======
+openviking add-memory "NotebookLM: <nome progetto> docs indexed"
+>>>>>>> b05b65f05 (Refactor NotifyThemeableBusinessLogicTest to simplify factory usage and improve readability)
+
+# Claude usa NotebookLM per query source-grounded
+```
+
+### BMAD
+
+```bash
+# BMAD crea PRD
+/bmad-create-prd
+
+# NotebookLM query PRD patterns
+"Ask my BMAD docs about PRD structure"
+```
+
+### GSD
+
+```bash
+# GSD execution
+/gsd-plan-phase 1
+
+# NotebookLM query GSD workflows
+"What does GSD documentation say about phase planning?"
+```
+
+### Ralph Loop
+
+```bash
+# Ralph autonomous execution
+./.ralph/ralph-loop.sh
+
+# NotebookLM query Ralph patterns
+"Check Ralph documentation for checkpoint management"
+```
+
+---
+
+## 🚀 Quick Start (5 minuti)
+
+```bash
+# 1. Verifica installazione (GIÀ FATTO ✅)
+ls -la ~/.claude/skills/notebooklm/
+
+# 2. Apri Claude Code
+claude
+
+# 3. Autenticazione
+"Set up NotebookLM authentication"
+
+# 4. Crea notebook su notebooklm.google.com
+#    - Upload agents.md, docs/**/*.md
+#    - Share → Copy link
+
+# 5. Aggiungi a library
+"Add [LINK] to my NotebookLM library"
+
+# 6. Query
+<<<<<<< HEAD
+"What does Notify documentation say about theme configuration?"
+=======
+"What does <nome progetto> documentation say about theme configuration?"
+>>>>>>> b05b65f05 (Refactor NotifyThemeableBusinessLogicTest to simplify factory usage and improve readability)
+```
+
+---
+
+## 📖 Resources
+
+### Official Links
+
+- **NotebookLM**: https://notebooklm.google.com
+- **Skill Repo**: https://github.com/PleasePrompto/notebooklm-skill
+- **MCP Server**: https://github.com/PleasePrompto/notebooklm-mcp (alternative)
+
+### Documentation
+
+- **Skill README**: `~/.claude/skills/notebooklm/README.md`
+- **Skill Instructions**: `~/.claude/skills/notebooklm/SKILL.md`
+- **Authentication**: `~/.claude/skills/notebooklm/AUTHENTICATION.md`
+
+### Community
+
+- **Issues**: https://github.com/PleasePrompto/notebooklm-skill/issues
+- **Discussions**: https://github.com/PleasePrompto/notebooklm-skill/discussions
+
+---
+
+## ✅ Checklist Setup
+
+- [x] Skill installato (`~/.claude/skills/notebooklm/`)
+- [ ] Autenticazione completata
+- [ ] Notebook creato su notebooklm.google.com
+- [ ] Documenti uploadati (agents.md, docs/, etc.)
+- [ ] Notebook condiviso pubblicamente
+- [ ] Link aggiunto a Claude library
+- [ ] Prima query testata
+
+---
+
+## 📝 Example Session
+
+```
+User: "Show my NotebookLM notebooks"
+
+Claude: You have 1 notebook:
+<<<<<<< HEAD
+  - Notify Documentation (added 2026-03-30)
+    Topics: architecture, configuration, laravel, fil
+
+User: "Ask my Notify docs about the active theme"
+
+Claude: Based on your Notify Documentation notebook:
+
+  The active theme is **Sixteen** for the domain laraxot.local.
+=======
+  - <nome progetto> Documentation (added 2026-03-30)
+    Topics: architecture, configuration, laravel, fil
+
+User: "Ask my <nome progetto> docs about the active theme"
+
+Claude: Based on your <nome progetto> Documentation notebook:
+
+  The active theme is **Sixteen** for the domain <nome progetto>.local.
+>>>>>>> b05b65f05 (Refactor NotifyThemeableBusinessLogicTest to simplify factory usage and improve readability)
+  
+  Configuration is stored in `laravel/config/localhost/xra.php`:
+  
+  ```php
+  return [
+      'pub_theme' => 'Sixteen',  // Active theme
+      'adm_theme' => 'AdminLTE', // Legacy
+  ];
+  ```
+  
+<<<<<<< HEAD
+  **Source**: Notify Theme Context documentation
+
+User: "Perfect! Now check what modules are available"
+
+Claude: Your Notify Documentation lists 18 active modules:
+
+  1. App - Ticket management
+=======
+  **Source**: <nome progetto> Theme Context documentation
+
+User: "Perfect! Now check what modules are available"
+
+Claude: Your <nome progetto> Documentation lists 18 active modules:
+
+  1. <nome progetto> - Ticket management
+>>>>>>> b05b65f05 (Refactor NotifyThemeableBusinessLogicTest to simplify factory usage and improve readability)
+  2. User - Authentication
+  3. Cms - Content management
+  ... (continues)
+  
+  **Source**: Modules Index documentation
+```
+
+---
+
+**Status**: ✅ **INSTALLED & READY**  
+**Next Step**: Complete authentication and create first notebook  
+**Documentation**: This file + `~/.claude/skills/notebooklm/README.md`

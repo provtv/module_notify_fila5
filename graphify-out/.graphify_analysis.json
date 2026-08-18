@@ -1,0 +1,3442 @@
+{
+  "communities": {
+    "0": [
+      "app_actions_sendrecordnotificationaction",
+      "app_actions_sendrecordnotificationaction_sendrecordnotificationaction",
+      "app_actions_sendrecordnotificationaction_sendrecordnotificationaction_execute",
+      "app_enums_channelenum",
+      "app_enums_channelenum_getnotificationchannel",
+      "app_enums_channelenum_getrecipient",
+      "app_enums_channelenum_getrecordemail",
+      "app_enums_channelenum_getrecordphone",
+      "app_enums_channelenum_getrecordwhatsapp",
+      "app_jobs_sendnotificationjob_sendnotificationjob_construct",
+      "app_models_emailtemplate",
+      "app_models_emailtemplate_emailtemplate",
+      "app_models_emailtemplate_emailtemplate_casts",
+      "app_models_theme",
+      "app_models_theme_theme",
+      "app_models_theme_theme_casts",
+      "illuminate_database_eloquent_model",
+      "tests_fixtures_sendrecordnotificationfailstub",
+      "tests_fixtures_sendrecordnotificationfailstub_sendrecordnotificationfailstub",
+      "tests_fixtures_sendrecordnotificationfailstub_sendrecordnotificationfailstub_execute",
+      "tests_fixtures_sendrecordnotificationnoopstub",
+      "tests_fixtures_sendrecordnotificationnoopstub_sendrecordnotificationnoopstub",
+      "tests_fixtures_sendrecordnotificationnoopstub_sendrecordnotificationnoopstub_execute",
+      "tests_fixtures_sendrecordnotificationthrowstub",
+      "tests_fixtures_sendrecordnotificationthrowstub_sendrecordnotificationthrowstub",
+      "tests_fixtures_sendrecordnotificationthrowstub_sendrecordnotificationthrowstub_execute",
+      "tests_fixtures_sendrecordsnotificationrecorddummy",
+      "tests_fixtures_sendrecordsnotificationrecorddummy_sendrecordsnotificationrecorddummy",
+      "tests_fixtures_sendrecordsnotificationrecorddummy_sendrecordsnotificationrecorddummy_construct",
+      "tests_fixtures_sendrecordssafeeloquentcastemptystub",
+      "tests_fixtures_sendrecordssafeeloquentcastemptystub_sendrecordssafeeloquentcastemptystub",
+      "tests_fixtures_sendrecordssafeeloquentcastemptystub_sendrecordssafeeloquentcastemptystub_getstringattribute",
+      "tests_fixtures_sendrecordssafeeloquentcaststub",
+      "tests_fixtures_sendrecordssafeeloquentcaststub_sendrecordssafeeloquentcaststub",
+      "tests_fixtures_sendrecordssafeeloquentcaststub_sendrecordssafeeloquentcaststub_getstringattribute",
+      "tests_unit_actions_sendrecordnotificationactiontest",
+      "tests_unit_actions_sendrecordnotificationactiontest_getstringattribute",
+      "tests_unit_actions_sendrecordnotificationactiontest_makedummyrecordfornotify",
+      "tests_unit_actions_sendrecordsnotificationactiontest",
+      "tests_unit_actions_sendrecordsnotificationactiontest_makedummybulknotifyrecord",
+      "tests_unit_enums_channelenumtest",
+      "tests_unit_enums_channelenumtest_execute",
+      "tests_unit_enums_channelenumtest_getstringattribute",
+      "tests_unit_genericnotificationtest",
+      "tests_unit_genericnotificationtest_getfullname",
+      "tests_unit_notifications_notificationscoveragetest_makegenericnotifiabledummy"
+    ],
+    "1": [
+      "database_seeders_contactseeder",
+      "database_seeders_contactseeder_contactseeder",
+      "database_seeders_contactseeder_contactseeder_run",
+      "database_seeders_databaseseeder",
+      "database_seeders_databaseseeder_databaseseeder",
+      "database_seeders_databaseseeder_databaseseeder_run",
+      "database_seeders_mailtemplatelogseeder",
+      "database_seeders_mailtemplatelogseeder_mailtemplatelogseeder",
+      "database_seeders_mailtemplatelogseeder_mailtemplatelogseeder_run",
+      "database_seeders_mailtemplateseeder",
+      "database_seeders_mailtemplateseeder_mailtemplateseeder",
+      "database_seeders_mailtemplateseeder_mailtemplateseeder_run",
+      "database_seeders_mailtemplatesseeder",
+      "database_seeders_mailtemplatesseeder_mailtemplatesseeder",
+      "database_seeders_mailtemplatesseeder_mailtemplatesseeder_run",
+      "database_seeders_mailtemplateversionseeder",
+      "database_seeders_mailtemplateversionseeder_mailtemplateversionseeder",
+      "database_seeders_mailtemplateversionseeder_mailtemplateversionseeder_run",
+      "database_seeders_notificationchannelseeder",
+      "database_seeders_notificationchannelseeder_notificationchannelseeder",
+      "database_seeders_notificationchannelseeder_notificationchannelseeder_run",
+      "database_seeders_notificationlogseeder",
+      "database_seeders_notificationlogseeder_notificationlogseeder",
+      "database_seeders_notificationlogseeder_notificationlogseeder_run",
+      "database_seeders_notificationseeder",
+      "database_seeders_notificationseeder_notificationseeder",
+      "database_seeders_notificationseeder_notificationseeder_run",
+      "database_seeders_notificationtemplateseeder",
+      "database_seeders_notificationtemplateseeder_notificationtemplateseeder",
+      "database_seeders_notificationtemplateseeder_notificationtemplateseeder_run",
+      "database_seeders_notificationtemplateversionseeder",
+      "database_seeders_notificationtemplateversionseeder_notificationtemplateversionseeder",
+      "database_seeders_notificationtemplateversionseeder_notificationtemplateversionseeder_run",
+      "database_seeders_notificationtypeseeder",
+      "database_seeders_notificationtypeseeder_notificationtypeseeder",
+      "database_seeders_notificationtypeseeder_notificationtypeseeder_run",
+      "database_seeders_notifydatabaseseeder",
+      "database_seeders_notifydatabaseseeder_notifydatabaseseeder",
+      "database_seeders_notifydatabaseseeder_notifydatabaseseeder_run",
+      "database_seeders_notifythemeableseeder",
+      "database_seeders_notifythemeableseeder_notifythemeableseeder",
+      "database_seeders_notifythemeableseeder_notifythemeableseeder_run",
+      "database_seeders_notifythemeseeder",
+      "database_seeders_notifythemeseeder_notifythemeseeder",
+      "database_seeders_notifythemeseeder_notifythemeseeder_run",
+      "illuminate_database_seeder"
+    ],
+    "2": [
+      "app_actions_whatsapp_send360dialogwhatsappaction",
+      "app_actions_whatsapp_send360dialogwhatsappaction_send360dialogwhatsappaction",
+      "app_actions_whatsapp_send360dialogwhatsappaction_send360dialogwhatsappaction_construct",
+      "app_actions_whatsapp_send360dialogwhatsappaction_send360dialogwhatsappaction_determinemediatype",
+      "app_actions_whatsapp_send360dialogwhatsappaction_send360dialogwhatsappaction_execute",
+      "app_actions_whatsapp_sendfacebookwhatsappaction",
+      "app_actions_whatsapp_sendfacebookwhatsappaction_sendfacebookwhatsappaction",
+      "app_actions_whatsapp_sendfacebookwhatsappaction_sendfacebookwhatsappaction_construct",
+      "app_actions_whatsapp_sendfacebookwhatsappaction_sendfacebookwhatsappaction_execute",
+      "app_actions_whatsapp_sendtwiliowhatsappaction",
+      "app_actions_whatsapp_sendtwiliowhatsappaction_sendtwiliowhatsappaction",
+      "app_actions_whatsapp_sendtwiliowhatsappaction_sendtwiliowhatsappaction_construct",
+      "app_actions_whatsapp_sendtwiliowhatsappaction_sendtwiliowhatsappaction_execute",
+      "app_actions_whatsapp_sendvonagewhatsappaction",
+      "app_actions_whatsapp_sendvonagewhatsappaction_sendvonagewhatsappaction",
+      "app_actions_whatsapp_sendvonagewhatsappaction_sendvonagewhatsappaction_construct",
+      "app_actions_whatsapp_sendvonagewhatsappaction_sendvonagewhatsappaction_determinemediatype",
+      "app_actions_whatsapp_sendvonagewhatsappaction_sendvonagewhatsappaction_execute",
+      "app_channels_whatsappchannel",
+      "app_channels_whatsappchannel_whatsappchannel",
+      "app_channels_whatsappchannel_whatsappchannel_construct",
+      "app_channels_whatsappchannel_whatsappchannel_send",
+      "app_contracts_whatsappprovideractioncontract",
+      "app_contracts_whatsappprovideractioncontract_execute",
+      "app_contracts_whatsappprovideractioninterface",
+      "app_contracts_whatsappprovideractioninterface_execute",
+      "app_datas_whatsappdata",
+      "app_datas_whatsappdata_whatsappdata",
+      "app_datas_whatsappdata_whatsappdata_construct",
+      "app_factories_whatsappactionfactory",
+      "app_factories_whatsappactionfactory_php_whatsappprovideractioninterface",
+      "app_factories_whatsappactionfactory_whatsappactionfactory",
+      "app_factories_whatsappactionfactory_whatsappactionfactory_create",
+      "app_notifications_whatsappnotification_whatsappnotification",
+      "app_notifications_whatsappnotification_whatsappnotification_construct",
+      "app_notifications_whatsappnotification_whatsappnotification_getconfig",
+      "app_notifications_whatsappnotification_whatsappnotification_getprovider",
+      "app_notifications_whatsappnotification_whatsappnotification_towhatsapp",
+      "app_notifications_whatsappnotification_whatsappnotification_via",
+      "modules_notify_contracts_whatsappprovideractioninterface",
+      "tests_unit_actions_whatsapp_send360dialogwhatsappactiontest",
+      "tests_unit_actions_whatsapp_sendfacebookwhatsappactiontest",
+      "tests_unit_actions_whatsapp_sendtwiliowhatsappactiontest",
+      "tests_unit_actions_whatsapp_sendvonagewhatsappactiontest",
+      "tests_unit_channels_whatsappchanneltest"
+    ],
+    "3": [
+      "app_traits_hastenantnotifications",
+      "app_traits_hastenantnotifications_belongstocurrenttenant",
+      "app_traits_hastenantnotifications_belongstotenant",
+      "app_traits_hastenantnotifications_boothastenantnotifications",
+      "app_traits_hastenantnotifications_gettenantid",
+      "app_traits_hastenantnotifications_notifications",
+      "app_traits_hastenantnotifications_readnotifications",
+      "app_traits_hastenantnotifications_scopefortenant",
+      "app_traits_hastenantnotifications_tenantnotificationlogs",
+      "app_traits_hastenantnotifications_unreadnotifications",
+      "illuminate_database_eloquent_relations_morphmany",
+      "modules_notify_traits_hasnotificationratelimiting",
+      "modules_notify_traits_hasnotificationtracking",
+      "modules_notify_traits_hastenantnotifications",
+      "tests_unit_traits_notifyratelimitdummy",
+      "tests_unit_traits_notifyratelimitdummy_notifyratelimitdummy",
+      "tests_unit_traits_notifyratelimitdummy_notifyratelimitdummy_key",
+      "tests_unit_traits_notifyratelimitdummy_notifyratelimitdummy_remaining",
+      "tests_unit_traits_notifyratelimitdummy_notifyratelimitdummy_reset",
+      "tests_unit_traits_notifyratelimitdummy_notifyratelimitdummy_retryafter",
+      "tests_unit_traits_notifyratelimitdummy_notifyratelimitdummy_shouldsend",
+      "tests_unit_traits_notifytenantdummymodel",
+      "tests_unit_traits_notifytenantdummymodel_notifytenantdummymodel",
+      "tests_unit_traits_notifytenantdummymodel_notifytenantdummymodel_gettenantid",
+      "tests_unit_traits_notifytenantdummymodel_notifytenantdummymodel_tenantnotificationlogs",
+      "tests_unit_traits_notifytrackingdummy",
+      "tests_unit_traits_notifytrackingdummy_notifytrackingdummy",
+      "tests_unit_traits_notifytrackingdummy_notifytrackingdummy_addtrackingpublic",
+      "tests_unit_traits_notifytrackingdummy_notifytrackingdummy_trackingenabled",
+      "tests_unit_traits_notifytrackingdummy_notifytrackingdummy_trackingid",
+      "tests_unit_traits_notifytraitscoveragetest",
+      "tests_unit_traits_notifytraittestdoubles",
+      "tests_unit_traits_notifytraittestdoubles_notifyratelimitdummy",
+      "tests_unit_traits_notifytraittestdoubles_notifyratelimitdummy_key",
+      "tests_unit_traits_notifytraittestdoubles_notifyratelimitdummy_remaining",
+      "tests_unit_traits_notifytraittestdoubles_notifyratelimitdummy_reset",
+      "tests_unit_traits_notifytraittestdoubles_notifyratelimitdummy_retryafter",
+      "tests_unit_traits_notifytraittestdoubles_notifyratelimitdummy_shouldsend",
+      "tests_unit_traits_notifytraittestdoubles_notifytenantdummymodel",
+      "tests_unit_traits_notifytraittestdoubles_notifytenantdummymodel_tenantnotificationlogs",
+      "tests_unit_traits_notifytraittestdoubles_notifytrackingdummy",
+      "tests_unit_traits_notifytraittestdoubles_notifytrackingdummy_addtrackingpublic",
+      "tests_unit_traits_notifytraittestdoubles_notifytrackingdummy_trackingenabled",
+      "tests_unit_traits_notifytraittestdoubles_notifytrackingdummy_trackingid"
+    ],
+    "4": [
+      "app_actions_notifytheme_get",
+      "app_actions_notifytheme_get_get",
+      "app_actions_notifytheme_get_get_execute",
+      "app_datas_notifythemedata",
+      "app_datas_notifythemedata_notifythemedata",
+      "app_enums_contacttypeenum",
+      "app_enums_contacttypeenum_getcolumndefinitions",
+      "app_enums_notificationtypeenum",
+      "app_enums_smsdriverenum",
+      "app_enums_smsdriverenum_getdefault",
+      "app_enums_smsdriverenum_php_self",
+      "app_models_traits_hascontact",
+      "app_models_traits_hascontact_initializehascontact",
+      "database_factories_contactfactory",
+      "illuminate_foundation_application",
+      "illuminate_foundation_testing_databasetransactions",
+      "modules_xot_tests_xotbasetestcase",
+      "tests_feature_contactmanagementbusinesslogictest",
+      "tests_feature_emailtemplatestest_php_tests_feature_emailtemplatestest_3ec7f8",
+      "tests_feature_jsoncomponentstest_php_tests_feature_jsoncomponentstest_3a0ba5",
+      "tests_feature_jsoncomponentstest_php_tests_feature_jsoncomponentstest_464398",
+      "tests_feature_jsoncomponenttest",
+      "tests_feature_templatemanagementbusinesslogictest",
+      "tests_feature_thememanagementbusinesslogictest",
+      "tests_testcase",
+      "tests_testcase_testcase",
+      "tests_testcase_testcase_freshmodel",
+      "tests_testcase_testcase_getpackageproviders",
+      "tests_testcase_testcase_setup",
+      "tests_unit_actions_buildmailmessageactiontest",
+      "tests_unit_actions_normalizephonenumberactiontest",
+      "tests_unit_actions_notifytheme_gettest",
+      "tests_unit_actions_sms_normalizephonenumberactiontest",
+      "tests_unit_enums_contacttypeenumtest",
+      "tests_unit_enums_notificationtypeenumtest",
+      "tests_unit_enums_notifyenumscoveragetest",
+      "tests_unit_enums_smsdriverenumtest",
+      "tests_unit_models_contactbusinesslogictest",
+      "tests_unit_models_contacttest",
+      "tests_unit_models_contacttestpartonetest",
+      "tests_unit_models_contacttestparttwotest",
+      "tests_unit_models_notificationtemplatetest"
+    ],
+    "5": [
+      "app_actions_push_sendpushtoallusersaction",
+      "app_actions_push_sendpushtoallusersaction_sendpushtoallusersaction",
+      "app_actions_push_sendpushtoallusersaction_sendpushtoallusersaction_execute",
+      "app_actions_push_sendpushtoallusersaction_sendpushtoallusersaction_getallactivetokens",
+      "app_actions_push_sendpushtodeviceaction",
+      "app_actions_push_sendpushtodeviceaction_sendpushtodeviceaction",
+      "app_actions_push_sendpushtodeviceaction_sendpushtodeviceaction_execute",
+      "app_actions_push_sendpushtodevicesaction",
+      "app_actions_push_sendpushtodevicesaction_sendpushtodevicesaction",
+      "app_actions_push_sendpushtodevicesaction_sendpushtodevicesaction_detectplatform",
+      "app_actions_push_sendpushtodevicesaction_sendpushtodevicesaction_execute",
+      "app_actions_push_sendpushtodevicesaction_sendpushtodevicesaction_grouptokensbyplatform",
+      "app_actions_push_sendpushtodevicesaction_sendpushtodevicesaction_sendbatchtoplatform",
+      "app_actions_push_sendpushtoplatformaction",
+      "app_actions_push_sendpushtoplatformaction_sendpushtoplatformaction",
+      "app_actions_push_sendpushtoplatformaction_sendpushtoplatformaction_execute",
+      "app_actions_push_sendpushtoplatformaction_sendpushtoplatformaction_sendapnsnotification",
+      "app_actions_push_sendpushtoplatformaction_sendpushtoplatformaction_sendfcmnotification",
+      "app_actions_push_sendpushtoplatformaction_sendpushtoplatformaction_sendwebpushnotification",
+      "app_actions_push_sendpushtotopicaction",
+      "app_actions_push_sendpushtotopicaction_sendpushtotopicaction",
+      "app_actions_push_sendpushtotopicaction_sendpushtotopicaction_execute",
+      "app_actions_push_sendpushtotopicaction_sendpushtotopicaction_sendfcmtopicnotification",
+      "app_actions_push_sendpushtotopicaction_sendpushtotopicaction_sendtopictoplatform",
+      "app_actions_push_sendpushwithtargetingaction",
+      "app_actions_push_sendpushwithtargetingaction_sendpushwithtargetingaction",
+      "app_actions_push_sendpushwithtargetingaction_sendpushwithtargetingaction_execute",
+      "app_actions_push_sendpushwithtargetingaction_sendpushwithtargetingaction_gettokensbycriteria",
+      "app_actions_push_sendpushwithtemplateaction",
+      "app_actions_push_sendpushwithtemplateaction_sendpushwithtemplateaction",
+      "app_actions_push_sendpushwithtemplateaction_sendpushwithtemplateaction_execute",
+      "app_actions_push_sendpushwithtemplateaction_sendpushwithtemplateaction_gettemplate",
+      "app_actions_push_sendpushwithtemplateaction_sendpushwithtemplateaction_processtemplate",
+      "app_datas_pushcriteriadata",
+      "app_datas_pushcriteriadata_pushcriteriadata",
+      "app_datas_pushcriteriadata_pushcriteriadata_construct",
+      "app_datas_pushnotificationdata",
+      "app_datas_pushnotificationdata_pushnotificationdata",
+      "app_datas_pushnotificationdata_pushnotificationdata_construct",
+      "app_jobs_sendscheduledpushnotification_sendscheduledpushnotification_handle"
+    ],
+    "6": [
+      "app_actions_mail_engines_duocircle_sendduocirclemailaction",
+      "app_actions_mail_engines_duocircle_sendduocirclemailaction_sendduocirclemailaction",
+      "app_actions_mail_engines_duocircle_sendduocirclemailaction_sendduocirclemailaction_execute",
+      "app_actions_mail_engines_duocircle_tryduocirclemailaction",
+      "app_actions_mail_engines_duocircle_tryduocirclemailaction_tryduocirclemailaction",
+      "app_actions_mail_engines_duocircle_tryduocirclemailaction_tryduocirclemailaction_execute",
+      "app_actions_mail_engines_duocircle_tryduocirclemailaction_tryduocirclemailaction_invoke",
+      "app_actions_mail_getmaillayoutaction",
+      "app_actions_mail_getmaillayoutaction_getmaillayoutaction",
+      "app_actions_mail_getmaillayoutaction_getmaillayoutaction_execute",
+      "app_actions_mail_sendmailaction",
+      "app_actions_mail_sendmailaction_sendmailaction",
+      "app_actions_mail_sendmailaction_sendmailaction_execute",
+      "app_actions_mail_sendmailtrapmailaction",
+      "app_actions_mail_sendmailtrapmailaction_sendmailtrapmailaction",
+      "app_actions_mail_sendmailtrapmailaction_sendmailtrapmailaction_execute",
+      "app_actions_mail_trymailaction",
+      "app_actions_mail_trymailaction_trymailaction",
+      "app_actions_mail_trymailaction_trymailaction_execute",
+      "app_actions_normalizephonenumberaction",
+      "app_actions_normalizephonenumberaction_normalizephonenumberaction",
+      "app_actions_normalizephonenumberaction_normalizephonenumberaction_execute",
+      "app_actions_sendappointmentnotificationaction",
+      "app_actions_sendappointmentnotificationaction_sendappointmentnotificationaction",
+      "app_actions_sendappointmentnotificationaction_sendappointmentnotificationaction_execute",
+      "app_actions_sms_formatsmsmessageaction",
+      "app_actions_sms_formatsmsmessageaction_formatsmsmessageaction",
+      "app_actions_sms_formatsmsmessageaction_formatsmsmessageaction_execute",
+      "app_actions_sms_normalizephonenumberaction",
+      "app_actions_sms_normalizephonenumberaction_normalizephonenumberaction",
+      "app_actions_sms_normalizephonenumberaction_normalizephonenumberaction_execute",
+      "app_actions_smtpmailsendaction",
+      "app_actions_smtpmailsendaction_smtpmailsendaction",
+      "app_actions_smtpmailsendaction_smtpmailsendaction_execute",
+      "spatie_queueableaction_queueableaction",
+      "tests_unit_actions_mail_getmaillayoutactiontest",
+      "tests_unit_actions_sendappointmentnotificationactiontest",
+      "tests_unit_actions_sms_formatsmsmessageactiontest"
+    ],
+    "7": [
+      "ref_bootstrap_cache",
+      "ref_min_css",
+      "ref_node_modules",
+      "ref_public_build",
+      "ref_storage",
+      "ref_stylelint_config_prettier",
+      "ref_stylelint_config_standard",
+      "ref_vendor",
+      "stylelintrc",
+      "stylelintrc_extends",
+      "stylelintrc_ignorefiles",
+      "stylelintrc_rules",
+      "stylelintrc_rules_at_rule_no_unknown",
+      "stylelintrc_rules_block_no_empty",
+      "stylelintrc_rules_color_no_invalid_hex",
+      "stylelintrc_rules_comment_no_empty",
+      "stylelintrc_rules_declaration_block_no_duplicate_properties",
+      "stylelintrc_rules_declaration_block_no_redundant_longhand_properties",
+      "stylelintrc_rules_font_family_no_duplicate_names",
+      "stylelintrc_rules_font_family_no_missing_generic_family_keyword",
+      "stylelintrc_rules_function_calc_no_unspaced_operator",
+      "stylelintrc_rules_indentation",
+      "stylelintrc_rules_keyframe_declaration_no_important",
+      "stylelintrc_rules_max_empty_lines",
+      "stylelintrc_rules_max_line_length",
+      "stylelintrc_rules_media_feature_name_no_unknown",
+      "stylelintrc_rules_no_duplicate_at_import_rules",
+      "stylelintrc_rules_no_duplicate_selectors",
+      "stylelintrc_rules_no_empty_source",
+      "stylelintrc_rules_no_extra_semicolons",
+      "stylelintrc_rules_no_invalid_double_slash_comments",
+      "stylelintrc_rules_property_no_unknown",
+      "stylelintrc_rules_selector_pseudo_class_no_unknown",
+      "stylelintrc_rules_selector_pseudo_element_no_unknown",
+      "stylelintrc_rules_selector_type_no_unknown",
+      "stylelintrc_rules_string_no_newline",
+      "stylelintrc_rules_string_quotes",
+      "stylelintrc_rules_unit_no_unknown"
+    ],
+    "8": [
+      "app_actions_notificationmanager",
+      "app_actions_notificationmanager_notificationmanager",
+      "app_actions_notificationmanager_notificationmanager_getrecipientstats",
+      "app_actions_notificationmanager_notificationmanager_gettemplate",
+      "app_actions_notificationmanager_notificationmanager_gettemplatesbycategory",
+      "app_actions_notificationmanager_notificationmanager_gettemplatesbychannel",
+      "app_actions_notificationmanager_notificationmanager_gettemplatestats",
+      "app_actions_notificationmanager_notificationmanager_send",
+      "app_actions_notificationmanager_notificationmanager_sendmultiple",
+      "app_models_notificationtemplate_notificationtemplate",
+      "app_models_notificationtemplate_notificationtemplate_casts",
+      "app_models_notificationtemplate_notificationtemplate_compile",
+      "app_models_notificationtemplate_notificationtemplate_compilestring",
+      "app_models_notificationtemplate_notificationtemplate_getchannelslabelattribute",
+      "app_models_notificationtemplate_notificationtemplate_getgrapesjsdata",
+      "app_models_notificationtemplate_notificationtemplate_getpreviewbodyhtml",
+      "app_models_notificationtemplate_notificationtemplate_getpreviewbodytext",
+      "app_models_notificationtemplate_notificationtemplate_getpreviewdata",
+      "app_models_notificationtemplate_notificationtemplate_getpreviewsubject",
+      "app_models_notificationtemplate_notificationtemplate_preview",
+      "app_models_notificationtemplate_notificationtemplate_registermediacollections",
+      "app_models_notificationtemplate_notificationtemplate_setgrapesjsdata",
+      "app_models_notificationtemplate_notificationtemplate_shouldsend",
+      "app_models_notificationtemplate_php_self",
+      "app_services_notificationmanager",
+      "app_services_notificationmanager_notificationmanager",
+      "app_services_notificationmanager_notificationmanager_getrecipientstats",
+      "app_services_notificationmanager_notificationmanager_gettemplate",
+      "app_services_notificationmanager_notificationmanager_gettemplatesbycategory",
+      "app_services_notificationmanager_notificationmanager_gettemplatesbychannel",
+      "app_services_notificationmanager_notificationmanager_gettemplatestats",
+      "app_services_notificationmanager_notificationmanager_send",
+      "app_services_notificationmanager_notificationmanager_sendmultiple",
+      "illuminate_database_eloquent_collection",
+      "tests_pest_assertfirstmodel",
+      "tests_unit_services_notificationmanagertest"
+    ],
+    "9": [
+      "autoprefixer",
+      "axios",
+      "dotenv",
+      "dotenv_expand",
+      "laravel_mix",
+      "laravel_mix_merge_manifest",
+      "lodash",
+      "package",
+      "package_devdependencies",
+      "package_devdependencies_autoprefixer",
+      "package_devdependencies_axios",
+      "package_devdependencies_dotenv",
+      "package_devdependencies_dotenv_expand",
+      "package_devdependencies_laravel_mix",
+      "package_devdependencies_laravel_mix_merge_manifest",
+      "package_devdependencies_lodash",
+      "package_devdependencies_postcss",
+      "package_devdependencies_postcss_nesting",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tailwindcss_forms",
+      "package_devdependencies_tailwindcss_typography",
+      "package_private",
+      "package_scripts",
+      "package_scripts_dev",
+      "package_scripts_development",
+      "package_scripts_hot",
+      "package_scripts_prod",
+      "package_scripts_production",
+      "package_scripts_watch",
+      "package_scripts_watch_poll",
+      "postcss",
+      "postcss_nesting",
+      "tailwindcss",
+      "tailwindcss_forms",
+      "tailwindcss_typography"
+    ],
+    "10": [
+      "app_datas_recordnotificationdata",
+      "app_datas_recordnotificationdata_recordnotificationdata",
+      "app_datas_recordnotificationdata_recordnotificationdata_getchannel",
+      "app_datas_recordnotificationdata_recordnotificationdata_getroute",
+      "app_models_policies_contactpolicy",
+      "app_models_policies_contactpolicy_contactpolicy",
+      "app_models_policies_mailtemplatelogpolicy",
+      "app_models_policies_mailtemplatelogpolicy_mailtemplatelogpolicy",
+      "app_models_policies_mailtemplatepolicy",
+      "app_models_policies_mailtemplatepolicy_mailtemplatepolicy",
+      "app_models_policies_mailtemplatepolicy_mailtemplatepolicy_viewany",
+      "app_models_policies_mailtemplateversionpolicy",
+      "app_models_policies_mailtemplateversionpolicy_mailtemplateversionpolicy",
+      "app_models_policies_notificationpolicy",
+      "app_models_policies_notificationpolicy_notificationpolicy",
+      "app_models_policies_notificationtemplatepolicy",
+      "app_models_policies_notificationtemplatepolicy_notificationtemplatepolicy",
+      "app_models_policies_notificationtemplateversionpolicy",
+      "app_models_policies_notificationtemplateversionpolicy_notificationtemplateversionpolicy",
+      "app_models_policies_notificationtypepolicy",
+      "app_models_policies_notificationtypepolicy_notificationtypepolicy",
+      "app_models_policies_notifybasepolicy",
+      "app_models_policies_notifybasepolicy_notifybasepolicy",
+      "app_models_policies_notifythemeablepolicy",
+      "app_models_policies_notifythemeablepolicy_notifythemeablepolicy",
+      "app_models_policies_notifythemepolicy",
+      "app_models_policies_notifythemepolicy_notifythemepolicy",
+      "modules_user_models_policies_userbasepolicy",
+      "modules_xot_contracts_usercontract",
+      "tests_unit_datas_recordnotificationdatatest",
+      "tests_unit_datas_recordnotificationdatatest_execute",
+      "tests_unit_models_policies_mailtemplatepolicytest"
+    ],
+    "11": [
+      "app_actions_telegram_sendbotmantelegramaction",
+      "app_actions_telegram_sendbotmantelegramaction_sendbotmantelegramaction",
+      "app_actions_telegram_sendbotmantelegramaction_sendbotmantelegramaction_construct",
+      "app_actions_telegram_sendbotmantelegramaction_sendbotmantelegramaction_execute",
+      "app_actions_telegram_sendnutgramtelegramaction",
+      "app_actions_telegram_sendnutgramtelegramaction_sendnutgramtelegramaction",
+      "app_actions_telegram_sendnutgramtelegramaction_sendnutgramtelegramaction_construct",
+      "app_actions_telegram_sendnutgramtelegramaction_sendnutgramtelegramaction_execute",
+      "app_actions_telegram_sendofficialtelegramaction",
+      "app_actions_telegram_sendofficialtelegramaction_sendofficialtelegramaction",
+      "app_actions_telegram_sendofficialtelegramaction_sendofficialtelegramaction_construct",
+      "app_actions_telegram_sendofficialtelegramaction_sendofficialtelegramaction_execute",
+      "app_channels_telegramchannel",
+      "app_channels_telegramchannel_telegramchannel",
+      "app_channels_telegramchannel_telegramchannel_construct",
+      "app_channels_telegramchannel_telegramchannel_send",
+      "app_contracts_telegramprovideractioncontract",
+      "app_contracts_telegramprovideractioncontract_execute",
+      "app_contracts_telegramprovideractioninterface",
+      "app_contracts_telegramprovideractioninterface_execute",
+      "app_datas_telegramdata",
+      "app_datas_telegramdata_telegramdata",
+      "app_datas_telegramdata_telegramdata_construct",
+      "app_factories_telegramactionfactory",
+      "app_factories_telegramactionfactory_php_telegramprovideractioninterface",
+      "app_factories_telegramactionfactory_telegramactionfactory",
+      "app_factories_telegramactionfactory_telegramactionfactory_create",
+      "modules_notify_contracts_telegramprovideractioninterface",
+      "tests_unit_actions_telegram_sendbotmantelegramactiontest",
+      "tests_unit_actions_telegram_sendnutgramtelegramactiontest",
+      "tests_unit_actions_telegram_sendofficialtelegramactiontest"
+    ],
+    "12": [
+      "app_console_commands_analyzetranslationfiles",
+      "app_console_commands_analyzetranslationfiles_analyzetranslationfiles",
+      "app_console_commands_analyzetranslationfiles_analyzetranslationfiles_analyzenavigationstructure",
+      "app_console_commands_analyzetranslationfiles_analyzetranslationfiles_analyzestructurepatterns",
+      "app_console_commands_analyzetranslationfiles_analyzetranslationfiles_flattenarray",
+      "app_console_commands_analyzetranslationfiles_analyzetranslationfiles_generateconsistencyreport",
+      "app_console_commands_analyzetranslationfiles_analyzetranslationfiles_generaterecommendations",
+      "app_console_commands_analyzetranslationfiles_analyzetranslationfiles_handle",
+      "app_console_commands_sendmailcommand",
+      "app_console_commands_sendmailcommand_sendmailcommand",
+      "app_console_commands_sendmailcommand_sendmailcommand_handle",
+      "app_console_commands_telegramwebhook",
+      "app_console_commands_telegramwebhook_telegramwebhook",
+      "app_console_commands_telegramwebhook_telegramwebhook_handle",
+      "app_datas_smtpdata",
+      "app_datas_smtpdata_php_self",
+      "app_datas_smtpdata_smtpdata",
+      "app_datas_smtpdata_smtpdata_getmailer",
+      "app_datas_smtpdata_smtpdata_gettransport",
+      "app_datas_smtpdata_smtpdata_make",
+      "app_datas_smtpdata_smtpdata_send",
+      "app_datas_smtpdata_smtpdata_toarray",
+      "app_filament_clusters_test_pages_testsmtppage_testsmtppage_sendemail",
+      "command",
+      "illuminate_console_command",
+      "symfony_component_mailer_mailer",
+      "symfony_component_mailer_transport_smtp_esmtptransport",
+      "tests_unit_console_commands_analyzetranslationfilestest",
+      "tests_unit_console_commands_sendmailcommandtest",
+      "tests_unit_console_telegramwebhookcommandtest",
+      "tests_unit_datas_smtpdatatest"
+    ],
+    "13": [
+      "app_models_mailtemplatelog",
+      "app_models_mailtemplatelog_mailtemplatelog",
+      "app_models_mailtemplatelog_mailtemplatelog_casts",
+      "app_models_mailtemplatelog_mailtemplatelog_mailable",
+      "app_models_mailtemplatelog_mailtemplatelog_template",
+      "app_models_mailtemplateversion",
+      "app_models_mailtemplateversion_mailtemplateversion",
+      "app_models_mailtemplateversion_mailtemplateversion_casts",
+      "app_models_mailtemplateversion_mailtemplateversion_template",
+      "app_models_notificationlog",
+      "app_models_notificationlog_notificationlog",
+      "app_models_notificationlog_notificationlog_casts",
+      "app_models_notificationlog_notificationlog_markasclicked",
+      "app_models_notificationlog_notificationlog_markasopened",
+      "app_models_notificationlog_notificationlog_notifiable",
+      "app_models_notificationlog_notificationlog_scopeforchannel",
+      "app_models_notificationlog_notificationlog_scopefornotifiable",
+      "app_models_notificationlog_notificationlog_scopewithstatus",
+      "app_models_notificationlog_notificationlog_template",
+      "app_models_notificationlog_php_self",
+      "app_models_notificationtemplate_notificationtemplate_scopeactive",
+      "app_models_notificationtemplate_notificationtemplate_scopeforcategory",
+      "app_models_notificationtemplate_notificationtemplate_scopeforchannel",
+      "app_models_notifytheme_notifytheme_linkable",
+      "illuminate_database_eloquent_builder",
+      "illuminate_database_eloquent_relations_belongsto",
+      "illuminate_database_eloquent_relations_morphto",
+      "illuminate_database_eloquent_softdeletes",
+      "tests_unit_models_mailtemplatelogtest",
+      "tests_unit_models_mailtemplatelogtestpartonetest",
+      "tests_unit_models_mailtemplatelogtestparttwotest"
+    ],
+    "14": [
+      "app_actions_buildmailmessageaction",
+      "app_actions_buildmailmessageaction_buildmailmessageaction",
+      "app_actions_buildmailmessageaction_buildmailmessageaction_decoderichtext",
+      "app_actions_buildmailmessageaction_buildmailmessageaction_execute",
+      "app_notifications_genericnotification",
+      "app_notifications_themenotification",
+      "app_notifications_ticketassignednotification",
+      "app_notifications_ticketassignednotification_ticketassignednotification",
+      "app_notifications_ticketassignednotification_ticketassignednotification_construct",
+      "app_notifications_ticketassignednotification_ticketassignednotification_toarray",
+      "app_notifications_ticketassignednotification_ticketassignednotification_tomail",
+      "app_notifications_ticketassignednotification_ticketassignednotification_via",
+      "app_notifications_ticketstatuschangednotification",
+      "app_notifications_ticketstatuschangednotification_ticketstatuschangednotification",
+      "app_notifications_ticketstatuschangednotification_ticketstatuschangednotification_construct",
+      "app_notifications_ticketstatuschangednotification_ticketstatuschangednotification_toarray",
+      "app_notifications_ticketstatuschangednotification_ticketstatuschangednotification_tomail",
+      "app_notifications_ticketstatuschangednotification_ticketstatuschangednotification_via",
+      "illuminate_notifications_messages_mailmessage",
+      "modules_user_models_user",
+      "tests_unit_notifications_notificationscoveragetest",
+      "tests_unit_notifications_notificationscoveragetest_makethemenotifiabledummy",
+      "tests_unit_notifications_notificationscoveragetest_routenotificationfor"
+    ],
+    "15": [
+      "app_datas_emaildata",
+      "app_emails_emaildataemail",
+      "app_filament_clusters_test",
+      "app_filament_clusters_test_pages_sendawsemailpage",
+      "app_filament_clusters_test_pages_sendemail",
+      "app_filament_clusters_test_pages_sendemailpage",
+      "app_filament_clusters_test_pages_sendfirebasepushnotificationpage",
+      "app_filament_clusters_test_pages_sendnetfunsmspage",
+      "app_filament_clusters_test_pages_sendpushnotification",
+      "app_filament_clusters_test_pages_sendpushnotificationpage",
+      "app_filament_clusters_test_pages_sendsmspage",
+      "app_filament_clusters_test_pages_sendspatieemailpage",
+      "app_filament_clusters_test_pages_sendtelegram",
+      "app_filament_clusters_test_pages_sendtelegrampage",
+      "app_filament_clusters_test_pages_sendwhatsapppage",
+      "app_filament_clusters_test_pages_slacknotification",
+      "app_filament_clusters_test_pages_slacknotification_php_backedenum",
+      "app_filament_clusters_test_pages_slacknotification_slacknotification",
+      "app_filament_clusters_test_pages_slacknotificationpage",
+      "app_filament_clusters_test_pages_slacknotificationpage_php_backedenum",
+      "app_filament_clusters_test_pages_slacknotificationpage_slacknotificationpage",
+      "app_filament_clusters_test_pages_testsmtppage",
+      "filament_forms_components_select",
+      "filament_notifications_notification",
+      "filament_schemas_schema",
+      "illuminate_contracts_auth_authenticatable",
+      "illuminate_mail_mailables_address",
+      "illuminate_support_facades_notification",
+      "modules_xot_filament_pages_xotbasepage",
+      "tests_unit_emails_emaildataemailtest"
+    ],
+    "16": [
+      "app_models_mailtemplate",
+      "app_models_mailtemplate_mailtemplate",
+      "app_models_mailtemplate_mailtemplate_casts",
+      "app_models_mailtemplate_mailtemplate_getslugoptions",
+      "app_models_mailtemplate_mailtemplate_scopeformailable",
+      "app_models_mailtemplateversion_mailtemplateversion_restoretemplate",
+      "app_models_notificationtemplate",
+      "database_factories_mailtemplatefactory",
+      "database_factories_mailtemplatefactory_mailtemplatefactory",
+      "database_factories_mailtemplatefactory_mailtemplatefactory_definition",
+      "illuminate_contracts_mail_mailable",
+      "slugoptions",
+      "spatie_mailtemplates_models_mailtemplate",
+      "spatie_sluggable_hasslug",
+      "spatie_sluggable_slugoptions",
+      "spatie_translatable_hastranslations",
+      "tests_feature_mailtemplatelogbusinesslogictest",
+      "tests_feature_mailtemplatetest",
+      "tests_feature_mailtemplateversionbusinesslogictest",
+      "tests_feature_spatietranslatableplugintest",
+      "tests_pest_createmailtemplate",
+      "tests_pest_makemailtemplate",
+      "tests_unit_models_mailtemplatebusinesslogictest",
+      "tests_unit_models_mailtemplatebusinesslogictest_build",
+      "tests_unit_models_mailtemplatebusinesslogictest_getslug",
+      "tests_unit_models_mailtemplatebusinesslogictest_php_static",
+      "tests_unit_models_mailtemplatetest"
+    ],
+    "17": [
+      "app_contracts_canreceivepushnotifications",
+      "app_contracts_canreceivepushnotifications_getkey",
+      "app_contracts_canreceivepushnotifications_getmobiledevicetokens",
+      "app_datas_pushnotificationdebugdata",
+      "app_datas_pushnotificationdebugdata_php_self",
+      "app_datas_pushnotificationdebugdata_pushnotificationdebugdata",
+      "app_datas_pushnotificationdebugdata_pushnotificationdebugdata_construct",
+      "app_datas_pushnotificationdebugdata_pushnotificationdebugdata_make",
+      "app_datas_pushnotificationdebugdata_pushnotificationdebugdata_toarray",
+      "app_datas_sendnotificationbulkresultdata",
+      "app_datas_sendnotificationbulkresultdata_sendnotificationbulkresultdata",
+      "app_datas_sendnotificationbulkresultdata_sendnotificationbulkresultdata_construct",
+      "app_notifications_channels_firebasecloudmessagingchannel",
+      "app_notifications_channels_firebasecloudmessagingchannel_firebasecloudmessagingchannel",
+      "app_notifications_channels_firebasecloudmessagingchannel_firebasecloudmessagingchannel_construct",
+      "app_notifications_channels_firebasecloudmessagingchannel_firebasecloudmessagingchannel_send",
+      "app_notifications_channels_firebasecloudmessagingchannel_firebasecloudmessagingchannel_sendmulticastnotificationtodevices",
+      "app_notifications_channels_firebasecloudmessagingchannel_firebasecloudmessagingchannel_testfcmtokens",
+      "illuminate_contracts_support_arrayable",
+      "illuminate_support_collection",
+      "kreait_firebase_contract_messaging",
+      "kreait_firebase_messaging_multicastsendreport",
+      "modules_notify_contracts_canreceivepushnotifications",
+      "modules_notify_contracts_mobilepushnotification",
+      "psr_log_loggerinterface",
+      "tests_testcase_testcase_firstmodel"
+    ],
+    "18": [
+      "app_actions_push_schedulepushnotificationaction",
+      "app_actions_push_schedulepushnotificationaction_schedulepushnotificationaction",
+      "app_actions_push_schedulepushnotificationaction_schedulepushnotificationaction_execute",
+      "app_jobs_sendnotificationjob",
+      "app_jobs_sendnotificationjob_sendnotificationjob",
+      "app_jobs_sendnotificationjob_sendnotificationjob_failed",
+      "app_jobs_sendscheduledpushnotification",
+      "app_jobs_sendscheduledpushnotification_sendscheduledpushnotification",
+      "app_jobs_sendscheduledpushnotification_sendscheduledpushnotification_construct",
+      "app_jobs_sendscheduledpushnotification_sendscheduledpushnotification_failed",
+      "app_mail_appointmentnotificationmail",
+      "app_mail_appointmentnotificationmail_appointmentnotificationmail",
+      "app_mail_appointmentnotificationmail_appointmentnotificationmail_attachments",
+      "app_mail_appointmentnotificationmail_appointmentnotificationmail_construct",
+      "app_notifications_smsnotification",
+      "app_notifications_whatsappnotification",
+      "app_services_pushnotificationservice",
+      "app_services_pushnotificationservice_pushnotificationservice_schedulenotification",
+      "datetime",
+      "illuminate_bus_queueable",
+      "illuminate_contracts_queue_shouldqueue",
+      "illuminate_foundation_bus_dispatchable",
+      "illuminate_queue_interactswithqueue",
+      "illuminate_queue_serializesmodels",
+      "throwable"
+    ],
+    "19": [
+      "app_actions_sendrecordsnotificationaction",
+      "app_actions_sendrecordsnotificationaction_sendrecordsnotificationaction",
+      "app_actions_sendrecordsnotificationaction_sendrecordsnotificationaction_execute",
+      "app_actions_sendrecordsnotificationaction_sendrecordsnotificationaction_getrecordname",
+      "app_filament_actions_sendrecordsnotificationbulkaction",
+      "app_filament_actions_sendrecordsnotificationbulkaction_sendrecordsnotificationbulkaction",
+      "app_filament_actions_sendrecordsnotificationbulkaction_sendrecordsnotificationbulkaction_setup",
+      "app_filament_forms_components_channelcheckboxlist",
+      "app_filament_forms_components_channelcheckboxlist_channelcheckboxlist",
+      "app_filament_forms_components_channelcheckboxlist_channelcheckboxlist_make",
+      "app_filament_forms_components_channelcheckboxlist_channelcheckboxlist_setup",
+      "app_filament_forms_components_channelcheckboxlist_php_static",
+      "app_filament_forms_components_mailtemplateselect",
+      "app_filament_forms_components_mailtemplateselect_mailtemplateselect",
+      "app_filament_forms_components_mailtemplateselect_mailtemplateselect_make",
+      "app_filament_forms_components_mailtemplateselect_mailtemplateselect_setup",
+      "app_filament_forms_components_mailtemplateselect_php_static",
+      "filament_forms_components_checkboxlist",
+      "modules_xot_filament_tables_actions_xotbasebulkaction",
+      "tests_fixtures_sendrecordsnotificationbulkactionspy",
+      "tests_fixtures_sendrecordsnotificationbulkactionspy_sendrecordsnotificationbulkactionspy",
+      "tests_fixtures_sendrecordsnotificationbulkactionspy_sendrecordsnotificationbulkactionspy_execute",
+      "tests_unit_filament_actions_sendrecordsnotificationbulkactiontest",
+      "tests_unit_filament_actions_sendrecordsnotificationbulkactiontest_makedummynotifybulkmodel",
+      "tests_unit_filament_forms_components_notifyformcomponentstest"
+    ],
+    "20": [
+      "app_models_basemorphpivot",
+      "app_models_basemorphpivot_basemorphpivot",
+      "app_models_basemorphpivot_basemorphpivot_casts",
+      "app_models_basepivot",
+      "app_models_basepivot_basepivot",
+      "app_models_basepivot_basepivot_casts",
+      "illuminate_database_eloquent_relations_morphpivot",
+      "illuminate_database_eloquent_relations_pivot",
+      "modules_xot_traits_updater",
+      "tests_fixtures_notifybasemorphpivotproxy",
+      "tests_fixtures_notifybasemorphpivotproxy_notifybasemorphpivotproxy",
+      "tests_fixtures_notifybasemorphpivotproxy_notifybasemorphpivotproxy_exposedcasts",
+      "tests_fixtures_notifybasepivotproxy",
+      "tests_fixtures_notifybasepivotproxy_notifybasepivotproxy",
+      "tests_fixtures_notifybasepivotproxy_notifybasepivotproxy_exposedcasts",
+      "tests_fixtures_notifynotificationtemplateproxy",
+      "tests_fixtures_notifynotificationtemplateproxy_notifynotificationtemplateproxy",
+      "tests_fixtures_notifynotificationtemplateproxy_notifynotificationtemplateproxy_exposedcasts",
+      "tests_fixtures_notifynotificationtemplateproxy_notifynotificationtemplateproxy_exposedcompilestring",
+      "tests_unit_models_notifymodelscoveragetest",
+      "tests_unit_models_notifymodelscoveragetest_makenotifybasemorphpivotproxy",
+      "tests_unit_models_notifymodelscoveragetest_makenotifybasepivotproxy",
+      "tests_unit_models_notifymodelscoveragetest_makenotifynotificationtemplateproxy"
+    ],
+    "21": [
+      "app_services_pushnotificationservice_pushnotificationservice",
+      "app_services_pushnotificationservice_pushnotificationservice_construct",
+      "app_services_pushnotificationservice_pushnotificationservice_detectplatform",
+      "app_services_pushnotificationservice_pushnotificationservice_getallactivetokens",
+      "app_services_pushnotificationservice_pushnotificationservice_gettemplate",
+      "app_services_pushnotificationservice_pushnotificationservice_gettokensbycriteria",
+      "app_services_pushnotificationservice_pushnotificationservice_grouptokensbyplatform",
+      "app_services_pushnotificationservice_pushnotificationservice_processtemplate",
+      "app_services_pushnotificationservice_pushnotificationservice_sendapnsnotification",
+      "app_services_pushnotificationservice_pushnotificationservice_sendapnstopicnotification",
+      "app_services_pushnotificationservice_pushnotificationservice_sendbatchtoplatform",
+      "app_services_pushnotificationservice_pushnotificationservice_sendfcmnotification",
+      "app_services_pushnotificationservice_pushnotificationservice_sendfcmtopicnotification",
+      "app_services_pushnotificationservice_pushnotificationservice_sendtoall",
+      "app_services_pushnotificationservice_pushnotificationservice_sendtodevice",
+      "app_services_pushnotificationservice_pushnotificationservice_sendtodevices",
+      "app_services_pushnotificationservice_pushnotificationservice_sendtopictoplatform",
+      "app_services_pushnotificationservice_pushnotificationservice_sendtoplatform",
+      "app_services_pushnotificationservice_pushnotificationservice_sendtotopic",
+      "app_services_pushnotificationservice_pushnotificationservice_sendwebpushnotification",
+      "app_services_pushnotificationservice_pushnotificationservice_sendwebpushtopicnotification",
+      "app_services_pushnotificationservice_pushnotificationservice_sendwithtargeting",
+      "app_services_pushnotificationservice_pushnotificationservice_sendwithtemplate"
+    ],
+    "22": [
+      "docs_obsidian_app",
+      "docs_obsidian_app_alwaysupdatelinks",
+      "docs_obsidian_app_attachmentfolderpath",
+      "docs_obsidian_app_autoconverthtml",
+      "docs_obsidian_app_defaulteditmode",
+      "docs_obsidian_app_defaultviewmode",
+      "docs_obsidian_app_foldheading",
+      "docs_obsidian_app_foldindent",
+      "docs_obsidian_app_legacyeditor",
+      "docs_obsidian_app_livepreview",
+      "docs_obsidian_app_newfilefolderpath",
+      "docs_obsidian_app_newfilelocation",
+      "docs_obsidian_app_readablelinelength",
+      "docs_obsidian_app_showfrontmatter",
+      "docs_obsidian_app_showlinenumber",
+      "docs_obsidian_app_spellcheck",
+      "docs_obsidian_app_strictlinebreaks",
+      "docs_obsidian_app_strictlinebreaksinparagraphs",
+      "docs_obsidian_app_tabsize",
+      "docs_obsidian_app_usemarkdownlinks",
+      "docs_obsidian_app_usewikilinks",
+      "docs_obsidian_app_vimmode",
+      "docs_obsidian_app_wikilinkfileextension"
+    ],
+    "23": [
+      "app_filament_resources_contactresource_tables_contactstable",
+      "app_filament_resources_contactresource_tables_contactstable_contactstable",
+      "app_filament_resources_contactresource_tables_contactstable_contactstable_gettablecolumns",
+      "app_filament_resources_contactresource_tables_contactstable_contactstable_gettablefilters",
+      "app_filament_resources_mailtemplateresource_tables_mailtemplatestable",
+      "app_filament_resources_mailtemplateresource_tables_mailtemplatestable_mailtemplatestable",
+      "app_filament_resources_mailtemplateresource_tables_mailtemplatestable_mailtemplatestable_gettablecolumns",
+      "app_filament_resources_notificationlogresource_tables_notificationlogstable",
+      "app_filament_resources_notificationlogresource_tables_notificationlogstable_notificationlogstable",
+      "app_filament_resources_notificationlogresource_tables_notificationlogstable_notificationlogstable_gettablecolumns",
+      "app_filament_resources_notificationresource_tables_notificationstable",
+      "app_filament_resources_notificationresource_tables_notificationstable_notificationstable",
+      "app_filament_resources_notificationresource_tables_notificationstable_notificationstable_gettablecolumns",
+      "app_filament_resources_notificationresource_tables_notificationstable_notificationstable_gettablefilters",
+      "app_filament_resources_notificationtemplateresource_tables_notificationtemplatestable",
+      "app_filament_resources_notificationtemplateresource_tables_notificationtemplatestable_notificationtemplatestable",
+      "app_filament_resources_notificationtemplateresource_tables_notificationtemplatestable_notificationtemplatestable_gettablecolumns",
+      "app_filament_resources_notifythemeresource_tables_notifythemestable",
+      "app_filament_resources_notifythemeresource_tables_notifythemestable_notifythemestable",
+      "app_filament_resources_notifythemeresource_tables_notifythemestable_notifythemestable_gettablecolumns",
+      "app_filament_resources_notifythemeresource_tables_notifythemestable_notifythemestable_gettablefilters",
+      "modules_xot_filament_resources_tables_xotbaseresourcetable"
+    ],
+    "24": [
+      "app_filament_resources_mailtemplateresource_pages_previewmailtemplate",
+      "app_filament_resources_mailtemplateresource_pages_previewmailtemplate_previewmailtemplate",
+      "app_filament_resources_mailtemplateresource_pages_previewmailtemplate_previewmailtemplate_gettitle",
+      "app_filament_resources_notificationtemplateresource",
+      "app_filament_resources_notificationtemplateresource_notificationtemplateresource",
+      "app_filament_resources_notificationtemplateresource_notificationtemplateresource_getformschema",
+      "app_filament_resources_notificationtemplateresource_notificationtemplateresource_getpages",
+      "app_filament_resources_notificationtemplateresource_pages_previewnotificationtemplate",
+      "app_filament_resources_notificationtemplateresource_pages_previewnotificationtemplate_previewnotificationtemplate",
+      "app_filament_resources_notificationtemplateresource_pages_previewnotificationtemplate_previewnotificationtemplate_getsubheading",
+      "app_filament_resources_notificationtemplateresource_pages_previewnotificationtemplate_previewnotificationtemplate_gettitle",
+      "modules_xot_filament_resources_pages_xotbaseresourcepage",
+      "tests_fixtures_previewmailtemplatetestproxy",
+      "tests_fixtures_previewmailtemplatetestproxy_previewmailtemplatetestproxy",
+      "tests_fixtures_previewmailtemplatetestproxy_previewmailtemplatetestproxy_exposedheaderactions",
+      "tests_fixtures_viewnotificationtestproxy_viewnotificationtestproxy",
+      "tests_fixtures_viewnotificationtestproxy_viewnotificationtestproxy_exposedinfolistschema",
+      "tests_unit_filament_resources_notifyfilamentresourcescoveragetest",
+      "tests_unit_filament_resources_notifyfilamentresourcescoveragetest_makepreviewmailtemplatetestproxy",
+      "tests_unit_filament_resources_notifyfilamentresourcescoveragetest_makepreviewnotificationtemplatetestproxy",
+      "tests_unit_filament_resources_notifyfilamentresourcescoveragetest_makeviewnotificationtestproxy"
+    ],
+    "25": [
+      "app_filament_resources_notifythemeresource",
+      "app_filament_resources_notifythemeresource_notifythemeresource",
+      "app_filament_resources_notifythemeresource_notifythemeresource_fieldoptions",
+      "app_filament_resources_notifythemeresource_notifythemeresource_getformschema",
+      "app_filament_resources_notifythemeresource_pages_editnotifytheme",
+      "app_filament_resources_notifythemeresource_pages_editnotifytheme_editnotifytheme",
+      "app_filament_resources_notifythemeresource_pages_editnotifytheme_editnotifytheme_getheaderactions",
+      "app_filament_resources_notifythemeresource_pages_listnotifythemes",
+      "app_filament_resources_notifythemeresource_pages_listnotifythemes_listnotifythemes",
+      "app_filament_resources_notifythemeresource_pages_listnotifythemes_listnotifythemes_getnotifythemetablecolumns",
+      "app_filament_resources_notifythemeresource_pages_listnotifythemes_listnotifythemes_gettablecolumns",
+      "app_filament_resources_notifythemeresource_pages_listnotifythemes_listnotifythemes_gettablefilters",
+      "app_filament_tables_columns_contactcolumn",
+      "app_filament_tables_columns_contactcolumn_contactcolumn",
+      "app_filament_tables_columns_contactcolumn_contactcolumn_setup",
+      "filament_tables_columns_viewcolumn",
+      "tests_fixtures_editnotifythemetestproxy",
+      "tests_fixtures_editnotifythemetestproxy_editnotifythemetestproxy",
+      "tests_fixtures_editnotifythemetestproxy_editnotifythemetestproxy_exposedheaderactions",
+      "tests_unit_filament_resources_notifythemeandcolumnscoveragetest",
+      "tests_unit_filament_resources_notifythemeandcolumnscoveragetest_makeeditnotifythemetestproxy"
+    ],
+    "26": [
+      "app_models_notifytheme",
+      "app_models_notifytheme_notifytheme",
+      "app_models_notifytheme_notifytheme_casts",
+      "app_models_notifytheme_notifytheme_getlogoattribute",
+      "app_models_notifythemeable",
+      "app_models_notifythemeable_notifythemeable",
+      "database_factories_notifythemeablefactory",
+      "database_factories_notifythemeablefactory_notifythemeablefactory",
+      "database_factories_notifythemeablefactory_notifythemeablefactory_definition",
+      "database_factories_notifythemeablefactory_notifythemeablefactory_forpatient",
+      "database_factories_notifythemeablefactory_notifythemeablefactory_foruser",
+      "database_factories_notifythemeablefactory_php_static",
+      "database_factories_notifythemefactory",
+      "database_factories_notifythemefactory_notifythemefactory",
+      "database_factories_notifythemefactory_notifythemefactory_definition",
+      "tests_feature_notifythemeablebusinesslogictest",
+      "tests_pest_notifythemeforthemeable",
+      "tests_unit_models_notifythemeabletest",
+      "tests_unit_models_notifythemetest",
+      "tests_unit_models_notifythemetestpartonetest",
+      "tests_unit_models_notifythemetestparttwotest"
+    ],
+    "27": [
+      "app_models_notificationchannel",
+      "app_models_notificationchannel_notificationchannel",
+      "app_models_notificationchannel_notificationchannel_casts",
+      "database_factories_contactfactory_contactfactory",
+      "database_factories_contactfactory_contactfactory_definition",
+      "database_factories_mailtemplatelogfactory",
+      "database_factories_mailtemplatelogfactory_mailtemplatelogfactory",
+      "database_factories_mailtemplatelogfactory_mailtemplatelogfactory_definition",
+      "database_factories_mailtemplateversionfactory",
+      "database_factories_mailtemplateversionfactory_mailtemplateversionfactory",
+      "database_factories_mailtemplateversionfactory_mailtemplateversionfactory_definition",
+      "database_factories_notificationchannelfactory",
+      "database_factories_notificationlogfactory",
+      "database_factories_notificationlogfactory_notificationlogfactory",
+      "database_factories_notificationlogfactory_notificationlogfactory_definition",
+      "database_factories_notificationtemplatefactory",
+      "database_factories_notificationtemplatefactory_notificationtemplatefactory",
+      "database_factories_notificationtemplatefactory_notificationtemplatefactory_definition",
+      "illuminate_database_eloquent_factories_factory",
+      "tests_unit_notifymodelstest"
+    ],
+    "28": [
+      "scripts_ci_contributor_lines_report",
+      "scripts_ci_contributor_lines_report_args",
+      "scripts_ci_contributor_lines_report_barchartsvg",
+      "scripts_ci_contributor_lines_report_buildhtml",
+      "scripts_ci_contributor_lines_report_buildsummary",
+      "scripts_ci_contributor_lines_report_clocdata",
+      "scripts_ci_contributor_lines_report_collectcloc",
+      "scripts_ci_contributor_lines_report_collectgitchurn",
+      "scripts_ci_contributor_lines_report_cwd",
+      "scripts_ci_contributor_lines_report_escapehtml",
+      "scripts_ci_contributor_lines_report_extof",
+      "scripts_ci_contributor_lines_report_gitdata",
+      "scripts_ci_contributor_lines_report_html",
+      "scripts_ci_contributor_lines_report_outhtml",
+      "scripts_ci_contributor_lines_report_outsummary",
+      "scripts_ci_contributor_lines_report_sh",
+      "scripts_ci_contributor_lines_report_sincedate",
+      "scripts_ci_contributor_lines_report_summary",
+      "scripts_ci_contributor_lines_report_topauthors",
+      "scripts_ci_contributor_lines_report_topentries"
+    ],
+    "29": [
+      "app_channels_smschannel",
+      "app_contracts_notificationdispatchercontract",
+      "app_contracts_notificationdispatchercontract_broadcast",
+      "app_contracts_notificationdispatchercontract_dispatch",
+      "app_contracts_notificationdispatcherinterface",
+      "app_contracts_notificationdispatcherinterface_broadcast",
+      "app_contracts_notificationdispatcherinterface_dispatch",
+      "app_notifications_channels_telegramchannel",
+      "app_notifications_channels_telegramchannel_telegramchannel",
+      "app_notifications_channels_telegramchannel_telegramchannel_send",
+      "app_notifications_recordnotification",
+      "app_notifications_telegramnotification",
+      "app_notifications_telegramnotification_telegramnotification",
+      "app_notifications_telegramnotification_telegramnotification_construct",
+      "app_notifications_telegramnotification_telegramnotification_toarray",
+      "app_notifications_telegramnotification_telegramnotification_totelegram",
+      "app_notifications_telegramnotification_telegramnotification_via",
+      "illuminate_notifications_notification",
+      "tests_unit_channels_smschanneltest"
+    ],
+    "30": [
+      "app_filament_forms_components_htmllayoutpathselect",
+      "app_filament_forms_components_htmllayoutpathselect_htmllayoutpathselect",
+      "app_filament_forms_components_htmllayoutpathselect_htmllayoutpathselect_make",
+      "app_filament_forms_components_htmllayoutpathselect_htmllayoutpathselect_setup",
+      "app_filament_forms_components_htmllayoutpathselect_php_static",
+      "app_filament_resources_mailtemplateresource",
+      "app_filament_resources_mailtemplateresource_mailtemplateresource",
+      "app_filament_resources_mailtemplateresource_mailtemplateresource_getformschema",
+      "app_filament_resources_mailtemplateresource_pages_createmailtemplate",
+      "app_filament_resources_mailtemplateresource_pages_createmailtemplate_createmailtemplate",
+      "app_filament_resources_mailtemplateresource_pages_editmailtemplate",
+      "app_filament_resources_mailtemplateresource_pages_editmailtemplate_editmailtemplate",
+      "app_filament_resources_mailtemplateresource_pages_previewmailtemplate_previewmailtemplate_getheaderactions",
+      "app_filament_resources_mailtemplateresource_schemas_mailtemplateform",
+      "app_filament_resources_mailtemplateresource_schemas_mailtemplateform_mailtemplateform",
+      "app_filament_resources_mailtemplateresource_schemas_mailtemplateform_mailtemplateform_getformschema",
+      "modules_lang_filament_resources_langbaseresource",
+      "modules_lang_filament_resources_pages_langbasecreaterecord",
+      "modules_lang_filament_resources_pages_langbaseeditrecord"
+    ],
+    "31": [
+      "app_filament_resources_contactresource_schemas_contactinfolist",
+      "app_filament_resources_contactresource_schemas_contactinfolist_contactinfolist",
+      "app_filament_resources_contactresource_schemas_contactinfolist_contactinfolist_getinfolistschema",
+      "app_filament_resources_mailtemplateresource_schemas_mailtemplateinfolist",
+      "app_filament_resources_mailtemplateresource_schemas_mailtemplateinfolist_mailtemplateinfolist",
+      "app_filament_resources_mailtemplateresource_schemas_mailtemplateinfolist_mailtemplateinfolist_getinfolistschema",
+      "app_filament_resources_notificationlogresource_schemas_notificationloginfolist",
+      "app_filament_resources_notificationlogresource_schemas_notificationloginfolist_notificationloginfolist",
+      "app_filament_resources_notificationlogresource_schemas_notificationloginfolist_notificationloginfolist_getinfolistschema",
+      "app_filament_resources_notificationresource_schemas_notificationinfolist",
+      "app_filament_resources_notificationresource_schemas_notificationinfolist_notificationinfolist",
+      "app_filament_resources_notificationresource_schemas_notificationinfolist_notificationinfolist_getinfolistschema",
+      "app_filament_resources_notificationtemplateresource_schemas_notificationtemplateinfolist",
+      "app_filament_resources_notificationtemplateresource_schemas_notificationtemplateinfolist_notificationtemplateinfolist",
+      "app_filament_resources_notificationtemplateresource_schemas_notificationtemplateinfolist_notificationtemplateinfolist_getinfolistschema",
+      "app_filament_resources_notifythemeresource_schemas_notifythemeinfolist",
+      "app_filament_resources_notifythemeresource_schemas_notifythemeinfolist_notifythemeinfolist",
+      "app_filament_resources_notifythemeresource_schemas_notifythemeinfolist_notifythemeinfolist_getinfolistschema",
+      "modules_xot_filament_resources_schemas_xotbaseresourceinfolist"
+    ],
+    "32": [
+      "scripts_update_roadmaps",
+      "scripts_update_roadmaps_create_module_roadmap",
+      "scripts_update_roadmaps_create_theme_roadmap",
+      "scripts_update_roadmaps_error",
+      "scripts_update_roadmaps_generate_consolidated_report",
+      "scripts_update_roadmaps_log",
+      "scripts_update_roadmaps_main",
+      "scripts_update_roadmaps_notify_stakeholders",
+      "scripts_update_roadmaps_sh__entry",
+      "scripts_update_roadmaps_success",
+      "scripts_update_roadmaps_sync_master_roadmap",
+      "scripts_update_roadmaps_update_module_roadmaps",
+      "scripts_update_roadmaps_update_performance_metrics",
+      "scripts_update_roadmaps_update_phpstan_metrics",
+      "scripts_update_roadmaps_update_single_module_roadmap",
+      "scripts_update_roadmaps_update_single_theme_roadmap",
+      "scripts_update_roadmaps_update_test_coverage",
+      "scripts_update_roadmaps_update_theme_roadmaps",
+      "scripts_update_roadmaps_warning"
+    ],
+    "33": [
+      "app_actions_netfunsendaction_netfunsendaction",
+      "app_actions_netfunsendaction_netfunsendaction_construct",
+      "app_actions_netfunsendaction_netfunsendaction_execute",
+      "app_actions_sms_sendagiletelecomsmsaction",
+      "app_actions_sms_sendagiletelecomsmsaction_sendagiletelecomsmsaction",
+      "app_actions_sms_sendagiletelecomsmsaction_sendagiletelecomsmsaction_execute",
+      "app_actions_sms_sendnetfunsmsaction_sendnetfunsmsaction",
+      "app_actions_sms_sendnetfunsmsaction_sendnetfunsmsaction_construct",
+      "app_actions_sms_sendnetfunsmsaction_sendnetfunsmsaction_execute",
+      "app_contracts_sms_smsactioncontract",
+      "app_contracts_sms_smsactioncontract_execute",
+      "app_contracts_smsactioncontract",
+      "app_contracts_smsactioncontract_execute",
+      "app_contracts_smsprovidercontract",
+      "app_contracts_smsprovidercontract_execute",
+      "app_datas_smsdata_php_self",
+      "app_datas_smsdata_smsdata",
+      "app_datas_smsdata_smsdata_construct",
+      "app_datas_smsdata_smsdata_from"
+    ],
+    "34": [
+      "app_emails_spatieemail",
+      "app_emails_spatieemail_php_self",
+      "app_emails_spatieemail_spatieemail",
+      "app_emails_spatieemail_spatieemail_addattachments",
+      "app_emails_spatieemail_spatieemail_attachments",
+      "app_emails_spatieemail_spatieemail_buildsms",
+      "app_emails_spatieemail_spatieemail_construct",
+      "app_emails_spatieemail_spatieemail_embedlogo",
+      "app_emails_spatieemail_spatieemail_getattachmentfromdata",
+      "app_emails_spatieemail_spatieemail_getattachmentfrompath",
+      "app_emails_spatieemail_spatieemail_gethtmllayout",
+      "app_emails_spatieemail_spatieemail_getslug",
+      "app_emails_spatieemail_spatieemail_mergedata",
+      "app_emails_spatieemail_spatieemail_setrecipient",
+      "attachment",
+      "illuminate_mail_mailables_attachment",
+      "spatie_mailtemplates_interfaces_mailtemplateinterface",
+      "spatie_mailtemplates_templatemailable"
+    ],
+    "35": [
+      "mockery_compositeexpectation",
+      "mockery_mockinterface",
+      "phpunit_framework_testcase",
+      "tests_feature_emailtemplatestest_php_tests_feature_emailtemplatestest_95a4c9",
+      "tests_support_helpers",
+      "tests_support_helpers_mockexpectation",
+      "tests_support_helpers_typedmock",
+      "tests_unit_services_notificationmanagertest_notificationmanagertest",
+      "tests_unit_services_notificationmanagertest_notificationmanagertest_it_can_get_template_by_code",
+      "tests_unit_services_notificationmanagertest_notificationmanagertest_it_can_get_templates_by_category",
+      "tests_unit_services_notificationmanagertest_notificationmanagertest_it_can_send_notification_to_multiple_recipients",
+      "tests_unit_services_notificationmanagertest_notificationmanagertest_it_can_send_notification_to_single_recipient",
+      "tests_unit_services_notificationmanagertest_notificationmanagertest_it_returns_array_from_send_method",
+      "tests_unit_services_notificationmanagertest_notificationmanagertest_it_returns_array_from_send_multiple_method",
+      "tests_unit_services_notificationmanagertest_notificationmanagertest_it_throws_exception_when_template_not_found",
+      "tests_unit_services_notificationmanagertest_notificationmanagertest_recipient",
+      "tests_unit_services_notificationmanagertest_notificationmanagertest_setup",
+      "tests_unit_services_notificationmanagertest_notificationmanagertest_teardown"
+    ],
+    "36": [
+      "app_actions_sms_sendgammusmsaction_sendgammusmsaction",
+      "app_actions_sms_sendgammusmsaction_sendgammusmsaction_execute",
+      "app_actions_sms_sendnexmosmsaction",
+      "app_actions_sms_sendnexmosmsaction_sendnexmosmsaction",
+      "app_actions_sms_sendnexmosmsaction_sendnexmosmsaction_execute",
+      "app_actions_sms_sendsmsfactorsmsaction",
+      "app_factories_smsactionfactory",
+      "app_factories_smsactionfactory_smsactionfactory",
+      "app_factories_smsactionfactory_smsactionfactory_create",
+      "app_factories_smsactionfactory_smsactionfactory_normalizedrivername",
+      "modules_notify_contracts_sms_smsactioncontract",
+      "tests_unit_actions_sms_sendnexmosmsactiontest",
+      "tests_unit_actions_sms_sendsmsfactorsmsactiontest",
+      "tests_unit_factories_actionfactoriestest"
+    ],
+    "37": [
+      "app_emails_emaildataemail_emaildataemail",
+      "app_emails_emaildataemail_emaildataemail_attachments",
+      "app_emails_emaildataemail_emaildataemail_construct",
+      "app_emails_emaildataemail_emaildataemail_content",
+      "app_emails_emaildataemail_emaildataemail_envelope",
+      "app_emails_spatieemail_spatieemail_envelope",
+      "app_mail_appointmentnotificationmail_appointmentnotificationmail_content",
+      "app_mail_appointmentnotificationmail_appointmentnotificationmail_envelope",
+      "app_mail_christmasgreetingmailable",
+      "app_mail_christmasgreetingmailable_christmasgreetingmailable",
+      "app_mail_christmasgreetingmailable_christmasgreetingmailable_attachments",
+      "app_mail_christmasgreetingmailable_christmasgreetingmailable_construct",
+      "app_mail_christmasgreetingmailable_christmasgreetingmailable_content",
+      "app_mail_christmasgreetingmailable_christmasgreetingmailable_envelope",
+      "illuminate_mail_mailable",
+      "illuminate_mail_mailables_content",
+      "illuminate_mail_mailables_envelope"
+    ],
+    "38": [
+      "app_filament_resources_contactresource_schemas_contactform",
+      "app_filament_resources_contactresource_schemas_contactform_contactform",
+      "app_filament_resources_contactresource_schemas_contactform_contactform_getformschema",
+      "app_filament_resources_notificationlogresource_schemas_notificationlogform",
+      "app_filament_resources_notificationlogresource_schemas_notificationlogform_notificationlogform",
+      "app_filament_resources_notificationlogresource_schemas_notificationlogform_notificationlogform_getformschema",
+      "app_filament_resources_notificationresource_schemas_notificationform",
+      "app_filament_resources_notificationresource_schemas_notificationform_notificationform",
+      "app_filament_resources_notificationresource_schemas_notificationform_notificationform_getformschema",
+      "app_filament_resources_notificationtemplateresource_schemas_notificationtemplateform",
+      "app_filament_resources_notificationtemplateresource_schemas_notificationtemplateform_notificationtemplateform",
+      "app_filament_resources_notificationtemplateresource_schemas_notificationtemplateform_notificationtemplateform_getformschema",
+      "app_filament_resources_notifythemeresource_schemas_notifythemeform",
+      "app_filament_resources_notifythemeresource_schemas_notifythemeform_notifythemeform",
+      "app_filament_resources_notifythemeresource_schemas_notifythemeform_notifythemeform_fieldoptions",
+      "app_filament_resources_notifythemeresource_schemas_notifythemeform_notifythemeform_getformschema",
+      "modules_xot_filament_resources_schemas_xotbaseresourceform"
+    ],
+    "39": [
+      "app_models_basemodel",
+      "app_models_basemodel_basemodel",
+      "app_models_basemodel_basemodel_casts",
+      "app_models_notificationtemplateversion",
+      "app_models_notificationtemplateversion_notificationtemplateversion",
+      "app_models_notificationtemplateversion_notificationtemplateversion_casts",
+      "app_models_notificationtemplateversion_notificationtemplateversion_restoretemplate",
+      "app_models_notificationtemplateversion_notificationtemplateversion_template",
+      "database_factories_notificationtemplateversionfactory",
+      "database_factories_notificationtemplateversionfactory_notificationtemplateversionfactory",
+      "database_factories_notificationtemplateversionfactory_notificationtemplateversionfactory_definition",
+      "modules_xot_models_xotbasemodel",
+      "spatie_medialibrary_hasmedia",
+      "spatie_medialibrary_interactswithmedia",
+      "tests_feature_notificationtemplateversionbusinesslogictest",
+      "tests_unit_models_basemodeltest",
+      "tests_unit_models_notificationtemplateversiontest"
+    ],
+    "40": [
+      "app_models_notification",
+      "app_models_notification_notification",
+      "app_models_notification_notification_casts",
+      "database_factories_notificationfactory",
+      "database_factories_notificationfactory_notificationfactory",
+      "database_factories_notificationfactory_notificationfactory_definition",
+      "database_migrations_2026_06_10_134000_create_notifications_table",
+      "database_migrations_2026_06_10_134000_create_notifications_table_up",
+      "modules_xot_models_basemodel",
+      "tests_pest_createnotification",
+      "tests_pest_makenotification",
+      "tests_unit_actions_sendnotificationflowtest",
+      "tests_unit_models_notificationbusinesslogictest",
+      "tests_unit_models_notificationtest",
+      "tests_unit_models_notificationtestpartonetest",
+      "tests_unit_models_notificationtestparttwotest"
+    ],
+    "41": [
+      "reflectiontype",
+      "tests_pest",
+      "tests_pest_assertfreshmodel",
+      "tests_pest_assertlistcontains",
+      "tests_pest_assertnotifyarray",
+      "tests_pest_assertnotifytablehas",
+      "tests_pest_assertnotifytablemissing",
+      "tests_pest_assertnotifythrows",
+      "tests_pest_assertreflectionfilename",
+      "tests_pest_assertreflectionnamedtype",
+      "tests_pest_assertreflectiontypename",
+      "tests_pest_notifyarrayget",
+      "tests_pest_notifyfreshtypechannels",
+      "tests_pest_notifyfreshtypesettings",
+      "tests_pest_notifyreflectionpropertynames",
+      "tests_pest_notifyreflectionsource"
+    ],
+    "42": [
+      "app_models_contact",
+      "app_models_contact_contact",
+      "app_models_contact_contact_casts",
+      "app_models_notificationtype",
+      "app_models_notificationtype_notificationtype",
+      "app_models_notificationtype_notificationtype_casts",
+      "database_factories_notificationtypefactory",
+      "database_factories_notificationtypefactory_notificationtypefactory",
+      "database_factories_notificationtypefactory_notificationtypefactory_definition",
+      "illuminate_database_eloquent_factories_hasfactory",
+      "illuminate_support_carbon",
+      "tests_feature_notificationmanagementbusinesslogictest",
+      "tests_feature_notificationtypebusinesslogictest",
+      "tests_unit_models_notificationtypebusinesslogictest",
+      "tests_unit_models_notificationtypetest"
+    ],
+    "43": [
+      "app_notifications_channels_netfunchannel",
+      "app_notifications_channels_netfunchannel_netfunchannel",
+      "app_notifications_channels_netfunchannel_netfunchannel_send",
+      "app_notifications_themenotification_themenotification",
+      "app_notifications_themenotification_themenotification_construct",
+      "app_notifications_themenotification_themenotification_toarray",
+      "app_notifications_themenotification_themenotification_tomail",
+      "app_notifications_themenotification_themenotification_tosms",
+      "app_notifications_themenotification_themenotification_via",
+      "modules_notify_contracts_canthemenotificationcontract",
+      "tests_unit_notifications_channels_notificationschannelstest",
+      "tests_unit_notifications_channels_notificationschannelstest_execute",
+      "tests_unit_notifications_channels_notificationschannelstest_maketelegramnotifiabledummy",
+      "tests_unit_notifications_channels_notificationschannelstest_maketelegramnotificationdummy",
+      "tests_unit_notifications_channels_notificationschannelstest_makethemenotificationdummy"
+    ],
+    "44": [
+      "scripts_install_quality_tools",
+      "scripts_install_quality_tools_check_prerequisites",
+      "scripts_install_quality_tools_create_configurations",
+      "scripts_install_quality_tools_create_pre_commit_hook",
+      "scripts_install_quality_tools_create_quality_scripts",
+      "scripts_install_quality_tools_error",
+      "scripts_install_quality_tools_install_frontend_tools",
+      "scripts_install_quality_tools_install_infrastructure_tools",
+      "scripts_install_quality_tools_install_php_tools",
+      "scripts_install_quality_tools_install_security_tools",
+      "scripts_install_quality_tools_log",
+      "scripts_install_quality_tools_main",
+      "scripts_install_quality_tools_sh__entry",
+      "scripts_install_quality_tools_success",
+      "scripts_install_quality_tools_warning"
+    ],
+    "45": [
+      "app_actions_netfunsendaction",
+      "app_actions_sms_sendagiletelecomsmsv2action",
+      "app_actions_sms_sendgammusmsaction",
+      "app_actions_sms_sendnetfunsmsaction",
+      "app_datas_smsdata",
+      "reflectionclass",
+      "reflectionnamedtype",
+      "tests_unit_actions_netfunsendactiontest",
+      "tests_unit_actions_sms_sendagiletelecomsmsactiontest",
+      "tests_unit_actions_sms_sendagiletelecomsmsv1actiontest",
+      "tests_unit_actions_sms_sendagiletelecomsmsv2actiontest",
+      "tests_unit_actions_sms_sendgammusmsactiontest",
+      "tests_unit_actions_sms_sendnetfunsmsactiontest",
+      "tests_unit_datas_smsdatatest"
+    ],
+    "46": [
+      "app_actions_sendnotificationaction",
+      "app_actions_sendnotificationaction_sendnotificationaction",
+      "app_actions_sendnotificationaction_sendnotificationaction_handle",
+      "app_actions_sendnotificationaction_sendnotificationaction_normalizemodelkey",
+      "app_actions_sendnotificationaction_sendnotificationaction_senddatabase",
+      "app_actions_sendnotificationaction_sendnotificationaction_sendmail",
+      "app_actions_sendnotificationaction_sendnotificationaction_sendsms",
+      "app_actions_sendnotificationaction_sendnotificationaction_sendviachannel",
+      "app_jobs_sendnotificationjob_sendnotificationjob_handle",
+      "tests_unit_actions_notificationmanagertest",
+      "tests_unit_actions_notificationmanagertest_actionsnotificationmanagerrecipient",
+      "tests_unit_actions_sendnotificationactiontest",
+      "tests_unit_actions_sendnotificationactiontest_makedummysendnotificationrecipient"
+    ],
+    "47": [
+      "app_contracts_canthemenotificationcontract",
+      "app_contracts_canthemenotificationcontract_getmodel",
+      "app_contracts_canthemenotificationcontract_getnotificationdata",
+      "app_contracts_canthemenotificationcontract_increase",
+      "app_contracts_canthemenotificationcontract_sendemailcallback",
+      "app_contracts_canthemenotificationcontract_sendsmscallback",
+      "app_datas_notificationdata",
+      "app_datas_notificationdata_notificationdata",
+      "app_datas_notificationdata_notificationdata_getsmsdata",
+      "app_datas_notificationdata_notificationdata_routenotificationfor",
+      "app_datas_notificationdata_php_notificationmodel",
+      "spatie_laraveldata_datacollection",
+      "tests_unit_datas_notificationdatatest"
+    ],
+    "48": [
+      "app_filament_clusters_test_pages_sendpushnotification_php_backedenum",
+      "app_filament_clusters_test_pages_sendpushnotification_sendpushnotification",
+      "app_filament_clusters_test_pages_sendpushnotification_sendpushnotification_fillforms",
+      "app_filament_clusters_test_pages_sendpushnotification_sendpushnotification_getforms",
+      "app_filament_clusters_test_pages_sendpushnotification_sendpushnotification_getnotificationformactions",
+      "app_filament_clusters_test_pages_sendpushnotification_sendpushnotification_getuser",
+      "app_filament_clusters_test_pages_sendpushnotification_sendpushnotification_mount",
+      "app_filament_clusters_test_pages_sendpushnotification_sendpushnotification_notificationform",
+      "app_filament_clusters_test_pages_sendpushnotification_sendpushnotification_sendnotification",
+      "app_filament_clusters_test_pages_sendpushnotificationpage_sendpushnotificationpage_sendnotification",
+      "app_notifications_firebaseandroidnotification_firebaseandroidnotification_tofirebase",
+      "cloudmessage",
+      "kreait_firebase_messaging_cloudmessage"
+    ],
+    "49": [
+      "composer_require",
+      "composer_require_aws_aws_sdk_php",
+      "composer_require_filament_filament",
+      "composer_require_illuminate_contracts",
+      "composer_require_illuminate_support",
+      "composer_require_irazasyed_telegram_bot_sdk",
+      "composer_require_kreait_laravel_firebase",
+      "composer_require_laravel_notification_channels_fcm",
+      "composer_require_laravel_notification_channels_telegram",
+      "composer_require_phpdocumentor_type_resolver",
+      "composer_require_spatie_laravel_database_mail_templates",
+      "composer_require_symfony_http_client",
+      "composer_require_symfony_postmark_mailer"
+    ],
+    "50": [
+      "app_actions_sms_sendtwiliosmsaction",
+      "app_actions_sms_sendtwiliosmsaction_sendtwiliosmsaction",
+      "app_actions_sms_sendtwiliosmsaction_sendtwiliosmsaction_construct",
+      "app_actions_sms_sendtwiliosmsaction_sendtwiliosmsaction_execute",
+      "app_datas_sms_twiliodata_php_self",
+      "app_datas_sms_twiliodata_twiliodata",
+      "app_datas_sms_twiliodata_twiliodata_getauthheaders",
+      "app_datas_sms_twiliodata_twiliodata_getbaseurl",
+      "app_datas_sms_twiliodata_twiliodata_gettimeout",
+      "app_datas_sms_twiliodata_twiliodata_make",
+      "tests_unit_actions_sms_sendtwiliosmsactiontest",
+      "tests_unit_datas_sms_twiliodatatest"
+    ],
+    "51": [
+      "app_datas_beautyemaildata",
+      "app_datas_beautyemaildata_beautyemaildata",
+      "app_datas_emailattachmentdata",
+      "app_datas_emailattachmentdata_emailattachmentdata",
+      "app_datas_emailattachmentdata_emailattachmentdata_construct",
+      "app_datas_emailattachmentdata_emailattachmentdata_getcontent",
+      "app_datas_netfunsmsdata",
+      "app_datas_netfunsmsdata_netfunsmsdata",
+      "app_datas_netfunsmsdata_netfunsmsdata_construct",
+      "spatie_laraveldata_data",
+      "tests_unit_datas_emailattachmentdatatest",
+      "tests_unit_datas_emaildatatest"
+    ],
+    "52": [
+      "app_datas_emaildata_emaildata",
+      "app_datas_emaildata_emaildata_construct",
+      "app_datas_emaildata_emaildata_getfrom",
+      "app_datas_emaildata_emaildata_getmimeemail",
+      "app_notifications_emaildatanotification",
+      "app_notifications_emaildatanotification_emaildatanotification",
+      "app_notifications_emaildatanotification_emaildatanotification_construct",
+      "app_notifications_emaildatanotification_emaildatanotification_toarray",
+      "app_notifications_emaildatanotification_emaildatanotification_tomail",
+      "app_notifications_emaildatanotification_emaildatanotification_via",
+      "symfony_component_mime_address",
+      "symfony_component_mime_email"
+    ],
+    "53": [
+      "app_datas_netfunsmsmessage",
+      "app_datas_netfunsmsmessage_netfunsmsmessage",
+      "app_datas_netfunsmsmessage_netfunsmsmessage_construct",
+      "app_datas_netfunsmsrequestdata",
+      "app_datas_netfunsmsrequestdata_netfunsmsrequestdata",
+      "app_datas_netfunsmsrequestdata_netfunsmsrequestdata_construct",
+      "app_datas_netfunsmsrequestdata_netfunsmsrequestdata_fromarray",
+      "app_datas_netfunsmsrequestdata_php_self",
+      "app_datas_smsmessagedata",
+      "app_datas_smsmessagedata_smsmessagedata",
+      "app_datas_smsmessagedata_smsmessagedata_construct",
+      "tests_unit_datas_notifydatascoveragetest"
+    ],
+    "54": [
+      "app_filament_resources_contactresource",
+      "app_filament_resources_contactresource_contactresource",
+      "app_filament_resources_contactresource_contactresource_getformschema",
+      "app_filament_resources_notificationresource",
+      "app_filament_resources_notificationresource_notificationresource",
+      "app_filament_resources_notificationresource_notificationresource_getformschema",
+      "app_filament_resources_notificationresource_pages_viewnotification",
+      "app_filament_resources_notificationresource_pages_viewnotification_viewnotification",
+      "app_filament_resources_notificationresource_pages_viewnotification_viewnotification_getinfolistschema",
+      "modules_xot_filament_resources_pages_xotbaseviewrecord",
+      "modules_xot_filament_resources_xotbaseresource",
+      "tests_fixtures_viewnotificationtestproxy"
+    ],
+    "55": [
+      "app_filament_resources_contactresource_pages_editcontact",
+      "app_filament_resources_contactresource_pages_editcontact_editcontact",
+      "app_filament_resources_contactresource_pages_editcontact_editcontact_getheaderactions",
+      "app_filament_resources_notificationresource_pages_editnotification",
+      "app_filament_resources_notificationresource_pages_editnotification_editnotification",
+      "app_filament_resources_notificationtemplateresource_pages_editnotificationtemplate",
+      "app_filament_resources_notificationtemplateresource_pages_editnotificationtemplate_editnotificationtemplate",
+      "modules_xot_filament_resources_pages_xotbaseeditrecord",
+      "tests_fixtures_editcontacttestproxy",
+      "tests_fixtures_editcontacttestproxy_editcontacttestproxy",
+      "tests_fixtures_editcontacttestproxy_editcontacttestproxy_exposedheaderactions",
+      "tests_unit_filament_resources_notifyfilamentresourcescoveragetest_makeeditcontacttestproxy"
+    ],
+    "56": [
+      "app_filament_resources_contactresource_pages_listcontacts",
+      "app_filament_resources_contactresource_pages_listcontacts_listcontacts",
+      "app_filament_resources_contactresource_pages_listcontacts_listcontacts_gettablecolumns",
+      "app_filament_resources_contactresource_pages_listcontacts_listcontacts_gettablefilters",
+      "app_filament_resources_notificationresource_pages_listnotifications",
+      "app_filament_resources_notificationresource_pages_listnotifications_listnotifications",
+      "app_filament_resources_notificationresource_pages_listnotifications_listnotifications_gettablecolumns",
+      "app_filament_resources_notificationresource_pages_listnotifications_listnotifications_gettablefilters",
+      "app_filament_resources_notificationtemplateresource_pages_listnotificationtemplates",
+      "app_filament_resources_notificationtemplateresource_pages_listnotificationtemplates_listnotificationtemplates",
+      "app_filament_resources_notificationtemplateresource_pages_listnotificationtemplates_listnotificationtemplates_gettablecolumns",
+      "modules_xot_filament_resources_pages_xotbaselistrecords"
+    ],
+    "57": [
+      "composer",
+      "composer_authors",
+      "composer_autoload_dev",
+      "composer_autoload_dev_psr_4",
+      "composer_description",
+      "composer_homepage",
+      "composer_license",
+      "composer_minimum_stability",
+      "composer_name",
+      "composer_prefer_stable",
+      "composer_psr_4_modules_notify_tests",
+      "composer_repositories"
+    ],
+    "58": [
+      "composer_keywords",
+      "ref_email",
+      "ref_fcm",
+      "ref_filament",
+      "ref_laravel",
+      "ref_laraxot",
+      "ref_module_notify",
+      "ref_notifications",
+      "ref_notify",
+      "ref_sms",
+      "ref_telegram",
+      "ref_whatsapp"
+    ],
+    "59": [
+      "app_datas_sms_plivodata",
+      "app_datas_sms_twiliodata",
+      "app_helpers_confighelper",
+      "app_providers_concerns_mergesnotifyconfigfromenv",
+      "app_providers_concerns_mergesnotifyconfigfromenv_mergechannelconfig",
+      "app_providers_concerns_mergesnotifyconfigfromenv_mergenotifycompanyconfig",
+      "app_providers_concerns_mergesnotifyconfigfromenv_mergenotifymaillayoutconfig",
+      "app_providers_concerns_mergesnotifyconfigfromenv_mergenotifymoduleconfigfromenv",
+      "config_config",
+      "tests_feature_maillayoutrendertest",
+      "tests_feature_maillayoutrendertest_execute"
+    ],
+    "60": [
+      "app_filament_clusters_test_pages_sendawsemailpage_php_backedenum",
+      "app_filament_clusters_test_pages_sendawsemailpage_sendawsemailpage",
+      "app_filament_clusters_test_pages_sendawsemailpage_sendawsemailpage_emailform",
+      "app_filament_clusters_test_pages_sendawsemailpage_sendawsemailpage_fillforms",
+      "app_filament_clusters_test_pages_sendawsemailpage_sendawsemailpage_getemailformactions",
+      "app_filament_clusters_test_pages_sendawsemailpage_sendawsemailpage_getemailformschema",
+      "app_filament_clusters_test_pages_sendawsemailpage_sendawsemailpage_getforms",
+      "app_filament_clusters_test_pages_sendawsemailpage_sendawsemailpage_getslug",
+      "app_filament_clusters_test_pages_sendawsemailpage_sendawsemailpage_getuser",
+      "app_filament_clusters_test_pages_sendawsemailpage_sendawsemailpage_mount",
+      "app_filament_clusters_test_pages_sendawsemailpage_sendawsemailpage_sendemail"
+    ],
+    "61": [
+      "app_actions_sms_sendagiletelecomsmsv1action",
+      "app_actions_sms_sendagiletelecomsmsv1action_sendagiletelecomsmsv1action",
+      "app_actions_sms_sendagiletelecomsmsv1action_sendagiletelecomsmsv1action_execute",
+      "app_actions_sms_sendagiletelecomsmsv2action_sendagiletelecomsmsv2action",
+      "app_actions_sms_sendagiletelecomsmsv2action_sendagiletelecomsmsv2action_execute",
+      "app_datas_sms_agiletelecomdata",
+      "app_datas_sms_agiletelecomdata_agiletelecomdata",
+      "app_datas_sms_agiletelecomdata_agiletelecomdata_getauthheaders",
+      "app_datas_sms_agiletelecomdata_agiletelecomdata_make",
+      "app_datas_sms_agiletelecomdata_php_self"
+    ],
+    "62": [
+      "app_contracts_mobilepushnotification",
+      "app_contracts_mobilepushnotification_toarray",
+      "app_contracts_mobilepushnotification_tocloudmessage",
+      "app_notifications_firebaseandroidnotification",
+      "app_notifications_firebaseandroidnotification_firebaseandroidnotification",
+      "app_notifications_firebaseandroidnotification_firebaseandroidnotification_construct",
+      "app_notifications_firebaseandroidnotification_firebaseandroidnotification_toarray",
+      "app_notifications_firebaseandroidnotification_firebaseandroidnotification_tocloudmessage",
+      "app_notifications_firebaseandroidnotification_firebaseandroidnotification_via",
+      "kreait_firebase_messaging_message"
+    ],
+    "63": [
+      "app_filament_clusters_test_pages_sendemailpage_php_backedenum",
+      "app_filament_clusters_test_pages_sendemailpage_sendemailpage",
+      "app_filament_clusters_test_pages_sendemailpage_sendemailpage_emailform",
+      "app_filament_clusters_test_pages_sendemailpage_sendemailpage_fillforms",
+      "app_filament_clusters_test_pages_sendemailpage_sendemailpage_getemailformactions",
+      "app_filament_clusters_test_pages_sendemailpage_sendemailpage_getemailformschema",
+      "app_filament_clusters_test_pages_sendemailpage_sendemailpage_getforms",
+      "app_filament_clusters_test_pages_sendemailpage_sendemailpage_getuser",
+      "app_filament_clusters_test_pages_sendemailpage_sendemailpage_mount",
+      "app_filament_clusters_test_pages_sendemailpage_sendemailpage_sendemail"
+    ],
+    "64": [
+      "app_filament_clusters_test_pages_sendnetfunsmspage_php_backedenum",
+      "app_filament_clusters_test_pages_sendnetfunsmspage_sendnetfunsmspage",
+      "app_filament_clusters_test_pages_sendnetfunsmspage_sendnetfunsmspage_fillforms",
+      "app_filament_clusters_test_pages_sendnetfunsmspage_sendnetfunsmspage_getforms",
+      "app_filament_clusters_test_pages_sendnetfunsmspage_sendnetfunsmspage_getsmsformactions",
+      "app_filament_clusters_test_pages_sendnetfunsmspage_sendnetfunsmspage_getsmsformschema",
+      "app_filament_clusters_test_pages_sendnetfunsmspage_sendnetfunsmspage_getuser",
+      "app_filament_clusters_test_pages_sendnetfunsmspage_sendnetfunsmspage_mount",
+      "app_filament_clusters_test_pages_sendnetfunsmspage_sendnetfunsmspage_sendsms",
+      "app_filament_clusters_test_pages_sendnetfunsmspage_sendnetfunsmspage_smsform"
+    ],
+    "65": [
+      "app_filament_clusters_test_pages_sendsmspage_php_backedenum",
+      "app_filament_clusters_test_pages_sendsmspage_sendsmspage",
+      "app_filament_clusters_test_pages_sendsmspage_sendsmspage_fillforms",
+      "app_filament_clusters_test_pages_sendsmspage_sendsmspage_getforms",
+      "app_filament_clusters_test_pages_sendsmspage_sendsmspage_getsmsformactions",
+      "app_filament_clusters_test_pages_sendsmspage_sendsmspage_getsmsformschema",
+      "app_filament_clusters_test_pages_sendsmspage_sendsmspage_getuser",
+      "app_filament_clusters_test_pages_sendsmspage_sendsmspage_mount",
+      "app_filament_clusters_test_pages_sendsmspage_sendsmspage_sendsms",
+      "app_filament_clusters_test_pages_sendsmspage_sendsmspage_smsform"
+    ],
+    "66": [
+      "app_filament_clusters_test_pages_sendspatieemailpage_php_backedenum",
+      "app_filament_clusters_test_pages_sendspatieemailpage_sendspatieemailpage",
+      "app_filament_clusters_test_pages_sendspatieemailpage_sendspatieemailpage_emailform",
+      "app_filament_clusters_test_pages_sendspatieemailpage_sendspatieemailpage_fillforms",
+      "app_filament_clusters_test_pages_sendspatieemailpage_sendspatieemailpage_getemailformactions",
+      "app_filament_clusters_test_pages_sendspatieemailpage_sendspatieemailpage_getemailformschema",
+      "app_filament_clusters_test_pages_sendspatieemailpage_sendspatieemailpage_getforms",
+      "app_filament_clusters_test_pages_sendspatieemailpage_sendspatieemailpage_getuser",
+      "app_filament_clusters_test_pages_sendspatieemailpage_sendspatieemailpage_mount",
+      "app_filament_clusters_test_pages_sendspatieemailpage_sendspatieemailpage_sendemail"
+    ],
+    "67": [
+      "app_filament_clusters_test_pages_sendwhatsapppage_php_backedenum",
+      "app_filament_clusters_test_pages_sendwhatsapppage_sendwhatsapppage",
+      "app_filament_clusters_test_pages_sendwhatsapppage_sendwhatsapppage_fillforms",
+      "app_filament_clusters_test_pages_sendwhatsapppage_sendwhatsapppage_getforms",
+      "app_filament_clusters_test_pages_sendwhatsapppage_sendwhatsapppage_getuser",
+      "app_filament_clusters_test_pages_sendwhatsapppage_sendwhatsapppage_getwhatsappformactions",
+      "app_filament_clusters_test_pages_sendwhatsapppage_sendwhatsapppage_getwhatsappformschema",
+      "app_filament_clusters_test_pages_sendwhatsapppage_sendwhatsapppage_mount",
+      "app_filament_clusters_test_pages_sendwhatsapppage_sendwhatsapppage_sendwhatsapp",
+      "app_filament_clusters_test_pages_sendwhatsapppage_sendwhatsapppage_whatsappform"
+    ],
+    "68": [
+      "app_helpers_confighelper_confighelper",
+      "app_helpers_confighelper_confighelper_get",
+      "app_helpers_confighelper_confighelper_getcompanyconfig",
+      "app_helpers_confighelper_confighelper_getemailconfig",
+      "app_helpers_confighelper_confighelper_getpathconfig",
+      "app_helpers_confighelper_confighelper_gettestdata",
+      "app_helpers_confighelper_confighelper_getwebhookconfig",
+      "app_helpers_confighelper_confighelper_recursivereplace",
+      "app_helpers_confighelper_confighelper_replacestringvariables",
+      "app_helpers_confighelper_confighelper_replacetemplatevariables"
+    ],
+    "69": [
+      "app_actions_sms_sendplivosmsaction",
+      "app_actions_sms_sendplivosmsaction_sendplivosmsaction",
+      "app_actions_sms_sendplivosmsaction_sendplivosmsaction_construct",
+      "app_actions_sms_sendplivosmsaction_sendplivosmsaction_execute",
+      "app_datas_sms_plivodata_php_self",
+      "app_datas_sms_plivodata_plivodata",
+      "app_datas_sms_plivodata_plivodata_getauthheaders",
+      "app_datas_sms_plivodata_plivodata_getbaseurl",
+      "app_datas_sms_plivodata_plivodata_gettimeout",
+      "app_datas_sms_plivodata_plivodata_make",
+      "tests_unit_actions_sms_sendplivosmsactiontest"
+    ],
+    "70": [
+      "app_actions_sms_sendsmsfactorsmsaction_sendsmsfactorsmsaction",
+      "app_actions_sms_sendsmsfactorsmsaction_sendsmsfactorsmsaction_execute",
+      "app_channels_netfunchannel",
+      "app_channels_netfunchannel_netfunchannel",
+      "app_channels_netfunchannel_netfunchannel_construct",
+      "app_channels_netfunchannel_netfunchannel_send",
+      "app_channels_smschannel_smschannel",
+      "app_channels_smschannel_smschannel_construct",
+      "app_channels_smschannel_smschannel_send"
+    ],
+    "71": [
+      "app_filament_clusters_test_pages_sendemail_php_backedenum",
+      "app_filament_clusters_test_pages_sendemail_sendemail",
+      "app_filament_clusters_test_pages_sendemail_sendemail_emailform",
+      "app_filament_clusters_test_pages_sendemail_sendemail_fillforms",
+      "app_filament_clusters_test_pages_sendemail_sendemail_getemailformactions",
+      "app_filament_clusters_test_pages_sendemail_sendemail_getforms",
+      "app_filament_clusters_test_pages_sendemail_sendemail_getuser",
+      "app_filament_clusters_test_pages_sendemail_sendemail_mount",
+      "app_filament_clusters_test_pages_sendemail_sendemail_sendemail"
+    ],
+    "72": [
+      "app_filament_clusters_test_pages_sendfirebasepushnotificationpage_php_backedenum",
+      "app_filament_clusters_test_pages_sendfirebasepushnotificationpage_sendfirebasepushnotificationpage",
+      "app_filament_clusters_test_pages_sendfirebasepushnotificationpage_sendfirebasepushnotificationpage_fillforms",
+      "app_filament_clusters_test_pages_sendfirebasepushnotificationpage_sendfirebasepushnotificationpage_getforms",
+      "app_filament_clusters_test_pages_sendfirebasepushnotificationpage_sendfirebasepushnotificationpage_getpushformactions",
+      "app_filament_clusters_test_pages_sendfirebasepushnotificationpage_sendfirebasepushnotificationpage_getpushformschema",
+      "app_filament_clusters_test_pages_sendfirebasepushnotificationpage_sendfirebasepushnotificationpage_getuser",
+      "app_filament_clusters_test_pages_sendfirebasepushnotificationpage_sendfirebasepushnotificationpage_mount",
+      "app_filament_clusters_test_pages_sendfirebasepushnotificationpage_sendfirebasepushnotificationpage_pushform"
+    ],
+    "73": [
+      "app_filament_clusters_test_pages_sendnetfunsmspage_sendnetfunsmspage_getslug",
+      "app_filament_clusters_test_pages_sendsmspage_sendsmspage_getslug",
+      "app_filament_clusters_test_pages_sendwhatsapppage_sendwhatsapppage_getslug",
+      "app_providers_filament_adminpanelprovider",
+      "app_providers_filament_adminpanelprovider_adminpanelprovider",
+      "app_providers_filament_adminpanelprovider_adminpanelprovider_panel",
+      "filament_panel",
+      "modules_xot_providers_filament_xotbasepanelprovider",
+      "tests_unit_providers_adminpanelprovidertest"
+    ],
+    "74": [
+      "app_filament_clusters_test_pages_sendtelegram_php_backedenum",
+      "app_filament_clusters_test_pages_sendtelegram_sendtelegram",
+      "app_filament_clusters_test_pages_sendtelegram_sendtelegram_emailform",
+      "app_filament_clusters_test_pages_sendtelegram_sendtelegram_fillforms",
+      "app_filament_clusters_test_pages_sendtelegram_sendtelegram_getemailformactions",
+      "app_filament_clusters_test_pages_sendtelegram_sendtelegram_getforms",
+      "app_filament_clusters_test_pages_sendtelegram_sendtelegram_getuser",
+      "app_filament_clusters_test_pages_sendtelegram_sendtelegram_mount",
+      "app_filament_clusters_test_pages_sendtelegram_sendtelegram_sendemail"
+    ],
+    "75": [
+      "app_filament_clusters_test_pages_sendtelegrampage_php_backedenum",
+      "app_filament_clusters_test_pages_sendtelegrampage_sendtelegrampage",
+      "app_filament_clusters_test_pages_sendtelegrampage_sendtelegrampage_fillforms",
+      "app_filament_clusters_test_pages_sendtelegrampage_sendtelegrampage_getforms",
+      "app_filament_clusters_test_pages_sendtelegrampage_sendtelegrampage_gettelegramformactions",
+      "app_filament_clusters_test_pages_sendtelegrampage_sendtelegrampage_gettelegramformschema",
+      "app_filament_clusters_test_pages_sendtelegrampage_sendtelegrampage_mount",
+      "app_filament_clusters_test_pages_sendtelegrampage_sendtelegrampage_sendtelegram",
+      "app_filament_clusters_test_pages_sendtelegrampage_sendtelegrampage_telegramform"
+    ],
+    "76": [
+      "app_filament_resources_contactresource_pages_createcontact",
+      "app_filament_resources_contactresource_pages_createcontact_createcontact",
+      "app_filament_resources_notificationresource_pages_createnotification",
+      "app_filament_resources_notificationresource_pages_createnotification_createnotification",
+      "app_filament_resources_notificationtemplateresource_pages_createnotificationtemplate",
+      "app_filament_resources_notificationtemplateresource_pages_createnotificationtemplate_createnotificationtemplate",
+      "app_filament_resources_notifythemeresource_pages_createnotifytheme",
+      "app_filament_resources_notifythemeresource_pages_createnotifytheme_createnotifytheme",
+      "modules_xot_filament_resources_pages_xotbasecreaterecord"
+    ],
+    "77": [
+      "composer_scripts",
+      "composer_scripts_analyse",
+      "composer_scripts_format",
+      "composer_scripts_post_autoload_dump1",
+      "composer_scripts_post_update_cmd",
+      "composer_scripts_test",
+      "composer_scripts_test_coverage",
+      "ref_illuminate_foundation_composerscripts_postupdate",
+      "ref_php_vendor_bin_testbench_package_discover_ansi"
+    ],
+    "78": [
+      "app_actions_determineseasonalcontentviewpathaction",
+      "app_actions_determineseasonalcontentviewpathaction_determineseasonalcontentviewpathaction",
+      "app_actions_determineseasonalcontentviewpathaction_determineseasonalcontentviewpathaction_determineviewfilename",
+      "app_actions_determineseasonalcontentviewpathaction_determineseasonalcontentviewpathaction_execute",
+      "app_actions_determineseasonalcontentviewpathaction_determineseasonalcontentviewpathaction_geteasterdate",
+      "carbon",
+      "carbon_carbon",
+      "tests_unit_actions_determineseasonalcontentviewpathactiontest"
+    ],
+    "79": [
+      "app_actions_sms_sendgammusmsaction_sendgammusmsaction_construct",
+      "app_datas_sms_gammudata",
+      "app_datas_sms_gammudata_gammudata",
+      "app_datas_sms_gammudata_gammudata_getconfig",
+      "app_datas_sms_gammudata_gammudata_getpath",
+      "app_datas_sms_gammudata_gammudata_gettimeout",
+      "app_datas_sms_gammudata_gammudata_make",
+      "app_datas_sms_gammudata_php_self"
+    ],
+    "80": [
+      "app_actions_sms_sendnexmosmsaction_sendnexmosmsaction_construct",
+      "app_datas_sms_nexmodata",
+      "app_datas_sms_nexmodata_nexmodata",
+      "app_datas_sms_nexmodata_nexmodata_getauthheaders",
+      "app_datas_sms_nexmodata_nexmodata_getbaseurl",
+      "app_datas_sms_nexmodata_nexmodata_gettimeout",
+      "app_datas_sms_nexmodata_nexmodata_make",
+      "app_datas_sms_nexmodata_php_self"
+    ],
+    "81": [
+      "app_actions_sms_sendsmsfactorsmsaction_sendsmsfactorsmsaction_construct",
+      "app_datas_sms_smsfactordata",
+      "app_datas_sms_smsfactordata_php_self",
+      "app_datas_sms_smsfactordata_smsfactordata",
+      "app_datas_sms_smsfactordata_smsfactordata_getauthheaders",
+      "app_datas_sms_smsfactordata_smsfactordata_getbaseurl",
+      "app_datas_sms_smsfactordata_smsfactordata_gettimeout",
+      "app_datas_sms_smsfactordata_smsfactordata_make"
+    ],
+    "82": [
+      "app_filament_clusters_test_pages_sendpushnotificationpage_php_backedenum",
+      "app_filament_clusters_test_pages_sendpushnotificationpage_sendpushnotificationpage",
+      "app_filament_clusters_test_pages_sendpushnotificationpage_sendpushnotificationpage_fillforms",
+      "app_filament_clusters_test_pages_sendpushnotificationpage_sendpushnotificationpage_getforms",
+      "app_filament_clusters_test_pages_sendpushnotificationpage_sendpushnotificationpage_getnotificationformactions",
+      "app_filament_clusters_test_pages_sendpushnotificationpage_sendpushnotificationpage_getuser",
+      "app_filament_clusters_test_pages_sendpushnotificationpage_sendpushnotificationpage_mount",
+      "app_filament_clusters_test_pages_sendpushnotificationpage_sendpushnotificationpage_notificationform"
+    ],
+    "83": [
+      "app_filament_clusters_test_pages_testsmtppage_php_backedenum",
+      "app_filament_clusters_test_pages_testsmtppage_testsmtppage",
+      "app_filament_clusters_test_pages_testsmtppage_testsmtppage_emailform",
+      "app_filament_clusters_test_pages_testsmtppage_testsmtppage_fillforms",
+      "app_filament_clusters_test_pages_testsmtppage_testsmtppage_getemailformactions",
+      "app_filament_clusters_test_pages_testsmtppage_testsmtppage_getforms",
+      "app_filament_clusters_test_pages_testsmtppage_testsmtppage_getuser",
+      "app_filament_clusters_test_pages_testsmtppage_testsmtppage_mount"
+    ],
+    "84": [
+      "app_filament_forms_components_contactsection",
+      "app_filament_forms_components_contactsection_contactsection",
+      "app_filament_forms_components_contactsection_contactsection_getformschema",
+      "app_filament_forms_components_contactsection_contactsection_setup",
+      "modules_xot_filament_schemas_components_xotbasesection",
+      "tests_fixtures_contactsectiontestproxy",
+      "tests_fixtures_contactsectiontestproxy_contactsectiontestproxy",
+      "tests_fixtures_contactsectiontestproxy_contactsectiontestproxy_exposedformschema"
+    ],
+    "85": [
+      "app_notifications_recordnotification_php_self",
+      "app_notifications_recordnotification_recordnotification",
+      "app_notifications_recordnotification_recordnotification_addattachments",
+      "app_notifications_recordnotification_recordnotification_construct",
+      "app_notifications_recordnotification_recordnotification_mergedata",
+      "app_notifications_recordnotification_recordnotification_tomail",
+      "app_notifications_recordnotification_recordnotification_tosms",
+      "app_notifications_recordnotification_recordnotification_via"
+    ],
+    "86": [
+      "app_providers_notifyserviceprovider",
+      "app_providers_notifyserviceprovider_notifyserviceprovider",
+      "app_providers_notifyserviceprovider_notifyserviceprovider_boot",
+      "app_providers_notifyserviceprovider_notifyserviceprovider_register",
+      "modules_notify_providers_concerns_mergesnotifyconfigfromenv",
+      "modules_xot_providers_xotbaseserviceprovider",
+      "tests_unit_providers_notifyserviceprovidertest",
+      "tests_unit_providers_notifyserviceprovidertest_execute"
+    ],
+    "87": [
+      "app_services_mailengines_mailtrapengine",
+      "app_services_mailengines_mailtrapengine_mailtrapengine",
+      "app_services_mailengines_mailtrapengine_mailtrapengine_getinstance",
+      "app_services_mailengines_mailtrapengine_mailtrapengine_make",
+      "app_services_mailengines_mailtrapengine_mailtrapengine_send",
+      "app_services_mailengines_mailtrapengine_mailtrapengine_setlocalvars",
+      "app_services_mailengines_mailtrapengine_mailtrapengine_try",
+      "app_services_mailengines_mailtrapengine_php_self"
+    ],
+    "88": [
+      "app_services_smsservice",
+      "app_services_smsservice_php_self",
+      "app_services_smsservice_smsservice",
+      "app_services_smsservice_smsservice_getinstance",
+      "app_services_smsservice_smsservice_make",
+      "app_services_smsservice_smsservice_mergevars",
+      "app_services_smsservice_smsservice_send",
+      "app_services_smsservice_smsservice_setlocalvars"
+    ],
+    "89": [
+      "app_traits_hasnotificationtracking",
+      "app_traits_hasnotificationtracking_addlinktracking",
+      "app_traits_hasnotificationtracking_addtracking",
+      "app_traits_hasnotificationtracking_addtrackingpixel",
+      "app_traits_hasnotificationtracking_generatetrackingid",
+      "app_traits_hasnotificationtracking_islinktrackingenabled",
+      "app_traits_hasnotificationtracking_ispixeltrackingenabled",
+      "app_traits_hasnotificationtracking_istrackingenabled"
+    ],
+    "90": [
+      "app_enums_mediatypeenum",
+      "app_enums_mediatypeenum_getdefault",
+      "app_enums_mediatypeenum_issupported",
+      "app_enums_mediatypeenum_labels",
+      "app_enums_mediatypeenum_options",
+      "app_enums_mediatypeenum_php_self",
+      "tests_unit_enums_mediatypeenumtest"
+    ],
+    "91": [
+      "app_enums_telegramdriverenum",
+      "app_enums_telegramdriverenum_getdefault",
+      "app_enums_telegramdriverenum_issupported",
+      "app_enums_telegramdriverenum_labels",
+      "app_enums_telegramdriverenum_options",
+      "app_enums_telegramdriverenum_php_self",
+      "tests_unit_enums_telegramdriverenumtest"
+    ],
+    "92": [
+      "app_enums_whatsappdriverenum",
+      "app_enums_whatsappdriverenum_getdefault",
+      "app_enums_whatsappdriverenum_issupported",
+      "app_enums_whatsappdriverenum_labels",
+      "app_enums_whatsappdriverenum_options",
+      "app_enums_whatsappdriverenum_php_self",
+      "tests_unit_enums_whatsappdriverenumtest"
+    ],
+    "93": [
+      "database_factories_notificationchannelfactory_notificationchannelfactory",
+      "database_factories_notificationchannelfactory_notificationchannelfactory_definition",
+      "database_factories_notificationchannelfactory_notificationchannelfactory_disabled",
+      "database_factories_notificationchannelfactory_notificationchannelfactory_email",
+      "database_factories_notificationchannelfactory_notificationchannelfactory_enabled",
+      "database_factories_notificationchannelfactory_notificationchannelfactory_sms",
+      "database_factories_notificationchannelfactory_php_static"
+    ],
+    "94": [
+      "tests_fixtures_netfunchannelnotifiabledummy",
+      "tests_fixtures_netfunchannelnotifiabledummy_netfunchannelnotifiabledummy",
+      "tests_fixtures_netfunchannelnotifiabledummy_netfunchannelnotifiabledummy_getmodel",
+      "tests_fixtures_netfunchannelnotifiabledummy_netfunchannelnotifiabledummy_getnotificationdata",
+      "tests_fixtures_netfunchannelnotifiabledummy_netfunchannelnotifiabledummy_increase",
+      "tests_fixtures_netfunchannelnotifiabledummy_netfunchannelnotifiabledummy_sendemailcallback",
+      "tests_fixtures_netfunchannelnotifiabledummy_netfunchannelnotifiabledummy_sendsmscallback"
+    ],
+    "95": [
+      "app_actions_notifytheme_attachment_pdf",
+      "app_actions_notifytheme_attachment_pdf_pdf",
+      "app_actions_notifytheme_attachment_pdf_pdf_execute",
+      "app_datas_attachmentdata",
+      "app_datas_attachmentdata_attachmentdata",
+      "tests_unit_actions_notifytheme_attachment_pdftest"
+    ],
+    "96": [
+      "app_notifications_smsnotification_smsnotification",
+      "app_notifications_smsnotification_smsnotification_construct",
+      "app_notifications_smsnotification_smsnotification_getconfig",
+      "app_notifications_smsnotification_smsnotification_getprovider",
+      "app_notifications_smsnotification_smsnotification_tosms",
+      "app_notifications_smsnotification_smsnotification_via"
+    ],
+    "97": [
+      "app_traits_hasnotificationratelimiting",
+      "app_traits_hasnotificationratelimiting_getnotificationratelimitkey",
+      "app_traits_hasnotificationratelimiting_getnotificationratelimitremainingattempts",
+      "app_traits_hasnotificationratelimiting_getnotificationratelimitretryafter",
+      "app_traits_hasnotificationratelimiting_resetnotificationratelimit",
+      "app_traits_hasnotificationratelimiting_shouldsendnotification"
+    ],
+    "98": [
+      "composer_allow_plugins_dealerdirect_phpcodesniffer_composer_installer",
+      "composer_allow_plugins_pestphp_pest_plugin",
+      "composer_allow_plugins_wikimedia_composer_merge_plugin",
+      "composer_config",
+      "composer_config_allow_plugins",
+      "composer_config_sort_packages"
+    ],
+    "99": [
+      "composer_extra",
+      "composer_extra_laravel",
+      "composer_laravel_aliases",
+      "composer_laravel_providers",
+      "ref_modules_notify_providers_filament_adminpanelprovider",
+      "ref_modules_notify_providers_notifyserviceprovider"
+    ],
+    "100": [
+      "modules_notify_models_traits_hascontact",
+      "tests_fixtures_hascontactdummymodel",
+      "tests_fixtures_hascontactdummymodel_hascontactdummymodel",
+      "tests_fixtures_hascontactdummymodel_hascontactdummymodel_initcontacttrait",
+      "tests_unit_models_traits_hascontacttest",
+      "tests_unit_models_traits_hascontacttest_makehascontactdummymodel"
+    ],
+    "101": [
+      "screenshot_group_b",
+      "screenshot_group_b_chromium",
+      "screenshot_group_b_fs",
+      "screenshot_group_b_pages",
+      "screenshot_group_b_path",
+      "screenshot_group_b_screenshot"
+    ],
+    "102": [
+      "app_actions_esendexsendaction",
+      "app_actions_esendexsendaction_esendexsendaction",
+      "app_actions_esendexsendaction_esendexsendaction_execute",
+      "app_actions_esendexsendaction_esendexsendaction_login",
+      "tests_unit_actions_esendexsendactiontest"
+    ],
+    "103": [
+      "app_actions_sendnotificationtorecipientaction",
+      "app_actions_sendnotificationtorecipientaction_sendnotificationtorecipientaction",
+      "app_actions_sendnotificationtorecipientaction_sendnotificationtorecipientaction_execute",
+      "tests_unit_actions_sendnotificationtorecipientactiontest",
+      "tests_unit_actions_sendnotificationtorecipientactiontest_makedummynotificationforrecipient"
+    ],
+    "104": [
+      "app_datas_firebasenotificationdata",
+      "app_datas_firebasenotificationdata_firebasenotificationdata",
+      "app_datas_firebasenotificationdata_firebasenotificationdata_fromtype",
+      "app_datas_firebasenotificationdata_php_self",
+      "app_filament_clusters_test_pages_sendfirebasepushnotificationpage_sendfirebasepushnotificationpage_sendpushnotification"
+    ],
+    "105": [
+      "app_datas_netfunsmsresponsedata",
+      "app_datas_netfunsmsresponsedata_netfunsmsresponsedata",
+      "app_datas_netfunsmsresponsedata_netfunsmsresponsedata_construct",
+      "app_datas_netfunsmsresponsedata_netfunsmsresponsedata_fromarray",
+      "app_datas_netfunsmsresponsedata_php_self"
+    ],
+    "106": [
+      "app_enums_notificationlogstatusenum",
+      "app_enums_notificationlogstatusenum_iscompleted",
+      "app_enums_notificationlogstatusenum_isfailed",
+      "app_enums_notificationlogstatusenum_ispending",
+      "tests_unit_enums_notificationlogstatusenumtest"
+    ],
+    "107": [
+      "app_filament_pages_settingpage",
+      "app_filament_pages_settingpage_php_backedenum",
+      "app_filament_pages_settingpage_settingpage",
+      "app_filament_pages_settingpage_settingpage_getheaderwidgets",
+      "tests_unit_filament_pages_settingpagetest"
+    ],
+    "108": [
+      "app_providers_eventserviceprovider",
+      "app_providers_eventserviceprovider_eventserviceprovider",
+      "app_providers_eventserviceprovider_eventserviceprovider_configureemailverification",
+      "illuminate_foundation_support_providers_eventserviceprovider",
+      "tests_unit_providers_eventserviceprovidertest"
+    ],
+    "109": [
+      "composer_autoload",
+      "composer_autoload_psr_4",
+      "composer_psr_4_modules_notify",
+      "composer_psr_4_modules_notify_database_factories",
+      "composer_psr_4_modules_notify_database_seeders"
+    ],
+    "110": [
+      "resources_views_emails_samples_widgets_blade",
+      "resources_views_emails_samples_widgets_blade_php_notify_emails_templates_widgets_articleend",
+      "resources_views_emails_samples_widgets_blade_php_notify_emails_templates_widgets_articlestart",
+      "resources_views_emails_samples_widgets_blade_php_notify_emails_templates_widgets_newfeatureend",
+      "resources_views_emails_samples_widgets_blade_php_notify_emails_templates_widgets_newfeaturestart"
+    ],
+    "111": [
+      "resources_views_emails_templates_widgets_mail_blade",
+      "resources_views_emails_templates_widgets_mail_blade_php_notify_emails_templates_widgets_articleend",
+      "resources_views_emails_templates_widgets_mail_blade_php_notify_emails_templates_widgets_articlestart",
+      "resources_views_emails_templates_widgets_mail_blade_php_notify_emails_templates_widgets_newfeatureend",
+      "resources_views_emails_templates_widgets_mail_blade_php_notify_emails_templates_widgets_newfeaturestart"
+    ],
+    "112": [
+      "resources_views_emails_welcome_blade",
+      "resources_views_emails_welcome_blade_php_notify_emails_templates_widgets_articleend",
+      "resources_views_emails_welcome_blade_php_notify_emails_templates_widgets_articlestart",
+      "resources_views_emails_welcome_blade_php_notify_emails_templates_widgets_newfeatureend",
+      "resources_views_emails_welcome_blade_php_notify_emails_templates_widgets_newfeaturestart"
+    ],
+    "113": [
+      "app_filament_resources_mailtemplateresource_pages_listmailtemplates",
+      "app_filament_resources_mailtemplateresource_pages_listmailtemplates_listmailtemplates",
+      "app_filament_resources_mailtemplateresource_pages_listmailtemplates_listmailtemplates_gettablecolumns",
+      "modules_lang_filament_resources_pages_langbaselistrecords"
+    ],
+    "114": [
+      "app_filament_resources_notifythemeresource_relationmanagers_linkablerelationmanager",
+      "app_filament_resources_notifythemeresource_relationmanagers_linkablerelationmanager_linkablerelationmanager",
+      "app_filament_resources_notifythemeresource_relationmanagers_linkablerelationmanager_linkablerelationmanager_getformschema",
+      "modules_xot_filament_resources_relationmanagers_xotbaserelationmanager"
+    ],
+    "115": [
+      "beautymail_templates_minty_contentend",
+      "beautymail_templates_minty_contentstart",
+      "resources_views_emails_samples_minty_blade",
+      "resources_views_emails_samples_minty_blade_php_beautymail_templates_minty_button"
+    ],
+    "116": [
+      "beautymail_templates_sunny_contentend",
+      "beautymail_templates_sunny_contentstart",
+      "resources_views_emails_samples_sunny_blade",
+      "resources_views_emails_samples_sunny_blade_php_beautymail_templates_sunny_button"
+    ],
+    "117": [
+      "notify_emails_templates_minty_contentend",
+      "notify_emails_templates_minty_contentstart",
+      "resources_views_emails_templates_minty_mail_blade",
+      "resources_views_emails_templates_minty_mail_blade_php_beautymail_templates_minty_button"
+    ],
+    "118": [
+      "notify_emails_templates_sunny_contentend",
+      "notify_emails_templates_sunny_contentstart",
+      "resources_views_emails_templates_sunny_mail_blade",
+      "resources_views_emails_templates_sunny_mail_blade_php_beautymail_templates_sunny_button"
+    ],
+    "119": [
+      "resources_views_emails_samples_ark_blade",
+      "resources_views_emails_samples_ark_blade_php_notify_emails_templates_ark_contentend",
+      "resources_views_emails_samples_ark_blade_php_notify_emails_templates_ark_contentstart",
+      "resources_views_emails_samples_ark_blade_php_notify_emails_templates_ark_heading"
+    ],
+    "120": [
+      "resources_views_emails_templates_ark_mail_blade",
+      "resources_views_emails_templates_ark_mail_blade_php_notify_emails_templates_ark_contentend",
+      "resources_views_emails_templates_ark_mail_blade_php_notify_emails_templates_ark_contentstart",
+      "resources_views_emails_templates_ark_mail_blade_php_notify_emails_templates_ark_heading"
+    ],
+    "121": [
+      "app_filament_clusters_test_php_backedenum",
+      "app_filament_clusters_test_test",
+      "modules_xot_filament_clusters_xotbasecluster"
+    ],
+    "122": [
+      "app_filament_pages_dashboard",
+      "app_filament_pages_dashboard_dashboard",
+      "modules_xot_filament_pages_xotbasedashboard"
+    ],
+    "123": [
+      "app_providers_routeserviceprovider",
+      "app_providers_routeserviceprovider_routeserviceprovider",
+      "modules_xot_providers_xotbaserouteserviceprovider"
+    ],
+    "124": [
+      "scripts_benchmark",
+      "scripts_benchmark_benchmark_endpoint",
+      "scripts_benchmark_sh__entry"
+    ],
+    "125": [
+      "webpack_mix",
+      "webpack_mix_dotenvexpand",
+      "webpack_mix_mix"
+    ],
+    "126": [
+      "database_migrations_2018_10_10_000000_create_mail_templates_table",
+      "database_migrations_2018_10_10_000000_create_mail_templates_table_up"
+    ],
+    "127": [
+      "database_migrations_2018_10_10_000002_create_mail_templates_table",
+      "database_migrations_2018_10_10_000002_create_mail_templates_table_up"
+    ],
+    "128": [
+      "database_migrations_2018_10_10_000003_create_mail_templates_table",
+      "database_migrations_2018_10_10_000003_create_mail_templates_table_up"
+    ],
+    "129": [
+      "database_migrations_2018_10_10_000004_create_mail_templates_table",
+      "database_migrations_2018_10_10_000004_create_mail_templates_table_up"
+    ],
+    "130": [
+      "database_migrations_2018_10_10_000005_create_mail_templates_table",
+      "database_migrations_2018_10_10_000005_create_mail_templates_table_up"
+    ],
+    "131": [
+      "database_migrations_2018_10_10_000006_create_mail_templates_table",
+      "database_migrations_2018_10_10_000006_create_mail_templates_table_up"
+    ],
+    "132": [
+      "database_migrations_2018_10_10_000007_create_mail_templates_table",
+      "database_migrations_2018_10_10_000007_create_mail_templates_table_up"
+    ],
+    "133": [
+      "database_migrations_2020_01_01_000007_create_notify_themes_table",
+      "database_migrations_2020_01_01_000007_create_notify_themes_table_up"
+    ],
+    "134": [
+      "database_migrations_2022_10_12_133532_create_notifications_table",
+      "database_migrations_2022_10_12_133532_create_notifications_table_up"
+    ],
+    "135": [
+      "database_migrations_2022_10_12_133535_create_notify_contacts_table",
+      "database_migrations_2022_10_12_133535_create_notify_contacts_table_up"
+    ],
+    "136": [
+      "database_migrations_2022_11_24_000002_create_notify_themeables_table",
+      "database_migrations_2022_11_24_000002_create_notify_themeables_table_up"
+    ],
+    "137": [
+      "database_migrations_2024_04_20_000001_create_mail_template_versions_table",
+      "database_migrations_2024_04_20_000001_create_mail_template_versions_table_up"
+    ],
+    "138": [
+      "database_migrations_2025_03_31_000001_create_notification_logs_table",
+      "database_migrations_2025_03_31_000001_create_notification_logs_table_up"
+    ],
+    "139": [
+      "database_migrations_2025_04_20_000001_create_mail_template_versions_table",
+      "database_migrations_2025_04_20_000001_create_mail_template_versions_table_up"
+    ],
+    "140": [
+      "database_migrations_2025_07_01_000000_create_notification_logs_table",
+      "database_migrations_2025_07_01_000000_create_notification_logs_table_up"
+    ],
+    "141": [
+      "database_migrations_2026_03_03_000000_create_notification_templates_table",
+      "database_migrations_2026_03_03_000000_create_notification_templates_table_up"
+    ],
+    "142": [
+      "database_migrations_2026_03_03_000001_create_notification_types_table",
+      "database_migrations_2026_03_03_000001_create_notification_types_table_up"
+    ],
+    "143": [
+      "database_migrations_2026_06_11_180000_create_notify_contacts_table",
+      "database_migrations_2026_06_11_180000_create_notify_contacts_table_up"
+    ],
+    "144": [
+      "database_migrations_archive_redundant_2018_10_10_000000_create_mail_templates_table",
+      "database_migrations_archive_redundant_2018_10_10_000000_create_mail_templates_table_up"
+    ],
+    "145": [
+      "database_migrations_archive_redundant_2018_10_10_000002_create_mail_templates_table",
+      "database_migrations_archive_redundant_2018_10_10_000002_create_mail_templates_table_up"
+    ],
+    "146": [
+      "database_migrations_archive_redundant_2018_10_10_000003_create_mail_templates_table",
+      "database_migrations_archive_redundant_2018_10_10_000003_create_mail_templates_table_up"
+    ],
+    "147": [
+      "database_migrations_archive_redundant_2018_10_10_000004_create_mail_templates_table",
+      "database_migrations_archive_redundant_2018_10_10_000004_create_mail_templates_table_up"
+    ],
+    "148": [
+      "database_migrations_archive_redundant_2018_10_10_000005_create_mail_templates_table",
+      "database_migrations_archive_redundant_2018_10_10_000005_create_mail_templates_table_up"
+    ],
+    "149": [
+      "database_migrations_archive_redundant_2018_10_10_000006_create_mail_templates_table",
+      "database_migrations_archive_redundant_2018_10_10_000006_create_mail_templates_table_up"
+    ],
+    "150": [
+      "database_migrations_archive_redundant_2024_04_20_000001_create_mail_template_versions_table",
+      "database_migrations_archive_redundant_2024_04_20_000001_create_mail_template_versions_table_up"
+    ],
+    "151": [
+      "notify_emails_templates",
+      "resources_views_emails_templates_item_blade"
+    ],
+    "152": [
+      "resources_views_filament_pages_send_telegram_blade",
+      "sendtelegram"
+    ],
+    "153": [
+      "resources_views_filament_pages_send_whatsapp_blade",
+      "sendwhatsapp"
+    ],
+    "154": [
+      "scripts_code_quality_check",
+      "scripts_code_quality_check_sh__entry"
+    ],
+    "155": [
+      "scripts_code_quality_fix",
+      "scripts_code_quality_fix_sh__entry"
+    ],
+    "156": [
+      "scripts_fix_code_quality_issues",
+      "scripts_fix_code_quality_issues_sh__entry"
+    ],
+    "157": [
+      "scripts_full_code_quality_check",
+      "scripts_full_code_quality_check_sh__entry"
+    ],
+    "158": [
+      "test_homepage",
+      "test_homepage_chromium"
+    ],
+    "159": [
+      "test_homepage2",
+      "test_homepage2_chromium"
+    ],
+    "160": [
+      "app_console_commands_cleanupnotificationlogscommand"
+    ],
+    "161": [
+      "app_http_controllers_notificationtrackingcontroller"
+    ],
+    "162": [
+      "config_beautymail"
+    ],
+    "163": [
+      "config_notify"
+    ],
+    "164": [
+      "config_sms"
+    ],
+    "165": [
+      "config_telegram"
+    ],
+    "166": [
+      "config_whatsapp"
+    ],
+    "167": [
+      "docs_templates_send_template"
+    ],
+    "168": [
+      "eslintrc"
+    ],
+    "169": [
+      "lang_de_channel"
+    ],
+    "170": [
+      "lang_de_columns"
+    ],
+    "171": [
+      "lang_de_contact"
+    ],
+    "172": [
+      "lang_de_contact_column"
+    ],
+    "173": [
+      "lang_de_contact_type"
+    ],
+    "174": [
+      "lang_de_contact_type_enum_php_lang_de_contact_type_enum_00e199"
+    ],
+    "175": [
+      "lang_de_contact_type_enum_php_lang_de_contact_type_enum_d4ad4c"
+    ],
+    "176": [
+      "lang_de_contacts"
+    ],
+    "177": [
+      "lang_de_corrected_send_sms"
+    ],
+    "178": [
+      "lang_de_create_mail_template"
+    ],
+    "179": [
+      "lang_de_dashboard"
+    ],
+    "180": [
+      "lang_de_edit_mail_template"
+    ],
+    "181": [
+      "lang_de_log"
+    ],
+    "182": [
+      "lang_de_mail"
+    ],
+    "183": [
+      "lang_de_mail_channel"
+    ],
+    "184": [
+      "lang_de_mail_template"
+    ],
+    "185": [
+      "lang_de_netfun_sms"
+    ],
+    "186": [
+      "lang_de_notification"
+    ],
+    "187": [
+      "lang_de_notification_channel"
+    ],
+    "188": [
+      "lang_de_notification_channel_enum"
+    ],
+    "189": [
+      "lang_de_notification_channels"
+    ],
+    "190": [
+      "lang_de_notification_template"
+    ],
+    "191": [
+      "lang_de_notification_templates"
+    ],
+    "192": [
+      "lang_de_notify"
+    ],
+    "193": [
+      "lang_de_notify_template"
+    ],
+    "194": [
+      "lang_de_notify_theme"
+    ],
+    "195": [
+      "lang_de_notify_themes"
+    ],
+    "196": [
+      "lang_de_send_aws_email"
+    ],
+    "197": [
+      "lang_de_send_email"
+    ],
+    "198": [
+      "lang_de_send_email_parameters"
+    ],
+    "199": [
+      "lang_de_send_firebase_push_notification"
+    ],
+    "200": [
+      "lang_de_send_netfun_sms"
+    ],
+    "201": [
+      "lang_de_send_netfun_sms_corrected"
+    ],
+    "202": [
+      "lang_de_send_push_notification"
+    ],
+    "203": [
+      "lang_de_send_sms"
+    ],
+    "204": [
+      "lang_de_send_spatie_email"
+    ],
+    "205": [
+      "lang_de_send_telegram"
+    ],
+    "206": [
+      "lang_de_send_twilio_sms"
+    ],
+    "207": [
+      "lang_de_send_vonage_sms"
+    ],
+    "208": [
+      "lang_de_send_whats_app"
+    ],
+    "209": [
+      "lang_de_send_whatsapp"
+    ],
+    "210": [
+      "lang_de_setting"
+    ],
+    "211": [
+      "lang_de_slack_notification"
+    ],
+    "212": [
+      "lang_de_sms"
+    ],
+    "213": [
+      "lang_de_sms_channel"
+    ],
+    "214": [
+      "lang_de_sms_driver_enum"
+    ],
+    "215": [
+      "lang_de_telegram"
+    ],
+    "216": [
+      "lang_de_telegram_channel"
+    ],
+    "217": [
+      "lang_de_template"
+    ],
+    "218": [
+      "lang_de_whatsapp"
+    ],
+    "219": [
+      "lang_de_whatsapp_channel"
+    ],
+    "220": [
+      "lang_en_channel"
+    ],
+    "221": [
+      "lang_en_columns"
+    ],
+    "222": [
+      "lang_en_contact"
+    ],
+    "223": [
+      "lang_en_contact_column"
+    ],
+    "224": [
+      "lang_en_contact_type"
+    ],
+    "225": [
+      "lang_en_contact_type_enum_php_lang_en_contact_type_enum_9cdcb4"
+    ],
+    "226": [
+      "lang_en_contact_type_enum_php_lang_en_contact_type_enum_e04887"
+    ],
+    "227": [
+      "lang_en_contacts"
+    ],
+    "228": [
+      "lang_en_corrected_send_sms"
+    ],
+    "229": [
+      "lang_en_create_mail_template"
+    ],
+    "230": [
+      "lang_en_dashboard"
+    ],
+    "231": [
+      "lang_en_edit_mail_template"
+    ],
+    "232": [
+      "lang_en_log"
+    ],
+    "233": [
+      "lang_en_mail"
+    ],
+    "234": [
+      "lang_en_mail_template"
+    ],
+    "235": [
+      "lang_en_notification"
+    ],
+    "236": [
+      "lang_en_notification_template"
+    ],
+    "237": [
+      "lang_en_notify"
+    ],
+    "238": [
+      "lang_en_notify_theme"
+    ],
+    "239": [
+      "lang_en_notify_themes"
+    ],
+    "240": [
+      "lang_en_send_aws_email"
+    ],
+    "241": [
+      "lang_en_send_email"
+    ],
+    "242": [
+      "lang_en_send_email_parameters"
+    ],
+    "243": [
+      "lang_en_send_firebase_push_notification"
+    ],
+    "244": [
+      "lang_en_send_netfun_sms"
+    ],
+    "245": [
+      "lang_en_send_netfun_sms_corrected"
+    ],
+    "246": [
+      "lang_en_send_push_notification"
+    ],
+    "247": [
+      "lang_en_send_sms"
+    ],
+    "248": [
+      "lang_en_send_spatie_email"
+    ],
+    "249": [
+      "lang_en_send_telegram"
+    ],
+    "250": [
+      "lang_en_send_whats_app"
+    ],
+    "251": [
+      "lang_en_send_whatsapp"
+    ],
+    "252": [
+      "lang_en_setting"
+    ],
+    "253": [
+      "lang_en_slack_notification"
+    ],
+    "254": [
+      "lang_en_sms"
+    ],
+    "255": [
+      "lang_en_sms_driver_enum"
+    ],
+    "256": [
+      "lang_en_telegram"
+    ],
+    "257": [
+      "lang_en_template"
+    ],
+    "258": [
+      "lang_en_whatsapp"
+    ],
+    "259": [
+      "lang_es_contact_type_enum"
+    ],
+    "260": [
+      "lang_es_mail_template"
+    ],
+    "261": [
+      "lang_fr_contact_type_enum"
+    ],
+    "262": [
+      "lang_hi_mail_template"
+    ],
+    "263": [
+      "lang_it_actions"
+    ],
+    "264": [
+      "lang_it_channel"
+    ],
+    "265": [
+      "lang_it_channel_checkbox_list"
+    ],
+    "266": [
+      "lang_it_channel_enum"
+    ],
+    "267": [
+      "lang_it_columns"
+    ],
+    "268": [
+      "lang_it_contact"
+    ],
+    "269": [
+      "lang_it_contact_column"
+    ],
+    "270": [
+      "lang_it_contact_test_proxy"
+    ],
+    "271": [
+      "lang_it_contact_type"
+    ],
+    "272": [
+      "lang_it_contact_type_enum_php_lang_it_contact_type_enum_4f9030"
+    ],
+    "273": [
+      "lang_it_contact_type_enum_php_lang_it_contact_type_enum_5a0466"
+    ],
+    "274": [
+      "lang_it_contacts"
+    ],
+    "275": [
+      "lang_it_corrected_send_sms"
+    ],
+    "276": [
+      "lang_it_create_mail_template"
+    ],
+    "277": [
+      "lang_it_dashboard"
+    ],
+    "278": [
+      "lang_it_edit_mail_template"
+    ],
+    "279": [
+      "lang_it_html_layout_path_select"
+    ],
+    "280": [
+      "lang_it_linkable"
+    ],
+    "281": [
+      "lang_it_log"
+    ],
+    "282": [
+      "lang_it_mail"
+    ],
+    "283": [
+      "lang_it_mail_template"
+    ],
+    "284": [
+      "lang_it_mail_template_select"
+    ],
+    "285": [
+      "lang_it_mail_templates"
+    ],
+    "286": [
+      "lang_it_notification"
+    ],
+    "287": [
+      "lang_it_notification_template"
+    ],
+    "288": [
+      "lang_it_notification_templates"
+    ],
+    "289": [
+      "lang_it_notification_test_proxy"
+    ],
+    "290": [
+      "lang_it_notifications"
+    ],
+    "291": [
+      "lang_it_notify"
+    ],
+    "292": [
+      "lang_it_notify_theme"
+    ],
+    "293": [
+      "lang_it_notify_theme_test_proxy"
+    ],
+    "294": [
+      "lang_it_notify_themes"
+    ],
+    "295": [
+      "lang_it_preview_mail_template_test_proxy"
+    ],
+    "296": [
+      "lang_it_send_aws_email"
+    ],
+    "297": [
+      "lang_it_send_email"
+    ],
+    "298": [
+      "lang_it_send_email_parameters"
+    ],
+    "299": [
+      "lang_it_send_firebase_push_notification"
+    ],
+    "300": [
+      "lang_it_send_netfun_sms"
+    ],
+    "301": [
+      "lang_it_send_netfun_sms_corrected"
+    ],
+    "302": [
+      "lang_it_send_notification_bulk"
+    ],
+    "303": [
+      "lang_it_send_push_notification"
+    ],
+    "304": [
+      "lang_it_send_records_notification_bulk"
+    ],
+    "305": [
+      "lang_it_send_sms"
+    ],
+    "306": [
+      "lang_it_send_spatie_email"
+    ],
+    "307": [
+      "lang_it_send_telegram"
+    ],
+    "308": [
+      "lang_it_send_whats_app"
+    ],
+    "309": [
+      "lang_it_send_whatsapp"
+    ],
+    "310": [
+      "lang_it_setting"
+    ],
+    "311": [
+      "lang_it_slack_notification"
+    ],
+    "312": [
+      "lang_it_sms"
+    ],
+    "313": [
+      "lang_it_sms_driver_enum"
+    ],
+    "314": [
+      "lang_it_telegram"
+    ],
+    "315": [
+      "lang_it_template"
+    ],
+    "316": [
+      "lang_it_whatsapp"
+    ],
+    "317": [
+      "lang_pl_contact_type_enum"
+    ],
+    "318": [
+      "lang_pt_mail_template"
+    ],
+    "319": [
+      "lang_ru_mail_template"
+    ],
+    "320": [
+      "lang_zh_mail_template"
+    ],
+    "321": [
+      "postcss_config"
+    ],
+    "322": [
+      "resources_assets_js_app"
+    ],
+    "323": [
+      "resources_views_admin_dashboard_item_blade"
+    ],
+    "324": [
+      "resources_views_admin_home_acts_try_alert_blade"
+    ],
+    "325": [
+      "resources_views_admin_index_acts_manage_template_blade"
+    ],
+    "326": [
+      "resources_views_components_mail_message_blade"
+    ],
+    "327": [
+      "resources_views_email_blade"
+    ],
+    "328": [
+      "resources_views_emails_appointments_cancelled_blade"
+    ],
+    "329": [
+      "resources_views_emails_appointments_confirmed_blade"
+    ],
+    "330": [
+      "resources_views_emails_appointments_generic_blade"
+    ],
+    "331": [
+      "resources_views_emails_appointments_reminder_blade"
+    ],
+    "332": [
+      "resources_views_emails_appointments_rescheduled_blade"
+    ],
+    "333": [
+      "resources_views_emails_email_data_email_blade"
+    ],
+    "334": [
+      "resources_views_emails_html_blade"
+    ],
+    "335": [
+      "resources_views_emails_template_blade"
+    ],
+    "336": [
+      "resources_views_emails_templates_ark_blade"
+    ],
+    "337": [
+      "resources_views_emails_templates_ark_contentend_blade"
+    ],
+    "338": [
+      "resources_views_emails_templates_ark_contentstart_blade"
+    ],
+    "339": [
+      "resources_views_emails_templates_ark_heading_blade"
+    ],
+    "340": [
+      "resources_views_emails_templates_ark_wideimage_blade"
+    ],
+    "341": [
+      "resources_views_emails_templates_empty_blade"
+    ],
+    "342": [
+      "resources_views_emails_templates_minty_blade"
+    ],
+    "343": [
+      "resources_views_emails_templates_minty_button_blade"
+    ],
+    "344": [
+      "resources_views_emails_templates_minty_contentcenteredend_blade_php_resources_views_emails_templates_minty_contentcenteredend_blade_d98991"
+    ],
+    "345": [
+      "resources_views_emails_templates_minty_contentcenteredend_blade_php_resources_views_emails_templates_minty_contentcenteredend_blade_fd24b9"
+    ],
+    "346": [
+      "resources_views_emails_templates_minty_contentcenteredstart_blade"
+    ],
+    "347": [
+      "resources_views_emails_templates_minty_contentend_blade_php_resources_views_emails_templates_minty_contentend_blade_5a8963"
+    ],
+    "348": [
+      "resources_views_emails_templates_minty_contentend_blade_php_resources_views_emails_templates_minty_contentend_blade_b7399e"
+    ],
+    "349": [
+      "resources_views_emails_templates_minty_contentstart_blade_php_resources_views_emails_templates_minty_contentstart_blade_03dd47"
+    ],
+    "350": [
+      "resources_views_emails_templates_minty_contentstart_blade_php_resources_views_emails_templates_minty_contentstart_blade_072d5c"
+    ],
+    "351": [
+      "resources_views_emails_templates_sunny_blade"
+    ],
+    "352": [
+      "resources_views_emails_templates_sunny_button_blade"
+    ],
+    "353": [
+      "resources_views_emails_templates_sunny_contentend_blade"
+    ],
+    "354": [
+      "resources_views_emails_templates_sunny_contentstart_blade"
+    ],
+    "355": [
+      "resources_views_emails_templates_sunny_heading_blade"
+    ],
+    "356": [
+      "resources_views_emails_templates_sunny_wideimage_blade_php_resources_views_emails_templates_sunny_wideimage_blade_7eb80e"
+    ],
+    "357": [
+      "resources_views_emails_templates_sunny_wideimage_blade_php_resources_views_emails_templates_sunny_wideimage_blade_af976d"
+    ],
+    "358": [
+      "resources_views_emails_templates_widgets_articleend_blade"
+    ],
+    "359": [
+      "resources_views_emails_templates_widgets_articlestart_blade_php_resources_views_emails_templates_widgets_articlestart_blade_5ab2c7"
+    ],
+    "360": [
+      "resources_views_emails_templates_widgets_articlestart_blade_php_resources_views_emails_templates_widgets_articlestart_blade_f41195"
+    ],
+    "361": [
+      "resources_views_emails_templates_widgets_blade"
+    ],
+    "362": [
+      "resources_views_emails_templates_widgets_newfeatureend_blade_php_resources_views_emails_templates_widgets_newfeatureend_blade_5576b0"
+    ],
+    "363": [
+      "resources_views_emails_templates_widgets_newfeatureend_blade_php_resources_views_emails_templates_widgets_newfeatureend_blade_577eb2"
+    ],
+    "364": [
+      "resources_views_emails_templates_widgets_newfeaturestart_blade_php_resources_views_emails_templates_widgets_newfeaturestart_blade_77b693"
+    ],
+    "365": [
+      "resources_views_emails_templates_widgets_newfeaturestart_blade_php_resources_views_emails_templates_widgets_newfeaturestart_blade_e8011f"
+    ],
+    "366": [
+      "resources_views_emails_text_blade"
+    ],
+    "367": [
+      "resources_views_filament_clusters_test_pages_slack_notification_blade"
+    ],
+    "368": [
+      "resources_views_filament_components_params_badges_blade"
+    ],
+    "369": [
+      "resources_views_filament_pages_dashboard_blade"
+    ],
+    "370": [
+      "resources_views_filament_pages_send_email_blade"
+    ],
+    "371": [
+      "resources_views_filament_pages_send_email_parameters_blade"
+    ],
+    "372": [
+      "resources_views_filament_pages_send_push_notification_blade"
+    ],
+    "373": [
+      "resources_views_filament_pages_send_sms_blade"
+    ],
+    "374": [
+      "resources_views_filament_pages_setting_blade"
+    ],
+    "375": [
+      "resources_views_filament_resources_mail_template_resource_pages_preview_mail_template_blade"
+    ],
+    "376": [
+      "resources_views_filament_resources_notification_template_resource_pages_preview_notification_template_blade"
+    ],
+    "377": [
+      "resources_views_filament_tables_columns_contact_blade"
+    ],
+    "378": [
+      "resources_views_filament_tables_columns_contact_column_blade"
+    ],
+    "379": [
+      "resources_views_index_blade"
+    ],
+    "380": [
+      "resources_views_layouts_ark_blade"
+    ],
+    "381": [
+      "resources_views_layouts_empty_blade"
+    ],
+    "382": [
+      "resources_views_layouts_master_blade"
+    ],
+    "383": [
+      "resources_views_livewire_database_notifications_trigger_blade"
+    ],
+    "384": [
+      "resources_views_mail_newsletter_blade"
+    ],
+    "385": [
+      "resources_views_mail_promotion_blade"
+    ],
+    "386": [
+      "resources_views_mail_transactional_order_confirmation_blade"
+    ],
+    "387": [
+      "resources_views_mail_welcome_blade"
+    ],
+    "388": [
+      "resources_views_notifications_html_blade"
+    ],
+    "389": [
+      "routes_api"
+    ],
+    "390": [
+      "routes_web"
+    ],
+    "391": [
+      "tailwind_config"
+    ],
+    "392": [
+      "tests_unit_architecture_noorphanhttpcontrollerstest"
+    ],
+    "393": [
+      "tests_unit_channels_netfunchanneltest"
+    ],
+    "394": [
+      "tests_unit_channels_telegramchanneltest"
+    ],
+    "395": [
+      "app_notifications_genericnotification_genericnotification",
+      "app_notifications_genericnotification_genericnotification_construct",
+      "app_notifications_genericnotification_genericnotification_getrecipientname",
+      "app_notifications_genericnotification_genericnotification_todatabase",
+      "app_notifications_genericnotification_genericnotification_tomail",
+      "app_notifications_genericnotification_genericnotification_totwilio",
+      "app_notifications_genericnotification_genericnotification_via"
+    ]
+  },
+  "cohesion": {
+    "0": 0.07439613526570048,
+    "1": 0.057971014492753624,
+    "2": 0.07171717171717172,
+    "3": 0.06976744186046512,
+    "4": 0.06504065040650407,
+    "5": 0.08333333333333333,
+    "6": 0.07254623044096728,
+    "7": 0.05263157894736842,
+    "8": 0.0873015873015873,
+    "9": 0.05714285714285714,
+    "10": 0.06854838709677419,
+    "11": 0.10752688172043011,
+    "12": 0.0989247311827957,
+    "13": 0.08817204301075268,
+    "14": 0.13043478260869565,
+    "15": 0.21839080459770116,
+    "16": 0.11396011396011396,
+    "17": 0.16307692307692306,
+    "18": 0.17333333333333334,
+    "19": 0.11,
+    "20": 0.12648221343873517,
+    "21": 0.16205533596837945,
+    "22": 0.08695652173913043,
+    "23": 0.11688311688311688,
+    "24": 0.14285714285714285,
+    "25": 0.12857142857142856,
+    "26": 0.12380952380952381,
+    "27": 0.1368421052631579,
+    "28": 0.15789473684210525,
+    "29": 0.14619883040935672,
+    "30": 0.13450292397660818,
+    "31": 0.14035087719298245,
+    "32": 0.32748538011695905,
+    "33": 0.1286549707602339,
+    "34": 0.1830065359477124,
+    "35": 0.2222222222222222,
+    "36": 0.2087912087912088,
+    "37": 0.15441176470588236,
+    "38": 0.15441176470588236,
+    "39": 0.15441176470588236,
+    "40": 0.19166666666666668,
+    "41": 0.16666666666666666,
+    "42": 0.17142857142857143,
+    "43": 0.20952380952380953,
+    "44": 0.42857142857142855,
+    "45": 0.24175824175824176,
+    "46": 0.21794871794871795,
+    "47": 0.1794871794871795,
+    "48": 0.16666666666666666,
+    "49": 0.15384615384615385,
+    "50": 0.21212121212121213,
+    "51": 0.22727272727272727,
+    "52": 0.21212121212121213,
+    "53": 0.16666666666666666,
+    "54": 0.21212121212121213,
+    "55": 0.22727272727272727,
+    "56": 0.21212121212121213,
+    "57": 0.16666666666666666,
+    "58": 0.16666666666666666,
+    "59": 0.23636363636363636,
+    "60": 0.23636363636363636,
+    "61": 0.24444444444444444,
+    "62": 0.24444444444444444,
+    "63": 0.26666666666666666,
+    "64": 0.26666666666666666,
+    "65": 0.28888888888888886,
+    "66": 0.28888888888888886,
+    "67": 0.28888888888888886,
+    "68": 0.2,
+    "69": 0.23636363636363636,
+    "70": 0.3055555555555556,
+    "71": 0.2777777777777778,
+    "72": 0.3055555555555556,
+    "73": 0.2777777777777778,
+    "74": 0.2777777777777778,
+    "75": 0.2777777777777778,
+    "76": 0.3333333333333333,
+    "77": 0.2222222222222222,
+    "78": 0.39285714285714285,
+    "79": 0.2857142857142857,
+    "80": 0.2857142857142857,
+    "81": 0.2857142857142857,
+    "82": 0.2857142857142857,
+    "83": 0.2857142857142857,
+    "84": 0.35714285714285715,
+    "85": 0.39285714285714285,
+    "86": 0.32142857142857145,
+    "87": 0.39285714285714285,
+    "88": 0.4642857142857143,
+    "89": 0.39285714285714285,
+    "90": 0.3333333333333333,
+    "91": 0.3333333333333333,
+    "92": 0.3333333333333333,
+    "93": 0.42857142857142855,
+    "94": 0.2857142857142857,
+    "95": 0.4666666666666667,
+    "96": 0.3333333333333333,
+    "97": 0.3333333333333333,
+    "98": 0.3333333333333333,
+    "99": 0.3333333333333333,
+    "100": 0.4666666666666667,
+    "101": 0.3333333333333333,
+    "102": 0.5,
+    "103": 0.4,
+    "104": 0.4,
+    "105": 0.4,
+    "106": 0.4,
+    "107": 0.4,
+    "108": 0.4,
+    "109": 0.4,
+    "110": 0.4,
+    "111": 0.4,
+    "112": 0.4,
+    "113": 0.6666666666666666,
+    "114": 0.6666666666666666,
+    "115": 0.5,
+    "116": 0.5,
+    "117": 0.5,
+    "118": 0.5,
+    "119": 0.5,
+    "120": 0.5,
+    "121": 0.6666666666666666,
+    "122": 1.0,
+    "123": 1.0,
+    "124": 1.0,
+    "125": 0.6666666666666666,
+    "126": 1.0,
+    "127": 1.0,
+    "128": 1.0,
+    "129": 1.0,
+    "130": 1.0,
+    "131": 1.0,
+    "132": 1.0,
+    "133": 1.0,
+    "134": 1.0,
+    "135": 1.0,
+    "136": 1.0,
+    "137": 1.0,
+    "138": 1.0,
+    "139": 1.0,
+    "140": 1.0,
+    "141": 1.0,
+    "142": 1.0,
+    "143": 1.0,
+    "144": 1.0,
+    "145": 1.0,
+    "146": 1.0,
+    "147": 1.0,
+    "148": 1.0,
+    "149": 1.0,
+    "150": 1.0,
+    "151": 1.0,
+    "152": 1.0,
+    "153": 1.0,
+    "154": 1.0,
+    "155": 1.0,
+    "156": 1.0,
+    "157": 1.0,
+    "158": 1.0,
+    "159": 1.0,
+    "160": 1.0,
+    "161": 1.0,
+    "162": 1.0,
+    "163": 1.0,
+    "164": 1.0,
+    "165": 1.0,
+    "166": 1.0,
+    "167": 1.0,
+    "168": 1.0,
+    "169": 1.0,
+    "170": 1.0,
+    "171": 1.0,
+    "172": 1.0,
+    "173": 1.0,
+    "174": 1.0,
+    "175": 1.0,
+    "176": 1.0,
+    "177": 1.0,
+    "178": 1.0,
+    "179": 1.0,
+    "180": 1.0,
+    "181": 1.0,
+    "182": 1.0,
+    "183": 1.0,
+    "184": 1.0,
+    "185": 1.0,
+    "186": 1.0,
+    "187": 1.0,
+    "188": 1.0,
+    "189": 1.0,
+    "190": 1.0,
+    "191": 1.0,
+    "192": 1.0,
+    "193": 1.0,
+    "194": 1.0,
+    "195": 1.0,
+    "196": 1.0,
+    "197": 1.0,
+    "198": 1.0,
+    "199": 1.0,
+    "200": 1.0,
+    "201": 1.0,
+    "202": 1.0,
+    "203": 1.0,
+    "204": 1.0,
+    "205": 1.0,
+    "206": 1.0,
+    "207": 1.0,
+    "208": 1.0,
+    "209": 1.0,
+    "210": 1.0,
+    "211": 1.0,
+    "212": 1.0,
+    "213": 1.0,
+    "214": 1.0,
+    "215": 1.0,
+    "216": 1.0,
+    "217": 1.0,
+    "218": 1.0,
+    "219": 1.0,
+    "220": 1.0,
+    "221": 1.0,
+    "222": 1.0,
+    "223": 1.0,
+    "224": 1.0,
+    "225": 1.0,
+    "226": 1.0,
+    "227": 1.0,
+    "228": 1.0,
+    "229": 1.0,
+    "230": 1.0,
+    "231": 1.0,
+    "232": 1.0,
+    "233": 1.0,
+    "234": 1.0,
+    "235": 1.0,
+    "236": 1.0,
+    "237": 1.0,
+    "238": 1.0,
+    "239": 1.0,
+    "240": 1.0,
+    "241": 1.0,
+    "242": 1.0,
+    "243": 1.0,
+    "244": 1.0,
+    "245": 1.0,
+    "246": 1.0,
+    "247": 1.0,
+    "248": 1.0,
+    "249": 1.0,
+    "250": 1.0,
+    "251": 1.0,
+    "252": 1.0,
+    "253": 1.0,
+    "254": 1.0,
+    "255": 1.0,
+    "256": 1.0,
+    "257": 1.0,
+    "258": 1.0,
+    "259": 1.0,
+    "260": 1.0,
+    "261": 1.0,
+    "262": 1.0,
+    "263": 1.0,
+    "264": 1.0,
+    "265": 1.0,
+    "266": 1.0,
+    "267": 1.0,
+    "268": 1.0,
+    "269": 1.0,
+    "270": 1.0,
+    "271": 1.0,
+    "272": 1.0,
+    "273": 1.0,
+    "274": 1.0,
+    "275": 1.0,
+    "276": 1.0,
+    "277": 1.0,
+    "278": 1.0,
+    "279": 1.0,
+    "280": 1.0,
+    "281": 1.0,
+    "282": 1.0,
+    "283": 1.0,
+    "284": 1.0,
+    "285": 1.0,
+    "286": 1.0,
+    "287": 1.0,
+    "288": 1.0,
+    "289": 1.0,
+    "290": 1.0,
+    "291": 1.0,
+    "292": 1.0,
+    "293": 1.0,
+    "294": 1.0,
+    "295": 1.0,
+    "296": 1.0,
+    "297": 1.0,
+    "298": 1.0,
+    "299": 1.0,
+    "300": 1.0,
+    "301": 1.0,
+    "302": 1.0,
+    "303": 1.0,
+    "304": 1.0,
+    "305": 1.0,
+    "306": 1.0,
+    "307": 1.0,
+    "308": 1.0,
+    "309": 1.0,
+    "310": 1.0,
+    "311": 1.0,
+    "312": 1.0,
+    "313": 1.0,
+    "314": 1.0,
+    "315": 1.0,
+    "316": 1.0,
+    "317": 1.0,
+    "318": 1.0,
+    "319": 1.0,
+    "320": 1.0,
+    "321": 1.0,
+    "322": 1.0,
+    "323": 1.0,
+    "324": 1.0,
+    "325": 1.0,
+    "326": 1.0,
+    "327": 1.0,
+    "328": 1.0,
+    "329": 1.0,
+    "330": 1.0,
+    "331": 1.0,
+    "332": 1.0,
+    "333": 1.0,
+    "334": 1.0,
+    "335": 1.0,
+    "336": 1.0,
+    "337": 1.0,
+    "338": 1.0,
+    "339": 1.0,
+    "340": 1.0,
+    "341": 1.0,
+    "342": 1.0,
+    "343": 1.0,
+    "344": 1.0,
+    "345": 1.0,
+    "346": 1.0,
+    "347": 1.0,
+    "348": 1.0,
+    "349": 1.0,
+    "350": 1.0,
+    "351": 1.0,
+    "352": 1.0,
+    "353": 1.0,
+    "354": 1.0,
+    "355": 1.0,
+    "356": 1.0,
+    "357": 1.0,
+    "358": 1.0,
+    "359": 1.0,
+    "360": 1.0,
+    "361": 1.0,
+    "362": 1.0,
+    "363": 1.0,
+    "364": 1.0,
+    "365": 1.0,
+    "366": 1.0,
+    "367": 1.0,
+    "368": 1.0,
+    "369": 1.0,
+    "370": 1.0,
+    "371": 1.0,
+    "372": 1.0,
+    "373": 1.0,
+    "374": 1.0,
+    "375": 1.0,
+    "376": 1.0,
+    "377": 1.0,
+    "378": 1.0,
+    "379": 1.0,
+    "380": 1.0,
+    "381": 1.0,
+    "382": 1.0,
+    "383": 1.0,
+    "384": 1.0,
+    "385": 1.0,
+    "386": 1.0,
+    "387": 1.0,
+    "388": 1.0,
+    "389": 1.0,
+    "390": 1.0,
+    "391": 1.0,
+    "392": 1.0,
+    "393": 1.0,
+    "394": 1.0,
+    "395": 0.3333333333333333
+  },
+  "gods": [
+    {
+      "id": "tests_testcase_testcase",
+      "label": "TestCase",
+      "degree": 101
+    },
+    {
+      "id": "app_models_notificationtemplate_notificationtemplate",
+      "label": "NotificationTemplate",
+      "degree": 50
+    },
+    {
+      "id": "app_datas_smsdata_smsdata",
+      "label": "SmsData",
+      "degree": 44
+    },
+    {
+      "id": "app_models_notification_notification",
+      "label": "Notification",
+      "degree": 43
+    },
+    {
+      "id": "stylelintrc_rules",
+      "label": "rules",
+      "degree": 27
+    },
+    {
+      "id": "app_services_pushnotificationservice_pushnotificationservice",
+      "label": "PushNotificationService",
+      "degree": 25
+    },
+    {
+      "id": "app_datas_pushnotificationdata_pushnotificationdata",
+      "label": "PushNotificationData",
+      "degree": 24
+    },
+    {
+      "id": "app_models_mailtemplate_mailtemplate",
+      "label": "MailTemplate",
+      "degree": 20
+    },
+    {
+      "id": "app_datas_whatsappdata_whatsappdata",
+      "label": "WhatsAppData",
+      "degree": 19
+    },
+    {
+      "id": "app_emails_spatieemail_spatieemail",
+      "label": "SpatieEmail",
+      "degree": 18
+    }
+  ],
+  "surprises": [
+    {
+      "source": "execute()",
+      "target": "SmsData",
+      "source_files": [
+        "tests/Unit/Notifications/Channels/NotificationsChannelsTest.php",
+        "app/Datas/SmsData.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `execute()` unexpectedly reaches hub `SmsData`"
+    },
+    {
+      "source": "TestCase",
+      "target": "NotificationManager",
+      "source_files": [
+        "tests/TestCase.php",
+        "app/Actions/NotificationManager.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "ViewNotificationTestProxy",
+      "target": "ViewNotification",
+      "source_files": [
+        "tests/Fixtures/ViewNotificationTestProxy.php",
+        "app/Filament/Resources/NotificationResource/Pages/ViewNotification.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "makePreviewNotificationTemplateTestProxy()",
+      "target": "PreviewNotificationTemplate",
+      "source_files": [
+        "tests/Unit/Filament/Resources/NotifyFilamentResourcesCoverageTest.php",
+        "app/Filament/Resources/NotificationTemplateResource/Pages/PreviewNotificationTemplate.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `makePreviewNotificationTemplateTestProxy()` unexpectedly reaches hub `PreviewNotificationTemplate`"
+    },
+    {
+      "source": "NotifyNotificationTemplateProxy",
+      "target": "NotificationTemplate",
+      "source_files": [
+        "tests/Fixtures/NotifyNotificationTemplateProxy.php",
+        "app/Models/NotificationTemplate.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "connects across different repos/directories; bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `TestCase` connect `TestCase` to `Illuminate\\Database\\Eloquent\\Model`, `WhatsAppData`, `HasTenantNotifications.php`, `Spatie\\QueueableAction\\QueueableAction`, `NotificationTemplate`, `NotifyBasePolicy`, `TelegramData`, `SmtpData`, `NotificationLog.php`, `NotificationsCoverageTest.php`, `Modules\\Xot\\Filament\\Pages\\XotBasePage`, `MailTemplate.php`, `Illuminate\\Support\\Collection`, `SendRecordsNotificationAction.php`, `NotifyModelsCoverageTest.php`, `NotifyFilamentResourcesCoverageTest.php`, `NotifyThemeAndColumnsCoverageTest.php`, `NotifyTheme`, `Illuminate\\Database\\Eloquent\\Factories\\Factory`, `Modules\\Notify\\Contracts\\SMS\\SmsActionContract`, `BaseModel`, `Notification`, `NotificationManagementBusinessLogicTest.php`, `ThemeNotification`, `SendNotificationAction`, `NotifyDatasCoverageTest.php`, `config.php`, `Filament\\Panel`, `Carbon\\Carbon`, `NotifyServiceProvider.php`, `MediaTypeEnum.php`, `TelegramDriverEnum.php`, `WhatsAppDriverEnum.php`, `AttachmentData`, `HasContactDummyModel`, `EsendexSendAction.php`, `SendNotificationToRecipientAction.php`, `NotificationLogStatusEnum.php`, `SettingPage`, `EventServiceProvider`?",
+      "why": "High betweenness centrality (0.130) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Notification` connect `Notification` to `Illuminate\\Database\\Eloquent\\Model`, `Illuminate\\Database\\Seeder`, `NotificationTemplate`, `SmtpData`, `Modules\\Xot\\Filament\\Pages\\XotBasePage`, `Illuminate\\Bus\\Queueable`, `NotifyModelsCoverageTest.php`, `Illuminate\\Database\\Eloquent\\Factories\\Factory`, `Pest.php`, `NotificationManagementBusinessLogicTest.php`, `SendNotificationAction`, `NotificationData`, `SendPushNotification`, `NotificationResource.php`, `SendEmailPage`, `SendNetfunSmsPage`, `SendSmsPage`, `SendSpatieEmailPage`, `SendWhatsAppPage`, `SendEmail`, `SendTelegram`, `SendTelegramPage`, `SendNotificationToRecipientAction.php`?",
+      "why": "High betweenness centrality (0.033) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `NotificationTemplate` connect `NotificationTemplate` to `Illuminate\\Database\\Seeder`, `TestCase`, `BaseModel`, `Notification`, `NotificationManagementBusinessLogicTest.php`, `NotificationLog.php`, `SendNotificationAction`, `MailTemplate.php`, `NotifyModelsCoverageTest.php`, `NotifyFilamentResourcesCoverageTest.php`, `Illuminate\\Database\\Eloquent\\Factories\\Factory`?",
+      "why": "High betweenness centrality (0.024) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `stylelint-config-standard`, `stylelint-config-prettier`, `color-no-invalid-hex` to the rest of the system?",
+      "why": "177 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Illuminate\\Database\\Eloquent\\Model` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07439613526570048 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Illuminate\\Database\\Seeder` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.057971014492753624 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `WhatsAppData` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07171717171717172 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
